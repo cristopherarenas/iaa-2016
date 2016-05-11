@@ -1,7 +1,51 @@
 #include "SolutionSet.h"
 
-SolutionSet::SolutionSet(void) 
+
+SolutionSet::SolutionSet(void){
+	
+}
+
+SolutionSet::~SolutionSet(){
+}
+
+SolutionSet::SolutionSet(int size){
+	vector<Solution> sol;
+	sol.reserve(size);
+	this->solutions=sol;
+}
+
+SolutionSet::SolutionSet(Problem &p, vector<RouteInfo> &ri,int &pop_size) 
 {
+	vector<Solution> sol;
+	sol.reserve(p.get_size());
+	this->solutions=sol;
+	
+	bool sol_conexa = false;
+	//generar conjunto de rutas factible	
+	for(int i=0;i<pop_size;i++){
+		do{
+			Solution *s = new Solution(p,ri);
+			sol_conexa = s->check_connectivity(p.get_size()) && s->check_feasability();
+			if(sol_conexa){
+				this->solutions.push_back(*s);
+			}
+			delete s;
+		}while(!sol_conexa);	
+		cout << "solution " << (i+1) << endl;
+	}
+	
+}
+
+vector<Solution> SolutionSet::get_solution_ranking(int rank){
+	vector<Solution> result;
+	result.reserve(this->solutions.size());
+	
+	for(int i=0;i<this->solutions.size();i++){
+		if(this->solutions[i].ranking_pareto == rank){
+			result.push_back(this->solutions[i]);
+		}
+	}
+	return result;
 	
 }
 

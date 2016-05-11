@@ -18,10 +18,10 @@
 #include "inmune.h"
 #include "opciones.h"
 
-#define POP_SIZE 100
+#define POP_SIZE 50
 #define ALPHA 0.4
 #define BETA 0.6
-#define CLON_SIZE 150
+#define CLON_SIZE 75
 #define PROBMUTACION 0.1
 #define AFINIDAD 1
 #define GENERACIONES 10
@@ -46,7 +46,7 @@ void intro(void)
 
 void usage(void)
 {
-	std::string s = 	"Usage: ./utrpmo -i INSTANCE_PREFIX -s SEED -r ROUTE_INFO -p POP_SIZE -c CLON_SIZE -g GENERACIONES -a PORC_CLONES -b PORC_REEMPLAZO\n"
+	std::string s = 	"Usage: ./utrpmo -i INSTANCE_PREFIX -s SEED -r ROUTE_INFO -p POP_SIZE -c CLON_SIZE -g GENERACIONES -a PORC_CLONES -b PORC_REEMPLAZO -f ALPHA\n"
 						"For example: ./utrpmo -i instances/Mandl -s 12345 -r \"10:2:7;12:3:8\" \n";
 
 	std::cout << s << std::endl;
@@ -54,11 +54,12 @@ void usage(void)
 
 int main(int argc, char **argv)
 {
-	srand(time(NULL));
-	//time_t inicio;
-	//time_t fin;
-	//double segundos;
-	//time(&inicio);
+	//srand(time(NULL));
+	time_t inicio;
+	time_t fin;
+	time_t fin_sol;
+	double segundos;
+	time(&inicio);
 	
 	intro();
 
@@ -74,8 +75,9 @@ int main(int argc, char **argv)
 	int iteraciones = 0;
 	int porc_clones = 0;
 	int porc_reemplazo = 0;
+	int p_fo = 0;
 	
-    while ((c = getopt(argc, argv, "i:s:r:p:c:g:a:b:")) != -1)
+    while ((c = getopt(argc, argv, "i:s:r:p:c:g:a:b:f:")) != -1)
     switch (c)
     {
     	case 'i':
@@ -110,6 +112,9 @@ int main(int argc, char **argv)
 			break;
 	    case 'b':
 			porc_reemplazo = atoi(optarg);
+			break;
+		case 'f':
+			p_fo = atoi(optarg);
 			break;
 	    case '?':
 	        if (optopt == 's' || optopt == 'r' || optopt == 'i')
@@ -199,8 +204,8 @@ int main(int argc, char **argv)
 	Opciones* o = new Opciones();
 	
 	o->set_popsize(popsize);
-	o->set_alpha(1);
-	o->set_beta(1);
+	o->set_alpha((p_fo)/100.0);
+	o->set_beta((100-p_fo)/100.0);
 	o->set_clonsize(clonsize);
 	o->set_probmutacion(0.1);
 	o->set_afinidad(1);
@@ -211,17 +216,180 @@ int main(int argc, char **argv)
 
 	ShortestRoute *sr = new ShortestRoute(size);
 	sr->calcDistNoRoutes(travel_times);
+	
+	//se le entrega la semmilla al random
+	srand(opt_seed);
+	
 
+	
 	//inicializacion del algoritmo
-	Inmune *algoritmo = new Inmune(routes_info,o,demand,travel_times,bus_stops,size,opt_seed);
+	Inmune *algoritmo = new Inmune(*p,*o,routes_info,*sr);
+	time(&fin_sol);
+	/*
+	int j=0;
+	while (j<10){
+		Route r1 = algoritmo->ss.solutions[0].routes[0];
+		Route r2 = algoritmo->ss.solutions[0].routes[1];
+		//cout << "r1-> " << r1.check_cycles_and_backtracks() << endl;
+		//cout << "r2-> " << r2.check_cycles_and_backtracks() << endl;
+		cout << " --- " << endl;
+		r2.print_route();
+		bool b = algoritmo->ss.solutions[0].mutation_add_bs(r2,travel_times,size,bus_stops);
+		cout << b << endl;
+		r2.print_route();
+		j++;
+	}
+	*/
+	
+	//cout << algoritmo->ss.solutions.size() << " soluciones aleatorias " << endl;
+	int generacion = 1;
+	
+	vector<float> hiper;
+	hiper.reserve(algoritmo->generaciones);
+	
+	while(generacion <= algoritmo->generaciones){
+		cout << "generacion " << generacion << endl;
+		//eliminar soluciones dominadas
+		//cout << "eliminar soluciones dominadas" << endl;
+		algoritmo->eliminar_dominados(algoritmo->ss.solutions);
+		
+		//algoritmo->print_solutions();
+	
+		//seleccionar mejores soluciones
+		//cout << "seleccionar mejores anticuerpos" << endl;
+		algoritmo->seleccionar_mejores_anticuerpos();
+			
+		//algoritmo->print_clones();
+		
+		//cout << "clones" << endl;
+		//algoritmo->print_clones();
+		//cout << endl;
+		
+		//cout << "clonar anticuerpos"  << endl;
+		algoritmo->clonar_anticuerpos();
+		
+		//cout << "clones" << endl;
+		//algoritmo->print_clones();
+			
+		algoritmo->mutar_clones(*p,routes_info,sr);
+		algoritmo->actualizar_dominancia(algoritmo->clon.solutions);
+		
+		//cout << "clones" << endl;
+		//algoritmo->print_clones();
+		
+		//copiar todos los clones al conjunto de poblacion 
+		algoritmo->clones_a_poblacion();
+		
+		//copiar un porcentaje de mejores clones al conjunto de memoria
+		algoritmo->guardar_mejores_clones();
+		//algoritmo->actualizar_dominancia(algoritmo->memory.solutions);
+		algoritmo->eliminar_dominados(algoritmo->memory.solutions);
+		
+		//algoritmo->print_memory();
+		
+		//reemplazar las peores soluciones de la poblacion con soluciones aleatorias
+		algoritmo->reemplazar_peores_soluciones(*p, routes_info,*sr);
+		
+		//cout << "poblacion size " << algoritmo->ss.solutions.size() << endl;
+		//cout << "clones size " << algoritmo->clon.solutions.size() << endl;
+		//cout << "memoria size " << algoritmo->memory.solutions.size() << endl;
+		
+		//cout << endl;
+		//cout << endl;
+		
+		//se guardan los optimos de pareto para la generacion
+		stringstream sstr;
+		sstr << "results/pareto_" << generacion << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+		string nombre = sstr.str();
+		
+		ofstream archivo(nombre.c_str());
+		
+		for(int i=0;i<algoritmo->memory.solutions.size();i++)
+		{
+			archivo << algoritmo->memory.solutions[i].fo1 << " " << algoritmo->memory.solutions[i].fo2 << " " << algoritmo->memory.solutions[i].quality << endl;
+			if(algoritmo->memory.solutions[i].fo2<63){
+				for (int i = 0; i < algoritmo->memory.solutions[i].routes.size() ; i++){
+					for( int j = 0; j < algoritmo->memory.solutions[i].routes[i].bus_stops.size(); j++){
+						archivo << algoritmo->memory.solutions[i].routes[i].bus_stops[j].idi+1;
+						if(j < algoritmo->memory.solutions[i].routes[i].bus_stops.size()-1){
+							archivo << ", ";
+						}
+					}
+					archivo << endl;
+				}  
+			}
+				
+		}
+		archivo.close();
+		
+		
+		//se guardan los optimos de pareto para la generacion
+		stringstream sstr2;
+		sstr2 << "results/solucion_" << generacion << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+		nombre = sstr2.str();
+		
+		ofstream archivo2(nombre.c_str());
+		
+		for(int i=0;i<algoritmo->ss.solutions.size();i++)
+		{
+			archivo2 << algoritmo->ss.solutions[i].fo1 << " " << algoritmo->ss.solutions[i].fo2 << " " << algoritmo->ss.solutions[i].quality << endl;
+				
+		}
+		archivo2.close();
+
+		//se guardan los optimos de pareto para la generacion
+		stringstream sstr3;
+		sstr3 << "results/clones_" << generacion << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+		nombre = sstr3.str();
+		
+		ofstream archivo3(nombre.c_str());
+		
+		for(int i=0;i<algoritmo->clon.solutions.size();i++)
+		{
+			archivo3 << algoritmo->clon.solutions[i].fo1 << " " << algoritmo->clon.solutions[i].fo2 << " " << algoritmo->clon.solutions[i].quality << endl;
+				
+		}
+		archivo3.close();		
+		SolutionSet* sset = new SolutionSet(size);
+		sset->solutions = algoritmo->memory.solutions;
+		
+		for(int i=0;i<algoritmo->memory.solutions.size();i++){
+			sset->solutions.push_back(algoritmo->memory.solutions[i]);
+		}
+		
+		float hypervolume = hv(sset, p);
+		cout << "hypervolumen: " << hypervolume << endl;	
+		hiper.push_back(hypervolume);
+		delete sset;
+		//siguiente generacion
+		generacion++;
+	}
+	
+	//guardar hipervolumen
+	stringstream sstr4;
+	sstr4 << "results/hypervolumen" << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+	string nombre = sstr4.str();
+	
+	ofstream archivo4(nombre.c_str());
+	
+	for(int i=0;i<hiper.size();i++)
+	{
+		archivo4 << hiper[i] << endl;
+			
+	}
+	archivo4.close();
+	
+	
+	
+	//Inmune *algoritmo = new Inmune(routes_info,o,demand,travel_times,bus_stops,size,opt_seed);
 	
 	//inicializacion de la poblacion
-	SolutionSet *poblacion = new SolutionSet();
+	//SolutionSet *poblacion = new SolutionSet(*p,routes_info);
 	
-	vector<Solution> sol;
-	poblacion->solutions=sol;
 
-	/*vector<std::string> z = split(opt_instance_prefix, '/');
+	
+	/*
+	vector<std::string> z = split(opt_instance_prefix, '/');
 	stringstream sstr2;
 	
 	sstr2 << "utpmo -i " << z[1] << " -s " << opt_seed << " -r " << opt_route_type << ".txt";
@@ -230,13 +398,12 @@ int main(int argc, char **argv)
 	ofstream archivo2(arch_final.c_str());
 
 	archivo2 << arch_final << endl;
-	cout << arch_final << endl;
-	*/
+	//cout << arch_final << endl;
+	
 	//se genera la poblacion aleatoriamente
 	algoritmo->generar_poblacion(*poblacion);
 	
-	//se le entrega la semmilla al random
-	srand(opt_seed);
+	
 	
 	//empieza el ciclo
 	
@@ -245,34 +412,71 @@ int main(int argc, char **argv)
 	//se itera hasta cumplir con el numero de generaciones ingresado
 	while(generacion<=algoritmo->opciones.get_generaciones())
 	{
-		//cout << "evaluar fo" << endl;
+		cout << "GENERACION " << generacion << endl;
+		cout << "==============" << endl;
+		cout << "evaluar fo" << endl;
 		//evaluacion de las funciones objetivo de las soluciones
 		algoritmo->evaluar_fo(poblacion);
 		
-		//cout << "afinidad" << endl;
+		cout << "afinidad" << endl;
 		//calculo de afinidad
-		algoritmo->afinidad(poblacion);
-		
-		//cout << "elimiar dominados" <<endl;
+		algoritmo->afinidad(poblacion->solutions);
+        
+        cout << "eliminar dominados" <<endl;
 		//se consideran solo las soluciones no dominadas del problema
-		algoritmo->eliminar_dominados(poblacion);
-		
-		//cout << "selccionar mejores anticuerpos" << endl;
+		algoritmo->eliminar_dominados(poblacion->solutions);
+               
+		cout << "selccionar mejores anticuerpos" << endl;
 		//seleccion de los mejores individuos
 		vector<Solution> clones = algoritmo->seleccionar_mejores_anticuerpos(poblacion);
 		
-		//cout << "clonar anticuerpos" << endl;
+		for(unsigned int i=0;i<clones.size();i++){
+			cout << "mejor anticuerpo " << i << " fo2 " << clones[i].fo2 << " fo1 " << clones[i].fo1 << endl;
+		}
+		
+		cout << "clonar anticuerpos" << endl;
 		//seleccion clonal
 		algoritmo->clonar_anticuerpos(clones);
 		
-		//cout << "mutacion" << endl;
+		for(unsigned int i=0;i<clones.size();i++){
+			cout << "clon " << i << " fo2 " << clones[i].fo2 << " fo1 " << clones[i].fo1 << " apt " << clones[i].quality << endl;
+		}
+		
+		cout << "mutacion" << endl;
 		//mutacion
-		algoritmo->mutacion(clones);
-
-		//cout << "eliminar exceso" << endl;
+		//algoritmo->mutacion(clones);
+		
+		for(unsigned int i=0;i<clones.size();i++){
+			//clones[i].mutation(routes_info,travel_times,size,algoritmo->bs);
+			//cout << "clon " << i << endl;
+			
+			if(clones[i].mutation(routes_info,travel_times,size,algoritmo->bs)){			
+				clones[i].setFO1(sr,demand);
+				clones[i].setF02(size,travel_times);
+				//cout << "change" << endl;
+			}
+			//else{
+				//cout << "not change" << endl;
+			//}
+		}
+		algoritmo->afinidad(clones);
+		
+		
+		
+		for(unsigned int i=0;i<clones.size();i++){
+			cout << "clon mutado " << i << " fo2 " << clones[i].fo2 << " fo1 " << clones[i].fo1 << " apt " << clones[i].quality << endl;
+		}
+		
+		
+		cout << "eliminar exceso" << endl;
 		//se elimina el exceso de anticuerpos
 		algoritmo->eliminar_exceso(clones);
-		/*
+		
+		for(unsigned int i=0;i<clones.size();i++){
+			cout << "clon sobreviviente " << i << " fo2 " << clones[i].fo2 << " fo1 " << clones[i].fo1 << " apt " << clones[i].quality << endl;
+		}
+		
+		
 		for(int i=0;i<poblacion->solutions.size();i++)
 		{
 				archivo2 << "i " << i << " calidad " << poblacion->solutions[i].quality << endl;
@@ -304,7 +508,8 @@ int main(int argc, char **argv)
 				if(!algoritmo->es_dominado_de_Pareto(poblacion->solutions[i],*poblacion))
 				{
 						archivo << poblacion->solutions[i].fo1 << " " << poblacion->solutions[i].fo2 << " " << poblacion->solutions[i].quality << endl;
-						if(i==0)
+						
+						if(false)
 						{
 								for(int j=0;j<poblacion->solutions[0].routes.size();j++)
 								{
@@ -323,25 +528,25 @@ int main(int argc, char **argv)
 		}
 		archivo.close();
 		
-		*/
-		//cout << "nueva generacion" << endl;
+		
+		cout << "nueva generacion" << endl;
 		//se incorporan nuevos anticuerpos a la nueva generacion
-		algoritmo->nueva_generacion(poblacion,clones);
-		
-		
-		
+		algoritmo->nueva_generacion(poblacion,clones);	
 
 		//se aumenta en uno la generacion
 		generacion++;
 		
 		//se repite el proceso hasta cumplir con la condicion de termino
 	}
+	
 	float hypervolume = hv(poblacion, p);
+	cout << hypervolume << endl;
 	
 	delete p;
 	delete sr;
-	
-	
+	*/
+	delete p;
+	delete sr;
 	
 	// De-Allocate memory to prevent memory leak
 	for (int i = 0; i < size; ++i)
@@ -352,12 +557,22 @@ int main(int argc, char **argv)
 	delete [] demand;
 	delete [] travel_times;
 	
-	cout << hypervolume << endl;
+
+	stringstream sstr5;
+	sstr5 << "results/time" << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+	string nombre5 = sstr5.str();
+	ofstream archivo5(nombre5.c_str());
 	
-	//time(&fin);
-	//segundos = difftime(fin,inicio);
+	segundos = difftime(fin_sol,inicio);
+	archivo5 << "Generar soluciones factibles iniciales: " << segundos << " segundos" << endl;
+	time(&fin);
+	segundos = difftime(fin,fin_sol);
 	
-	//archivo2 << segundos << " segundos transcurridos" << endl;
-	//archivo2.close();
+	archivo5 << "Iteraciones: " << segundos << " segundos" << endl;
+	
+	segundos = difftime(fin,inicio);
+	archivo5 << "Total: " << segundos << " segundos" << endl;
+	archivo5.close();
+	
 	return 0;
 }

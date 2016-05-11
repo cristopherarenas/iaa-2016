@@ -24,15 +24,15 @@ Los algoritmos inmunes artificiales (AIA) son estrategias de resolución de prob
 
 Existen acercamientos que se encargan de resolver el Urban Transit Routing Problem (UTRP) \cite{metaheuristic2010}. Entre ellos se encuentran algoritmos evolutivos que emulan ciertos comportamientos de la naturaleza y los organismos de manera de encontrar soluciones a este tipo de problemas. \\
 
-Dentro del grupo de los algorimos evolutivos, existen algunos que implementan ciertos comportamientos observados en los organismos de las personas. Los algoritmos inmunes artificiales representan una metáfora del sistema inmune donde se tiene un conjunto de anticuerpos que tienen la misión de encargarse de los virus y bacterias de enfermedades que atacan a uu organismo. Los anticuerpos funcionan a través de procesos adaptativos, pues una vez que encuentran la mejor forma de curar una enfermedad se capacitan para futuras infecciones \cite{introduction} \cite{sia}. \\
+Dentro del grupo de los algorimos evolutivos, existen algunos que implementan ciertos comportamientos observados en los organismos de las personas. Los algoritmos inmunes artificiales representan una metáfora del sistema inmune donde se tiene un conjunto de anticuerpos que tienen la misión de encargarse de los virus y bacterias de enfermedades que atacan a un organismo. Los anticuerpos funcionan a través de procesos adaptativos, pues una vez que encuentran la mejor forma de curar una enfermedad se capacitan para futuras infecciones \cite{introduction} \cite{sia}. \\
 
-En el presente documento se implementará un algoritmo evolutivo que se enfoca en simular el comportamiento del sistema inmune para resolver el UTRP. Posteriormete, se escogeran parámetros adecuados para el problema mediante un proceso de sintonnización. Finalmente, se mostrarán algunos experimentos con instancias y las conclusiones del trabajo realizado.
+En el presente documento se implementará un algoritmo evolutivo que se enfoca en simular el comportamiento del sistema inmune para resolver el UTRP. Posteriormete, se escogeran parámetros adecuados para el problema mediante un proceso de sintonización. Finalmente, se mostrarán algunos experimentos con instancias y las conclusiones del trabajo realizado.
 
 \section{Estado del Arte}
 El problema de enrutamiento de tr\'ansito urbano (UTRP por sus siglas en ingl\'es) involucra la ideaci\'on de rutas para el transporte p\'ublico.
 Se trata de un problema NP-Duro altamente complejo, y resolverlo involucra invariablemente un ciclo de
 generaci\'on y prueba de grupos de rutas candidatas. La mayor parte de literatura lo considera parte de un problema de escala mayor, el Urban Transit Network Design Problem (UTNDP por sus siglas),
-el cual es dividido tanto en el UTRP como UTSP (Urban Transit Scheduling Problem), y tal como se puede diferir de sus nombres, el URSP
+el cual es dividido tanto en el UTRP como UTSP (Urban Transit Scheduling Problem), y tal como se puede diferir de sus nombres, el UTSP
 tiene un enfoque de agendar los tiempos de llegada de los medios de transporte, mientras que el UTRP se enfoca en las rutas que estos
 utilizan, ambos para mejorar el sistema de transporte urbano en las ciudades.\\
 Los primeros acercamientos al UTRP lo tratan como un problema mono-objetivo. En~\cite{metaheuristic2010} se
@@ -81,7 +81,7 @@ el conjunto de soluciones. Este algoritmo entrega buen conjunto de rutas desde e
 para operadores en comparaci\'on a un algoritmo mono-objetivo similar con el que se compar\'o. Mumford en~\cite{NewHaEOps} utiliza exactamente
 el mismo modelado, pero agrega un operador de cruzamiento al algoritmo evolutivo. El operador de cruzamiento selecciona intercaladamente
 rutas de ambos padres de manera tal de tener una cantidad equitativa de rutas de cada padre en el hijo. En~\cite{GAUTRP}
-se considera el mismo modelo y funci\'on objetivo que los anteriores, pero es 
+se considera el mismo modelo y funci\'on objetivo que los anteriores, pero 
 se realizan diferentes operaciones sobre un set de rutas para tratar de mejorar su calidad. Entre las modificaciones
 se encuentran: una selecci\'on mediante ruleta de las rutas a modificar, una operaci\'on crossover entre dos rutas padres,
 y la revisi\'on de factibilidad de los hijos, para finalmnente realizar una operaci\'on de mutaci\'on sobre dos rutas pertenecientes
@@ -99,7 +99,7 @@ El autor aborda el problema mediante MIP (Programaci\'on Entera Mixta).
 
 \section{Descripción del problema}
 
-El problema considera inicialmente que se cuenta con algunas variables, tales como un grafo $G$, el cual representa una red de paraderos, lo que se puede entender como la estructura que se tiene en una ciudad por ejemlo. Cada vértice corresponde a un paradero, mientras que los arcos corresponden a las conexiones o caminos existentes entre dichos paraderos. Se considera que el grafo es no dirigido, lo que quiere decir que un arco entre dos vértices indica que hay una conexión en ambos sentidos entre los arcos que conecta. Las posiciones de cada vértice también son conocidas. Además, este grafo posee matrices simétricas, que poseen valores de tiempo de viaje entre paradas, demandas asociadas para cada vértice.
+El problema considera inicialmente que se cuenta con algunas variables, tales como un grafo $G$; el cual representa una red de paraderos, lo que se puede entender, por ejemplo, como la estructura que se tiene en una ciudad. Cada vértice corresponde a un paradero, mientras que los arcos corresponden a las conexiones o caminos existentes entre dichos paraderos. Se considera que el grafo es no dirigido, lo que quiere decir que un arco entre dos vértices indica que hay una conexión en ambos sentidos entre los arcos que conecta. Las posiciones de cada vértice también son conocidas. Además, este grafo posee matrices simétricas, que poseen valores de tiempo de viaje entre paradas, demandas asociadas para cada vértice.
 
 Como restricciones del problema se puede considerar lo siguiente \cite{NewHaEOps}:
 \begin{itemize}

@@ -23,8 +23,10 @@ public:
     Problem(void);
     ~Problem(void);
     
-    int get_demand(void); // calculates the total demand adding all demands
-
+    int** get_demand(void); // calculates the total demand adding all demands
+	int get_size(void);
+	std::vector<BusStop> get_bus_stops(void);
+	int** get_travel_times(void);
     void set_size(int size);
     void set_name(std::string name);
     std::string get_name(void);
@@ -35,6 +37,7 @@ public:
     void show_bus_stops(void);
     void show_demand(void);
     void show_travel_times(void);
+
 
 };
 

@@ -3,7 +3,7 @@
 
 Problem::Problem(void) {};
 Problem::~Problem(void) {};
-int Problem::get_demand(void) { return 0;}; // calculates the total demand adding all demands
+int** Problem::get_demand(void) { return this->demand;}; // calculates the total demand adding all demands
 
 void Problem::set_size(int size)
 {
@@ -51,4 +51,16 @@ void Problem::show_travel_times(void)
 
 std::string Problem::get_name(void){
 	return this->name;
+}
+
+std::vector<BusStop> Problem::get_bus_stops(void){
+	return this->bus_stops;
+}
+
+int Problem::get_size(void){
+	return this->size;
+}
+
+int** Problem::get_travel_times(void){
+	return this->travel_times;
 }

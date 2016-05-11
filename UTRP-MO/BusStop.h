@@ -11,7 +11,7 @@ class BusStop
 public:
     int idi;
     float x,y;
-
+	
     BusStop(int idi, float x, float y);
     bool operator==(const BusStop& compare);
 

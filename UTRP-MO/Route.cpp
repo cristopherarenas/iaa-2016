@@ -3,6 +3,44 @@
 using namespace std;
 
 Route::Route(void) {};
+
+Route::Route(Problem &p, RouteInfo &ri, vector<bool> &check_bus){
+	this->tipo_ruta = ri.tipo_ruta;
+	int longitud = ri.min_length+rand()%(ri.max_length-ri.min_length);
+	this->bus_stops.reserve(longitud);
+	int random_bs = rand()%(p.get_bus_stops().size());
+	
+	
+	vector<int> neighbors;
+	int counter_bus = 0; 
+	
+	
+	for(int i=0;i<longitud;i++){
+		this->bus_stops.push_back(p.get_bus_stops()[random_bs]);
+		check_bus[random_bs] = true;
+		counter_bus++;
+		for(int j=0;j<p.get_size();j++){
+			if (!check_bus[j] && p.get_travel_times()[random_bs][j]>0){
+				neighbors.push_back(j);
+			}
+			
+		}
+		if(neighbors.size()>0){
+			random_bs = neighbors[rand()%(neighbors.size())];
+			neighbors.clear();
+		}
+		else{
+			for(int j=0;j<p.get_size();j++){
+				if (p.get_travel_times()[random_bs][j]>0){
+					neighbors.push_back(j);
+				}
+			}
+			random_bs = neighbors[rand()%(neighbors.size())];
+			neighbors.clear();
+		}
+	}
+}
+
 void Route::define_bus_type(int tipo) 
 {
 	this->tipo_ruta = tipo;

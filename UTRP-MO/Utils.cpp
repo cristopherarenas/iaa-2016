@@ -34,7 +34,7 @@ void obtainReferencePoints(Problem *pbm, double *ref){
 }
 
 double hv(SolutionSet *pop, Problem *pbm){
-        double *data, *ref;
+    double *data, *ref;
 	double value;
 	int i, k, j;
 	

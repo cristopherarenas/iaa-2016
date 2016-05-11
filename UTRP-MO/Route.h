@@ -4,6 +4,8 @@
 #include <iostream>
 #include "common.h"
 #include "BusStop.h"
+#include "Problem.h"
+#include "RouteInfo.h"
 
 using namespace std;
 
@@ -16,6 +18,7 @@ public:
     // Bus bus_type; //o tipo de bus en esa ruta
 	
 	Route(void);
+	Route(Problem &p, RouteInfo &ri,std::vector<bool> &check_bus);
 	void set_bus_stops(std::vector<BusStop> &bus_stops);
     void add_bus_stops(std::vector<BusStop> &bus_stops);
     void add_distinct_bus_stops(std::vector<BusStop> &bus_stops);

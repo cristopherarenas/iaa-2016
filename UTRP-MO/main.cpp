@@ -225,23 +225,7 @@ int main(int argc, char **argv)
 	//inicializacion del algoritmo
 	Inmune *algoritmo = new Inmune(*p,*o,routes_info,*sr);
 	time(&fin_sol);
-	/*
-	int j=0;
-	while (j<10){
-		Route r1 = algoritmo->ss.solutions[0].routes[0];
-		Route r2 = algoritmo->ss.solutions[0].routes[1];
-		//cout << "r1-> " << r1.check_cycles_and_backtracks() << endl;
-		//cout << "r2-> " << r2.check_cycles_and_backtracks() << endl;
-		cout << " --- " << endl;
-		r2.print_route();
-		bool b = algoritmo->ss.solutions[0].mutation_add_bs(r2,travel_times,size,bus_stops);
-		cout << b << endl;
-		r2.print_route();
-		j++;
-	}
-	*/
-	
-	//cout << algoritmo->ss.solutions.size() << " soluciones aleatorias " << endl;
+
 	int generacion = 1;
 	
 	vector<float> hiper;
@@ -298,58 +282,66 @@ int main(int argc, char **argv)
 		//cout << endl;
 		
 		//se guardan los optimos de pareto para la generacion
-		stringstream sstr;
-		sstr << "results/pareto_" << generacion << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
-		string nombre = sstr.str();
 		
-		ofstream archivo(nombre.c_str());
+		if(generacion == algoritmo->generaciones){
 		
-		for(int i=0;i<algoritmo->memory.solutions.size();i++)
-		{
-			archivo << algoritmo->memory.solutions[i].fo1 << " " << algoritmo->memory.solutions[i].fo2 << " " << algoritmo->memory.solutions[i].quality << endl;
-			if(algoritmo->memory.solutions[i].fo2<63){
-				for (int i = 0; i < algoritmo->memory.solutions[i].routes.size() ; i++){
-					for( int j = 0; j < algoritmo->memory.solutions[i].routes[i].bus_stops.size(); j++){
-						archivo << algoritmo->memory.solutions[i].routes[i].bus_stops[j].idi+1;
-						if(j < algoritmo->memory.solutions[i].routes[i].bus_stops.size()-1){
+			stringstream sstr;
+			sstr << "results/" << opt_seed << "_pareto_" << generacion << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+			string nombre = sstr.str();
+			
+			ofstream archivo(nombre.c_str());
+			
+			for(int k=0;k<algoritmo->memory.solutions.size();k++)
+			{
+				archivo << algoritmo->memory.solutions[k].fo1 << " " << algoritmo->memory.solutions[k].fo2 << " " << algoritmo->memory.solutions[k].quality << endl;
+				
+				for (int i = 0; i < algoritmo->memory.solutions[k].routes.size() ; i++){
+					
+					for( int j = 0; j < algoritmo->memory.solutions[k].routes[i].bus_stops.size(); j++){
+						cout << "ksize=" << algoritmo->memory.solutions.size() << " isize=" << algoritmo->memory.solutions[k].routes.size() << " jsize=" <<  algoritmo->memory.solutions[k].routes[i].bus_stops.size() << ": i " << i << ", j " << j << ", k" << k << endl;
+						archivo << algoritmo->memory.solutions[k].routes[i].bus_stops[j].idi+1;
+						
+						if(j < algoritmo->memory.solutions[k].routes[i].bus_stops.size()-1){
 							archivo << ", ";
 						}
 					}
 					archivo << endl;
 				}  
+								
 			}
-				
-		}
-		archivo.close();
-		
-		
-		//se guardan los optimos de pareto para la generacion
-		stringstream sstr2;
-		sstr2 << "results/solucion_" << generacion << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
-		nombre = sstr2.str();
-		
-		ofstream archivo2(nombre.c_str());
-		
-		for(int i=0;i<algoritmo->ss.solutions.size();i++)
-		{
-			archivo2 << algoritmo->ss.solutions[i].fo1 << " " << algoritmo->ss.solutions[i].fo2 << " " << algoritmo->ss.solutions[i].quality << endl;
-				
-		}
-		archivo2.close();
+			archivo.close();
+			
+			/*	
+			//se guardan los optimos de pareto para la generacion
+			stringstream sstr2;
+			sstr2 << "results/" << opt_seed << "_solucion_" << generacion << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+			nombre = sstr2.str();
+			
+			ofstream archivo2(nombre.c_str());
+			
+			for(int i=0;i<algoritmo->ss.solutions.size();i++)
+			{
+				archivo2 << algoritmo->ss.solutions[i].fo1 << " " << algoritmo->ss.solutions[i].fo2 << " " << algoritmo->ss.solutions[i].quality << endl;
+					
+			}
+			archivo2.close();
 
-		//se guardan los optimos de pareto para la generacion
-		stringstream sstr3;
-		sstr3 << "results/clones_" << generacion << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
-		nombre = sstr3.str();
+			//se guardan los optimos de pareto para la generacion
+			stringstream sstr3;
+			sstr3 << "results/" << opt_seed << "_clones_" << generacion << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+			nombre = sstr3.str();
+			
+			ofstream archivo3(nombre.c_str());
+			
+			for(int i=0;i<algoritmo->clon.solutions.size();i++)
+			{
+				archivo3 << algoritmo->clon.solutions[i].fo1 << " " << algoritmo->clon.solutions[i].fo2 << " " << algoritmo->clon.solutions[i].quality << endl;
+					
+			}
+			archivo3.close();
+			*/
+		}		
 		
-		ofstream archivo3(nombre.c_str());
-		
-		for(int i=0;i<algoritmo->clon.solutions.size();i++)
-		{
-			archivo3 << algoritmo->clon.solutions[i].fo1 << " " << algoritmo->clon.solutions[i].fo2 << " " << algoritmo->clon.solutions[i].quality << endl;
-				
-		}
-		archivo3.close();		
 		SolutionSet* sset = new SolutionSet(size);
 		sset->solutions = algoritmo->memory.solutions;
 		
@@ -367,7 +359,7 @@ int main(int argc, char **argv)
 	
 	//guardar hipervolumen
 	stringstream sstr4;
-	sstr4 << "results/hypervolumen" << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+	sstr4 << "results/" << opt_seed << "_hypervolumen" << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
 	string nombre = sstr4.str();
 	
 	ofstream archivo4(nombre.c_str());
@@ -378,6 +370,17 @@ int main(int argc, char **argv)
 			
 	}
 	archivo4.close();
+	
+	//guardar hipervolumen
+	stringstream sstr6;
+	sstr6 << "results/hypervolumen" << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+	nombre = sstr6.str();
+	
+	ofstream archivo6(nombre.c_str(), ios::out | ios::app);
+	
+	archivo6 << opt_seed << " " << hiper[hiper.size()-1] << endl;
+	
+	archivo6.close();
 	
 	
 	
@@ -559,7 +562,7 @@ int main(int argc, char **argv)
 	
 
 	stringstream sstr5;
-	sstr5 << "results/time" << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
+	sstr5 << "results/" << opt_seed << "_time" << "_alpha_" << p_fo << "_beta_" << (100-p_fo) << ".txt";
 	string nombre5 = sstr5.str();
 	ofstream archivo5(nombre5.c_str());
 	

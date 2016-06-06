@@ -1,0 +1,13 @@
+\section{Parámetros del algoritmo}
+
+El algoritmo considera los siguientes parámetros:
+
+\begin{itemize}
+\item \texttt{GENERACIONES}: criterio de término para el algoritmo inmune. Es la cantidad de iteraciones que deben ocurrir para que finalice el algoritmo. Posee valores de 0 a infinito.
+\item \texttt{ALPHA} y \texttt{BETA}: representan variables de peso para ponderar las dos funciones objetivo y determinar una aptitud para una solución candidata. Posee valores entre cero y uno. La suma de ambas debe ser uno.
+\item \texttt{POP\_SIZE}: representa el tamaño de la población $P$ en cada generación. Una generación está compuesta por un conjunto de soluciones candidatas factibles. Posee valores de 1 a infinito.
+\item \texttt{CLON\_SIZE}: es el tamaño de la población de clones $C$ que se generarán en cada generación a partir de las mejores soluciones candidatas. Posee valores de 1 a infinito.
+\item \texttt{PORCENTAJE\_MEJORES}: Porcentaje de mejores soluciones de la población que serán seleccionadas para mutarse en cada generación. Posee valores entre 0 y 1.
+\item \texttt{PORCENTAJE\_CLONES}: porcentaje de mejores clones mutados que serán almacenados en el conjunto de memoria $M$. Posee valores entre 0 y 1.
+\item \texttt{PORCENTAJE\_REEMPLAZO}: porcentaje de peores soluciones de la población que serán reemplazadas por soluciones aleatorias. Posee valores entre 0 y 1.
+\end{itemize}

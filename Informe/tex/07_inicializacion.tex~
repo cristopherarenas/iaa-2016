@@ -1,0 +1,49 @@
+\section{Inicialización}
+
+El conjunto de soluciones iniciales es generado aleatoriamente. Una solución está compuesta por $r$ rutas, donde cada está acotada por un mínimo y máximo de paraderos. El algoritmo \ref{alg:inicializacion} muestra los pasos de la generación de la población inicial.
+
+\begin{algorithm}[!htb]
+\caption{Inicialización de soluciones factibles para el UTRP}
+\label{alg:inicializacion}
+\begin{algorithmic}[1]
+\REQUIRE tamaño de población \texttt{POP\_SIZE}, cantidad $r$ de rutas por solución, mímimo $min$ de parederos para una ruta, máximo $max$ de paraderos para una ruta
+\ENSURE Conjunto $P$ con población de soluciones factibles
+\STATE $P \leftarrow$ conjunto vacío
+\STATE $soluciones \leftarrow 0$ 
+\WHILE{$soluciones <$ \texttt{POP\_SIZE}}
+	\STATE $rutas \leftarrow 0$
+	\STATE $s \leftarrow$ nueva solución
+	\WHILE{$rutas < r$}
+		\STATE $nr \leftarrow$ nueva ruta
+		\STATE $q \leftarrow$ número aleatorio entre $min$ y $max$
+		\STATE $i \leftarrow$ paradero seleccioado aleatoriamente
+		\STATE agregar paradero $i$ a ruta $nr$
+		\STATE $paraderos \leftarrow 1$
+		\WHILE{$paraderos < q$}
+			\STATE $N \leftarrow$ vecinos de paradero $i$
+			\STATE $i \leftarrow$ paradero seleccionado aleatoriamente desde $N$
+			\STATE agregar paradero $i$ a ruta $nr$			
+			\STATE $q \leftarrow q+1$
+		\ENDWHILE
+		\STATE agregar ruta $nr$ a solución $s$
+		\STATE $rutas \leftarrow rutas + 1$
+	\ENDWHILE
+	\STATE agregar solución $s$ a población $P$
+	\STATE $soluciones \leftarrow soluciones+1$
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+
+Como fue mencionado en la representación del problema, una solución se compone por un conjunto de rutas. A su vez cada ruta se compone de un conjunto de paraderos. Para la generación de soluciones se debe iniciar con la asignación de paraderos, los cuales al agruparse constituyen una ruta. Finalmente, un conjunto de rutas genera una solución. 
+
+Una ruta es generada escogiendo aleatoriamente la cantidad $q$ de paraderos que tendrá (acotada por el mínimo y máximo de paraderos). Después se selecciona aleatoriamente un paradero. Luego, se buscan los vecinos del paradero y se escoge aleatoriamente uno de ellos. Este proceso se repite hasta completar la cantidad $q$. Progresivamente, nuevas rutas son generadas de la misma forma, hasta completar $r$ rutas. Un conjunto de soluciones se generará repitiendo los pasos anteriores de rutas y paraderos hasta llenar la población $P$ con \texttt{POP\_SIZE} individuos.
+
+Las soluciones que se generan en este algoritmo siempre son factibles, ya que satisfacen las cuatro restricciones del problema:
+\begin{itemize}
+\item Cada ruta del conjunto de rutas está libre de ciclos y retrocesos: el conjunto de vecinos a considerar no contiene paraderos que ya estén en la ruta.
+\item El conjunto de rutas está conectado: es satisfecho considerando el conjunto de vecinos seleccionando solo aquellos paraderos con conexión directa, dado por el grafo de la red de paraderos. Si existe adyacencia entre dos vértices (paraderos) entonces se considera como un vecino.
+\item Hay exactamente $r$ rutas en el conjunto de rutas: al generar solciones iniciales, se considera generar esta cantidad de rutas.
+\item El número de nodos en cada ruta debe ser mayor a uno y no debe exceder el valor máximo definido: el mínimo y máximo de paraderos está considerado al momento de generar una ruta. La cantidad de paraderos que tendrá una ruta se escoge aleatoriamente en un rango de valores posibles que es mayor o igual al mínimo de rutas y menor o igual al máximo de rutas.
+\end{itemize} 
+
+

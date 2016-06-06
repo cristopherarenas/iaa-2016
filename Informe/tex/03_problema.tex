@@ -1,0 +1,31 @@
+\section{Descripción del problema}
+
+El problema considera inicialmente que se cuenta con algunas variables, tales como un grafo $G$; el cual representa una red de paraderos, lo que se puede entender, por ejemplo, como la estructura que se tiene en una ciudad. Cada vértice corresponde a un paradero, mientras que los arcos corresponden a las conexiones o caminos existentes entre dichos paraderos. Se considera que el grafo es no dirigido, lo que quiere decir que un arco entre dos vértices indica que hay una conexión en ambos sentidos entre los arcos que conecta. Las posiciones de cada vértice también son conocidas. Además, este grafo posee matrices simétricas, que poseen valores de tiempo de viaje entre paradas, demandas asociadas para cada vértice.
+
+Como restricciones del problema se puede considerar lo siguiente \cite{NewHaEOps}:
+\begin{itemize}
+\item Cada ruta del conjunto de rutas está libre de ciclos y retrocesos.
+\item El conjunto de rutas está conectado.
+\item Hay exactamente $r$ rutas en el conjunto de rutas.
+\item El número de nodos en cada ruta debe ser mayor a uno y no debe exceder el valor máximo definido.
+\end{itemize} 
+
+Con esto se asume que se sabe la cantidad de rutas tendrá el conjunto de rutas resultante, además de que tendrán un rango paraderos permitidos, los cuales están acotados por un valor mínimo y un valor máximo.
+
+El UTRP consiste en satisfacer tanto a operadores de buses, como a los pasajeros que los utilizan. Es por esto que se tienen las siguientes funciones objetivo, dadas por las Ecuaciones \eqref{eq:fo1} y \eqref{eq:fo2} \cite{NewHaEOps}.
+
+La Ecuación \eqref{eq:fo1} considera una minimización de los costos para el operador de buses. $d_{ij}$ representa la demanda  entre las paradas $i$ y $j$ y $\alpha_{ij}$ corresponde al camino más corto entre las dos paradas.
+
+\begin{equation}
+\label{eq:fo1}
+min\mbox{ }\frac{\sum^n_{i,j=1}d_{ij}\alpha_{ij}(R)}{\sum_{i,j=1^n}d_{ij}}
+\end{equation} 
+
+Por otra parte, en la Ecuación \eqref{eq:fo2} se considera una minimización de los costos para los pasajeros. $t_{ij}$ corresponde al tiempo de viaje entre las paradas $i$ y $j$. 
+
+\begin{equation}
+\label{eq:fo2}
+min\mbox{ }\sum^r_{a=1}\sum_{(i,j) \in r} t_{i,j} (a)
+\end{equation} 
+
+Al considerar el UTRP como problema multiobjetivo, se plantea una minimización de costos tanto para operadores de buses, con la demanda de pasajeros; como para pasajeros al considerar los tiempos de viaje.

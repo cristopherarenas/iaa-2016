@@ -99,7 +99,7 @@ void Inmune::actualizar_dominancia(vector<Solution> &poblacion)
 void Inmune::seleccionar_mejores_anticuerpos()
 {	
 	//se elige un porcentaje de los mejores individuos
-	int seleccion = this->ss.solutions.size()*this->p_afinidad_clones;
+	int seleccion = (this->ss.solutions.size()*this->p_afinidad_clones + 0.5f);
 	this->clon.solutions.clear();
 	this->clon.solutions.reserve(seleccion);
 	vector<float> afinidades = ordenar_afinidad(this->ss.solutions);
@@ -128,6 +128,11 @@ vector<float> Inmune::ordenar_afinidad(vector<Solution> &s)
 	
 	
 	return afinidades;
+}
+
+int Inmune::cantidad_mutaciones(float valor, float menor_x, float mayor_x, int menor_y, int mayor_y){
+	float result = menor_y+((mayor_y-menor_y)/(mayor_x-menor_x))*(valor-menor_x);
+	return (int)(result+0.5f);
 }
 
 int Inmune::get_index_solucion(float valor,vector<Solution> clones)
@@ -161,19 +166,24 @@ void Inmune::mutar_clones(Problem &p, vector<RouteInfo> &routes_info, ShortestRo
 	int** travel_times = p.get_travel_times();
 	vector<BusStop> bus_stops = p.get_bus_stops();
 	int size = p.get_size();
+	vector<float> afinidades = ordenar_afinidad(this->clon.solutions);
 	
 	for(int i=0;i<this->clon.solutions.size();i++){
 		//cout << "solution " << i << endl;
-		if(this->clon.solutions[i].mutation(routes_info,travel_times,size,bus_stops)){
-			//cout << "fo1 " << this->clon.solutions[i].fo1 << " fo2 " << this->clon.solutions[i].fo2 << " apt " << this->clon.solutions[i].quality << endl;
-			this->clon.solutions[i].setFO1(*sr,demand);
-			this->clon.solutions[i].setFO2(size,travel_times);
-			this->clon.solutions[i].setQuality(this->alpha,this->beta);
-			//cout << "fo1 " << this->clon.solutions[i].fo1 << " fo2 " << this->clon.solutions[i].fo2 << " apt " << this->clon.solutions[i].quality << endl;
+		
+		int cant = cantidad_mutaciones(this->clon.solutions[i].quality,afinidades[0],afinidades[afinidades.size()-1],1,this->clon.solutions[i].routes.size());
+		for(int j=0;j<cant;j++){
+			if(this->clon.solutions[i].mutation(routes_info,travel_times,size,bus_stops)){
+				//cout << "fo1 " << this->clon.solutions[i].fo1 << " fo2 " << this->clon.solutions[i].fo2 << " apt " << this->clon.solutions[i].quality << endl;
+				this->clon.solutions[i].setFO1(*sr,demand);
+				this->clon.solutions[i].setFO2(size,travel_times);
+				this->clon.solutions[i].setQuality(this->alpha,this->beta);
+				//cout << "fo1 " << this->clon.solutions[i].fo1 << " fo2 " << this->clon.solutions[i].fo2 << " apt " << this->clon.solutions[i].quality << endl;
+			}
+			else{
+				cout << i << " false" << endl;
+			}		
 		}
-		else{
-			cout << i << " false" << endl;
-		}		
 	}
 }
 
@@ -203,10 +213,19 @@ void Inmune::clones_a_poblacion(){
 	}
 }
 
+bool Inmune::find_solution(Solution &s,vector<Solution> &sols){
+	for(int i=0;i<sols.size();i++){
+		if(s.fo1 == sols[i].fo1 && s.fo2==sols[i].fo2 && s.quality == sols[i].quality){
+			return true;
+		}
+	}
+	return false;
+}
+
 void Inmune::guardar_mejores_clones(){
 	//cout << "Guardar mejores clones" << endl;
 	
-	int seleccion = this->clon_size*this->p_clones;
+	int seleccion = (this->clon_size*this->p_clones + 0.5f);
 	//obtener soluciones dominadas
 	vector<Solution> mejores = this->clon.get_solution_ranking(1);
 	
@@ -231,8 +250,12 @@ void Inmune::guardar_mejores_clones(){
 	
 	while(counter < seleccion && i<afinidades.size()){
 		int index = get_index_solucion(afinidades[i],mejores);
+		//buscar si solucion ya esta en conjunto de memoria
+		
 		if(index!=-1){
-			this->memory.solutions.push_back(mejores[index]);
+			if(!find_solution(mejores[index],this->memory.solutions)){
+				this->memory.solutions.push_back(mejores[index]);
+			}
 			counter++;
 		}
 		i++;
@@ -252,7 +275,7 @@ void Inmune::reemplazar_peores_soluciones(Problem &p, vector<RouteInfo> &ri, Sho
 	
 	//obtener las mejores afinidades
 	vector<float> afinidades = ordenar_afinidad(this->ss.solutions);
-	int seleccion = this->pop_size*(1-this->p_reemplazo);
+	int seleccion = (this->pop_size*(1-this->p_reemplazo) + 0.5f);
 	int counter = 0;
 	int i = 0;
 	while(counter < seleccion && i < afinidades.size()){

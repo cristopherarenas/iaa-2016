@@ -24,10 +24,13 @@ SolutionSet::SolutionSet(Problem &p, vector<RouteInfo> &ri,int &pop_size)
 	//generar conjunto de rutas factible	
 	for(int i=0;i<pop_size;i++){
 		do{
+			//cout << "intentando generar solucion";
 			Solution *s = new Solution(p,ri);
 			sol_conexa = s->check_connectivity(p.get_size()) && s->check_feasability();
+			//cout << s->check_connectivity(p.get_size()) << " " << s->check_feasability() << endl;
 			if(sol_conexa){
 				this->solutions.push_back(*s);
+				//cout << "es conexa" << endl;
 			}
 			delete s;
 		}while(!sol_conexa);	

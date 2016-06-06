@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+
+\bibitem{alarcon2010}
+Victor~Zuñiga Alarcón.
+\newblock {\em Uso de herramientas de microsimulación para la definición de
+  estrategias de control de tránsito para la ciudad de santiago}.
+\newblock PhD thesis, Universidad de Chile, 2010.
+
+\bibitem{cortes2009}
+Cristián Cortés, Pablo Rey, Priscila Molina, Mario Recabal, and Sebastián
+  Souyris.
+\newblock Uso de modelos de optimización para el apoyo a la operación de un
+  alimentado de transantiago.
+\newblock 2009.
+
+\bibitem{events}
+J.~Tang D.~Zhang, H.~Wang.
+\newblock A hybrid genetic algorithm for the special transit route designing
+  problem in mega-events.
+\newblock In {\em Control and Decision Conference, 25th Chinese}, pages
+  2426--2429, 2013.
+
+\bibitem{introduction}
+Leandro~Nunes de~Castro~y Jon~Timmis.
+\newblock {\em An Introduction to Artificial Inmune Systems: A New
+  Computational Intelligence Paradigm}.
+\newblock Springer-Verlag, 2002.
+
+\bibitem{datosGob}
+Gobierno de~Chile.
+\newblock Portal de datos públicos.
+\newblock http://datos.gob.cl/datasets/ver/1587, Noviembre 2013.
+
+\bibitem{jiang2010improved}
+Hong Jiang, Qingsong Yu, and Yong Huang.
+\newblock An improved ant colony algorithm for urban transit network
+  optimization.
+\newblock In {\em Natural Computation (ICNC), 2010 Sixth International
+  Conference on}, volume~5, pages 2739--2743. IEEE, 2010.
+
+\bibitem{vrprb}
+Talbi Josefowiez, Semet.
+\newblock An evolutionary algorithm for the vehicle routing problem with route
+  balancing.
+\newblock {\em European Journal of Operational Research}, 195:761--769, 2009.
+
+\bibitem{metaheuristic2010}
+Christine L.~Mumford Lang~Fan.
+\newblock A metaheuristic approach to the urban transit routing problem.
+\newblock {\em Journal of Heuristics}, 1(16):353--372, 2010.
+
+\bibitem{GAUTRP}
+Joanne Suk Chun Chew Lai~Soon Lee.
+\newblock A genetic algorithm to the urban transit routing problem.
+\newblock {\em International Journal of Modern Physics}, 9, 2012.
+
+\bibitem{NewHaEOps}
+Christine~L. Mumford.
+\newblock New heuristic and evolutionary operators for the multi-objective
+  urban transit routing problem.
+\newblock In {\em 2013 IEEE Congress on Evolutionary Computation}, pages
+  939--946, 2013.
+
+\bibitem{read2012introduction}
+Mark Read, Paul~S Andrews, and Jon Timmis.
+\newblock An introduction to artificial immune systems.
+\newblock In {\em Handbook of Natural Computing}, pages 1575--1597. Springer,
+  2012.
+
+\bibitem{ttvrp}
+K.C. Tan.
+\newblock A hybrid multiobjective evolutionary algorithm for solving truck and
+  trailer vehicle routing problems.
+\newblock {\em European Journal or Operational Research}, 172:855--885, 2006.
+
+\bibitem{sia}
+Nareli Cruz~Cortés y~Carlos A. Coello~Coello.
+\newblock Un sistema inmune artificial para solucionar problemas de
+  optimización multiobjetivo.
+\newblock Congreso Mexicano de Computación Evolutiva, 2003.
+
+\bibitem{zhang2010multi}
+Jie Zhang, Huapu Lu, and Lang Fan.
+\newblock The multi-objective optimization algorithm to a simple model of urban
+  transit routing problem.
+\newblock In {\em Natural Computation (ICNC), 2010 Sixth International
+  Conference on}, volume~6, pages 2812--2815. IEEE, 2010.
+
+\bibitem{memetic2011}
+Xie~Binglei Zhao~Hang.
+\newblock A memetic algorithm for optimization of urban transit route network.
+\newblock In {\em Seventth International Conference on Natural Computation},
+  pages 1899--1903, 2011.
+
+\end{thebibliography}

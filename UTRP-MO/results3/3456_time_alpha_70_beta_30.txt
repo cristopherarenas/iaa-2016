@@ -1,0 +1,3 @@
+Generar soluciones factibles iniciales: 2 segundos
+Iteraciones: 1601 segundos
+Total: 1603 segundos

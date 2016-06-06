@@ -24,8 +24,10 @@ Solution::Solution(Problem &p, vector<RouteInfo> &routes_info)
 		for(int j=0;j<routes_info[i].quantity;j++){
 			//crear rutas entre una longitud minima y maxima
 			Route r = Route(p,routes_info[i],check_bus);
+			//cout << j << " ";
 			this->routes.push_back(r);
 		}
+		
 	}
 	
 }
@@ -340,55 +342,55 @@ bool Solution::mutation(vector<RouteInfo> &info, int** &travel,int &size,vector<
 }*/
 
 bool Solution::mutation(vector<RouteInfo> &info, int** &travel,int &size,vector<BusStop> &bs){
-	//int route_selected = rand()%this->routes.size();
-	for(int route_selected=0;route_selected<this->routes.size();route_selected++){
-		bool change = false;
-		Route r = this->routes[route_selected];
-		int intentos = 0;
+	int route_selected = rand()%this->routes.size();
+	
+	bool change = false;
+	Route r = this->routes[route_selected];
+	int intentos = 0;
+	
+	do{
+		if(this->routes[route_selected].bus_stops.size()==info[this->routes[route_selected].tipo_ruta].max_length){
+			int op_mutacion = (100*rand())%2;
+			if(op_mutacion == 0){
+				change = mutation_remove_bs(this->routes[route_selected],size);
+			}
+			else if(op_mutacion == 1){
+				change = mutation_mix_route(this->routes[route_selected],travel);
+			}
+			
+			
+		}
+		else if(this->routes[route_selected].bus_stops.size()==info[this->routes[route_selected].tipo_ruta].min_length){
+			int op_mutacion = (100*rand())%2;
+			if(op_mutacion == 0){
+				change = mutation_add_bs(this->routes[route_selected],travel,size,bs);
+			}
+			else if(op_mutacion == 1){
+				change = mutation_mix_route(this->routes[route_selected],travel);
+			}
+		}
+		else{
+			int op_mutacion = (100*rand())%3;
+			if(op_mutacion == 0){
+				change = mutation_remove_bs(this->routes[route_selected],size);
+			}
+			else if(op_mutacion == 1){
+				change = mutation_add_bs(this->routes[route_selected],travel,size,bs);
+			}
+			else if (op_mutacion == 2){
+				change = mutation_mix_route(this->routes[route_selected],travel);
+			}			
+		}
 		
-		do{
-			if(this->routes[route_selected].bus_stops.size()==info[this->routes[route_selected].tipo_ruta].max_length){
-				int op_mutacion = (100*rand())%2;
-				if(op_mutacion == 0){
-					change = mutation_remove_bs(this->routes[route_selected],size);
-				}
-				else if(op_mutacion == 1){
-					change = mutation_mix_route(this->routes[route_selected],travel);
-				}
-				
-				
-			}
-			else if(this->routes[route_selected].bus_stops.size()==info[this->routes[route_selected].tipo_ruta].min_length){
-				int op_mutacion = (100*rand())%2;
-				if(op_mutacion == 0){
-					change = mutation_add_bs(this->routes[route_selected],travel,size,bs);
-				}
-				else if(op_mutacion == 1){
-					change = mutation_mix_route(this->routes[route_selected],travel);
-				}
-			}
-			else{
-				int op_mutacion = (100*rand())%3;
-				if(op_mutacion == 0){
-					change = mutation_remove_bs(this->routes[route_selected],size);
-				}
-				else if(op_mutacion == 1){
-					change = mutation_add_bs(this->routes[route_selected],travel,size,bs);
-				}
-				else if (op_mutacion == 2){
-					change = mutation_mix_route(this->routes[route_selected],travel);
-				}			
-			}
-			
-			if(!change){
-				this->routes[route_selected] = r;
-				route_selected = rand()%this->routes.size();
-				r = this->routes[route_selected];
-			}
-			intentos++;
-			
-		}while(intentos <20 && !change);
-	}
+		if(!change){
+			this->routes[route_selected] = r;
+			route_selected = rand()%this->routes.size();
+			r = this->routes[route_selected];
+		}
+		intentos++;
+		
+	}while(intentos <20 && !change);
+	
 	return true;
 	//cout << "intentos " << intentos << " change " << change << endl;
 }

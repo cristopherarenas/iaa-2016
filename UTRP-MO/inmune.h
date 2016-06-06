@@ -30,7 +30,9 @@ class Inmune{
 		void seleccionar_mejores_anticuerpos();
 		vector<float> ordenar_afinidad(vector<Solution> &s);
 		int get_index_solucion(float valor,vector<Solution> clones);
+		bool find_solution(Solution &s,vector<Solution> &sols);
 		
+		int cantidad_mutaciones(float valor, float menor_x, float mayor_x, int menor_y, int mayor_y);
 		void clonar_anticuerpos();
 		void mutar_clones(Problem &p, vector<RouteInfo> &routes_info, ShortestRoute* &sr);
 		void clones_a_poblacion();

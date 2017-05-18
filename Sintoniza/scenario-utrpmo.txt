@@ -1,0 +1,12 @@
+algo = ./utfsm_movParamILS.sh
+execdir = .
+deterministic = 0
+run_obj = runlength
+overall_obj = mean
+cutoff_time = 5
+cutoff_length = max
+tunerTimeout = 30
+paramfile = ./utrpmo-params.txt
+outdir = paramils-out
+instance_file = ./seeds.txt
+test_instance_file = ./seeds.txt

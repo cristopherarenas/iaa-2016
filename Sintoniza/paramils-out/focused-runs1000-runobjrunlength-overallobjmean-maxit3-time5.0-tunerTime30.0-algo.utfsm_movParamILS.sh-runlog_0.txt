@@ -1,0 +1,501 @@
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 30 -clones 50 -mejores 100 -popsize 100 > /tmp/tmp-2017-02-0313:26:05-0.657755613327026
+Result: SAT, 0, -9246.89, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 10 -clones 100 -mejores 75 -popsize 100 > /tmp/tmp-2017-02-0314:14:20-0.176486015319824
+Result: SAT, 0, -8717.93, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 25 -mejores 50 -popsize 200 > /tmp/tmp-2017-02-0316:09:37-0.70432722568512
+Result: SAT, 0, -9144.24, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 100 -reemplazo 70 -clones 100 -mejores 75 -popsize 150 > /tmp/tmp-2017-02-0317:03:23-0.548887729644775
+Result: SAT, 0, -9199.1, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 50 -clones 75 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-0318:49:25-0.537463188171387
+Result: SAT, 0, -8502.54, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 75 -mejores 25 -popsize 50 > /tmp/tmp-2017-02-0319:53:31-0.557383060455322
+Result: SAT, 0, -8867.52, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 100 -reemplazo 50 -clones 25 -mejores 100 -popsize 150 > /tmp/tmp-2017-02-0320:37:38-0.257841229438782
+Result: SAT, 0, -8317.67, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 10 -clones 100 -mejores 25 -popsize 200 > /tmp/tmp-2017-02-0321:58:21-0.961751699447632
+Result: SAT, 0, -9192.93, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 70 -clones 50 -mejores 75 -popsize 150 > /tmp/tmp-2017-02-0323:32:31-0.138334989547729
+Result: SAT, 0, -9304.57, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0401:28:53-0.0647006034851074
+Result: SAT, 0, -9468.53, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 10 -clones 25 -mejores 75 -popsize 200 > /tmp/tmp-2017-02-0403:52:37-0.674569606781006
+Result: SAT, 0, -9342.56, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 100 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0405:44:42-0.224719047546387
+Result: SAT, 0, -9296.65, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 50 > /tmp/tmp-2017-02-0407:11:13-0.729392170906067
+Result: SAT, 0, -7011.67, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 30 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0409:35:52-0.291402339935303
+Result: SAT, 0, -8442.82, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 200 > /tmp/tmp-2017-02-0411:30:18-0.00771188735961914
+Result: SAT, 0, -8608.7, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-0414:26:58-0.281886100769043
+Result: SAT, 0, -8944.32, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0417:31:07-0.904661655426025
+Result: SAT, 0, -8200.91, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0419:35:16-0.32841682434082
+Result: SAT, 0, -9468.53, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0421:59:05-0.122330665588379
+Result: SAT, 0, -8072.69, 0, 1365105717
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0500:14:34-0.389166831970215
+Result: SAT, 0, -8072.69, 0, 1365105717
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8495746 "" 5.0 2147483647 481516916 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0502:29:40-0.728428840637207
+Result: SAT, 0, -8945.19, 0, 481516916
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8495746 "" 5.0 2147483647 481516916 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0505:03:09-0.507759094238281
+Result: SAT, 0, -8945.19, 0, 481516916
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4080632 "" 5.0 2147483647 1165481977 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0507:36:45-0.913084030151367
+Result: SAT, 0, -9180.44, 0, 1165481977
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4080632 "" 5.0 2147483647 1165481977 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0510:40:38-0.143791198730469
+Result: SAT, 0, -9180.44, 0, 1165481977
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3545449 "" 5.0 2147483647 1549064881 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0513:44:29-0.168153882026672
+Result: SAT, 0, -9038.23, 0, 1549064881
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3545449 "" 5.0 2147483647 1549064881 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0516:07:17-0.208391189575195
+Result: SAT, 0, -9038.23, 0, 1549064881
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9704415 "" 5.0 2147483647 646980841 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0518:30:36-0.572780132293701
+Result: SAT, 0, -9337.86, 0, 646980841
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9704415 "" 5.0 2147483647 646980841 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0520:35:55-0.257201433181763
+Result: SAT, 0, -9337.86, 0, 646980841
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7793621 "" 5.0 2147483647 852631582 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0522:40:42-0.791529655456543
+Result: SAT, 0, -9144.53, 0, 852631582
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7793621 "" 5.0 2147483647 852631582 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0601:37:19-0.132528305053711
+Result: SAT, 0, -9144.53, 0, 852631582
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9740134 "" 5.0 2147483647 1353614494 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0604:33:56-0.424649119377136
+Result: SAT, 0, -8577.75, 0, 1353614494
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9740134 "" 5.0 2147483647 1353614494 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0607:24:32-0.649055600166321
+Result: SAT, 0, -8577.75, 0, 1353614494
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 75 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0610:15:13-0.127025365829468
+Result: SAT, 0, -9468.53, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-0612:38:50-0.765419960021973
+Result: SAT, 0, -8944.32, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 25 -mejores 100 -popsize 100 > /tmp/tmp-2017-02-0615:42:47-0.00701737403869629
+Result: SAT, 0, -9281.56, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 200 > /tmp/tmp-2017-02-0617:30:17-0.757938742637634
+Result: SAT, 0, -8608.7, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 100 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0620:26:50-0.277145504951477
+Result: SAT, 0, -9296.65, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 25 -mejores 50 -popsize 100 > /tmp/tmp-2017-02-0621:53:25-0.698712944984436
+Result: SAT, 0, -9065.05, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 50 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0700:21:06-0.780490875244141
+Result: SAT, 0, -8239.6, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0702:46:39-0.547271728515625
+Result: SAT, 0, -8908.21, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 50 > /tmp/tmp-2017-02-0703:47:26-0.53868293762207
+Result: SAT, 0, -7011.67, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 10 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0706:13:46-0.385778188705444
+Result: SAT, 0, -8712.01, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 25 -mejores 75 -popsize 100 > /tmp/tmp-2017-02-0708:08:05-0.341835975646973
+Result: SAT, 0, -9141.46, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 30 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0710:06:45-0.183065176010132
+Result: SAT, 0, -8442.82, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 50 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0712:01:13-0.651610374450684
+Result: SAT, 0, -9468.53, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0714:27:14-0.564420342445374
+Result: SAT, 0, -8200.91, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5790056 "" 5.0 2147483647 682106748 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0716:31:30-0.387248158454895
+Result: SAT, 0, -8699.38, 0, 682106748
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5790056 "" 5.0 2147483647 682106748 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0719:11:21-0.646061897277832
+Result: SAT, 0, -8699.38, 0, 682106748
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5871323 "" 5.0 2147483647 498808182 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0721:51:32-0.765485763549805
+Result: SAT, 0, -9026.16, 0, 498808182
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5871323 "" 5.0 2147483647 498808182 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0800:36:04-0.357424736022949
+Result: SAT, 0, -9026.16, 0, 498808182
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3353907 "" 5.0 2147483647 55437432 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0803:20:40-0.373786330223083
+Result: SAT, 0, -9237.73, 0, 55437432
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3353907 "" 5.0 2147483647 55437432 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0806:00:10-0.193965673446655
+Result: SAT, 0, -9237.73, 0, 55437432
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8850023 "" 5.0 2147483647 2090933724 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0808:39:34-0.908278703689575
+Result: SAT, 0, -8090.97, 0, 2090933724
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8850023 "" 5.0 2147483647 2090933724 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0811:08:00-0.444387674331665
+Result: SAT, 0, -8090.97, 0, 2090933724
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1635137 "" 5.0 2147483647 1421700432 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0813:36:18-0.274913787841797
+Result: SAT, 0, -8672.21, 0, 1421700432
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1635137 "" 5.0 2147483647 1421700432 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0815:47:29-0.0904222726821899
+Result: SAT, 0, -8672.21, 0, 1421700432
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4520211 "" 5.0 2147483647 1299827071 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0817:58:41-0.797768115997314
+Result: SAT, 0, -8632.14, 0, 1299827071
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4520211 "" 5.0 2147483647 1299827071 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0820:18:11-0.042943000793457
+Result: SAT, 0, -8632.14, 0, 1299827071
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4016027 "" 5.0 2147483647 421988862 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0822:37:35-0.0514286756515503
+Result: SAT, 0, -9431.34, 0, 421988862
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4016027 "" 5.0 2147483647 421988862 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0901:03:37-0.157075881958008
+Result: SAT, 0, -9431.34, 0, 421988862
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3576176 "" 5.0 2147483647 240490034 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0903:29:34-0.91156280040741
+Result: SAT, 0, -7661.47, 0, 240490034
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3576176 "" 5.0 2147483647 240490034 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0905:57:44-0.722463846206665
+Result: SAT, 0, -7661.47, 0, 240490034
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2220994 "" 5.0 2147483647 1901221627 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0908:25:45-0.217737197875977
+Result: SAT, 0, -8981.48, 0, 1901221627
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2220994 "" 5.0 2147483647 1901221627 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0910:58:10-0.963503360748291
+Result: SAT, 0, -8981.48, 0, 1901221627
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5750828 "" 5.0 2147483647 95107365 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0913:30:45-0.996848821640015
+Result: SAT, 0, -8987.15, 0, 95107365
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5750828 "" 5.0 2147483647 95107365 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0915:59:33-0.244276523590088
+Result: SAT, 0, -8987.15, 0, 95107365
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8881787 "" 5.0 2147483647 1248669606 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0918:28:07-0.830845355987549
+Result: SAT, 0, -9111.01, 0, 1248669606
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8881787 "" 5.0 2147483647 1248669606 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0920:50:46-0.702389717102051
+Result: SAT, 0, -9111.01, 0, 1248669606
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4271431 "" 5.0 2147483647 1058256067 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0923:13:17-0.148382544517517
+Result: SAT, 0, -9286.06, 0, 1058256067
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4271431 "" 5.0 2147483647 1058256067 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-1002:06:22-0.855822324752808
+Result: SAT, 0, -9286.06, 0, 1058256067
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8322534 "" 5.0 2147483647 1023433867 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-1005:00:10-0.727729678153992
+Result: SAT, 0, -8630.27, 0, 1023433867
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8322534 "" 5.0 2147483647 1023433867 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-1007:22:13-0.166435718536377
+Result: SAT, 0, -8630.27, 0, 1023433867
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9605652 "" 5.0 2147483647 1671713513 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-1009:44:11-0.819276928901672
+Result: SAT, 0, -8806.75, 0, 1671713513
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9605652 "" 5.0 2147483647 1671713513 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-1012:09:51-0.562812089920044
+Result: SAT, 0, -8806.75, 0, 1671713513
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 50 > /tmp/tmp-2017-02-1014:35:34-0.768736243247986
+Result: SAT, 0, -7421.88, 0, 1365105717
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 30 -clones 25 -mejores 25 -popsize 50 > /tmp/tmp-2017-02-1017:35:07-0.909248352050781
+Result: SAT, 0, -7137.39, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 200 -reemplazo 30 -clones 25 -mejores 25 -popsize 50 > /tmp/tmp-2017-02-1020:31:18-0.314078211784363
+Result: SAT, 0, -7334.43, 0, 1365105717
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8495746 "" 5.0 2147483647 481516916 -clonsize 200 -reemplazo 30 -clones 25 -mejores 25 -popsize 50 > /tmp/tmp-2017-02-1022:55:15-0.119263887405396
+Result: SAT, 0, -8857.51, 0, 481516916
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1101:04:44-0.310192942619324
+Result: SAT, 0, -8704.91, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 200 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1103:50:50-0.486906766891479
+Result: SAT, 0, -9554.25, 0, 1365105717
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8495746 "" 5.0 2147483647 481516916 -clonsize 200 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1106:20:19-0.410000681877136
+Result: SAT, 0, -8955.76, 0, 481516916
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4080632 "" 5.0 2147483647 1165481977 -clonsize 200 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1108:32:59-0.823337554931641
+Result: SAT, 0, -8986.14, 0, 1165481977
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1111:13:00-0.805841326713562
+Result: SAT, 0, -9320.31, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 50 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1112:02:31-0.0736382007598877
+Result: SAT, 0, -9458.81, 0, 1365105717
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8495746 "" 5.0 2147483647 481516916 -clonsize 50 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1112:54:59-0.135006427764893
+Result: SAT, 0, -8680.48, 0, 481516916
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4080632 "" 5.0 2147483647 1165481977 -clonsize 50 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1113:50:56-0.937243342399597
+Result: SAT, 0, -9215.74, 0, 1165481977
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3545449 "" 5.0 2147483647 1549064881 -clonsize 50 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1114:39:01-0.674641132354736
+Result: SAT, 0, -9041.1, 0, 1549064881
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 25 -mejores 50 -popsize 150 > /tmp/tmp-2017-02-1115:28:52-0.423534870147705
+Result: SAT, 0, -8263.07, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 100 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1116:22:02-0.539732694625854
+Result: SAT, 0, -9320.31, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 25 -mejores 75 -popsize 150 > /tmp/tmp-2017-02-1117:11:24-0.890045404434204
+Result: SAT, 0, -7755.58, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 50 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1117:56:19-0.0799775123596191
+Result: SAT, 0, -9320.31, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 25 -mejores 25 -popsize 50 > /tmp/tmp-2017-02-1118:45:52-0.790241718292236
+Result: SAT, 0, -8867.52, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 75 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1119:29:58-0.953725099563599
+Result: SAT, 0, -9320.31, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 10 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1120:19:36-0.254587650299072
+Result: SAT, 0, -8958.36, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 25 -mejores 25 -popsize 200 > /tmp/tmp-2017-02-1120:54:46-0.766135454177856
+Result: SAT, 0, -8801.59, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1121:48:03-0.110630035400391
+Result: SAT, 0, -9368, 0, 2137449171
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1123:48:28-0.689889430999756
+Result: SAT, 0, -9449.12, 0, 1365105717
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8495746 "" 5.0 2147483647 481516916 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1201:43:36-0.6798415184021
+Result: SAT, 0, -9002.16, 0, 481516916
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4080632 "" 5.0 2147483647 1165481977 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1203:38:35-0.54202127456665
+Result: SAT, 0, -9452.3, 0, 1165481977
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3545449 "" 5.0 2147483647 1549064881 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1205:35:07-0.129077434539795
+Result: SAT, 0, -8884.25, 0, 1549064881
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9704415 "" 5.0 2147483647 646980841 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1207:19:25-0.909080505371094
+Result: SAT, 0, -8961.61, 0, 646980841
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7793621 "" 5.0 2147483647 852631582 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1209:11:10-0.409659147262573
+Result: SAT, 0, -8909.43, 0, 852631582
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9740134 "" 5.0 2147483647 1353614494 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1211:14:29-0.407711863517761
+Result: SAT, 0, -9078.71, 0, 1353614494
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5790056 "" 5.0 2147483647 682106748 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1213:19:57-0.668581008911133
+Result: SAT, 0, -8957.12, 0, 682106748
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5871323 "" 5.0 2147483647 498808182 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1215:02:18-0.24631404876709
+Result: SAT, 0, -8787.45, 0, 498808182
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3353907 "" 5.0 2147483647 55437432 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1216:48:27-0.856690406799316
+Result: SAT, 0, -9131.96, 0, 55437432
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8850023 "" 5.0 2147483647 2090933724 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1218:48:37-0.554803490638733
+Result: SAT, 0, -8439.89, 0, 2090933724
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1635137 "" 5.0 2147483647 1421700432 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1220:36:39-0.0309493541717529
+Result: SAT, 0, -8948.14, 0, 1421700432
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4520211 "" 5.0 2147483647 1299827071 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1222:08:23-0.720887660980225
+Result: SAT, 0, -9257.89, 0, 1299827071
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4016027 "" 5.0 2147483647 421988862 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1223:48:49-0.972731828689575
+Result: SAT, 0, -9046.74, 0, 421988862
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3576176 "" 5.0 2147483647 240490034 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1301:49:01-0.472361326217651
+Result: SAT, 0, -8557.38, 0, 240490034
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2220994 "" 5.0 2147483647 1901221627 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1303:45:21-0.803030014038086
+Result: SAT, 0, -8716.27, 0, 1901221627
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5750828 "" 5.0 2147483647 95107365 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1305:26:14-0.320908069610596
+Result: SAT, 0, -8932.98, 0, 95107365
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8881787 "" 5.0 2147483647 1248669606 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1307:15:41-0.0711493492126465
+Result: SAT, 0, -9183.73, 0, 1248669606
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4271431 "" 5.0 2147483647 1058256067 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1309:04:19-0.80932354927063
+Result: SAT, 0, -9100.33, 0, 1058256067
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8322534 "" 5.0 2147483647 1023433867 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1311:17:20-0.756258964538574
+Result: SAT, 0, -9222.48, 0, 1023433867
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9605652 "" 5.0 2147483647 1671713513 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1313:42:46-0.789257168769836
+Result: SAT, 0, -8610.11, 0, 1671713513
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2414007 "" 5.0 2147483647 1188728006 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1315:32:15-0.738808393478394
+Result: SAT, 0, -8578.76, 0, 1188728006
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3942459 "" 5.0 2147483647 1616870182 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1317:30:23-0.020756721496582
+Result: SAT, 0, -9150.74, 0, 1616870182
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4671691 "" 5.0 2147483647 123402156 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1319:21:53-0.202384948730469
+Result: SAT, 0, -8777.75, 0, 123402156
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1741997 "" 5.0 2147483647 738248403 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1321:05:12-0.0472297668457031
+Result: SAT, 0, -8821.15, 0, 738248403
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5263734 "" 5.0 2147483647 1311361059 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1323:09:03-0.892893075942993
+Result: SAT, 0, -8981.14, 0, 1311361059
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8393322 "" 5.0 2147483647 1432622778 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1400:54:21-0.109923362731934
+Result: SAT, 0, -9007.35, 0, 1432622778
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6363900 "" 5.0 2147483647 833609350 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1402:34:28-0.749003410339355
+Result: SAT, 0, -8523.4, 0, 833609350
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7417393 "" 5.0 2147483647 278360931 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1404:18:47-0.320269584655762
+Result: SAT, 0, -9446.4, 0, 278360931
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1254454 "" 5.0 2147483647 501207207 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1406:34:21-0.0599761009216309
+Result: SAT, 0, -8715.06, 0, 501207207
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8065669 "" 5.0 2147483647 1911369408 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1408:15:17-0.515725612640381
+Result: SAT, 0, -8936.6, 0, 1911369408
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7919939 "" 5.0 2147483647 257988418 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1409:53:49-0.432075500488281
+Result: SAT, 0, -8877.54, 0, 257988418
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5403259 "" 5.0 2147483647 1214623502 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1411:44:15-0.824179768562317
+Result: SAT, 0, -8918.17, 0, 1214623502
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6629409 "" 5.0 2147483647 1835501699 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1413:34:26-0.900049209594727
+Result: SAT, 0, -9275.95, 0, 1835501699
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5139547 "" 5.0 2147483647 1310787380 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1415:31:33-0.263849258422852
+Result: SAT, 0, -8673.19, 0, 1310787380
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5639232 "" 5.0 2147483647 579236401 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1417:12:33-0.288196563720703
+Result: SAT, 0, -8475.39, 0, 579236401
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2824114 "" 5.0 2147483647 967202311 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1418:53:50-0.699446678161621
+Result: SAT, 0, -8835.5, 0, 967202311
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2743934 "" 5.0 2147483647 867864388 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1420:49:23-0.883278369903564
+Result: SAT, 0, , 0, 867864388
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6894917 "" 5.0 2147483647 1185507215 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.467443466186523
+Result: SAT, 0, , 0, 1185507215
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/87917 "" 5.0 2147483647 560068076 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.420245170593262
+Result: SAT, 0, , 0, 560068076
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/315646 "" 5.0 2147483647 239300906 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.772355079650879
+Result: SAT, 0, , 0, 239300906
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6144531 "" 5.0 2147483647 1243227789 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.861879348754883
+Result: SAT, 0, , 0, 1243227789
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4417358 "" 5.0 2147483647 381209027 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.139819145202637
+Result: SAT, 0, , 0, 381209027
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6352407 "" 5.0 2147483647 647394664 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.79236888885498
+Result: SAT, 0, , 0, 647394664
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6337585 "" 5.0 2147483647 195410422 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.752039909362793
+Result: SAT, 0, , 0, 195410422
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8925704 "" 5.0 2147483647 1823824432 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.773065567016602
+Result: SAT, 0, , 0, 1823824432
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7436887 "" 5.0 2147483647 424658828 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.0192642211914062
+Result: SAT, 0, , 0, 424658828
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8847750 "" 5.0 2147483647 1218562851 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.450501441955566
+Result: SAT, 0, , 0, 1218562851
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7635240 "" 5.0 2147483647 1273162615 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.466100692749023
+Result: SAT, 0, , 0, 1273162615
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9916752 "" 5.0 2147483647 441900272 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.202920913696289
+Result: SAT, 0, , 0, 441900272
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4960164 "" 5.0 2147483647 1888826167 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.793242931365967
+Result: SAT, 0, , 0, 1888826167
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3873012 "" 5.0 2147483647 1318186685 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.316990852355957
+Result: SAT, 0, , 0, 1318186685
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4928911 "" 5.0 2147483647 932441347 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.530092239379883
+Result: SAT, 0, , 0, 932441347
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2068572 "" 5.0 2147483647 110210931 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.988022804260254
+Result: SAT, 0, , 0, 110210931
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9513130 "" 5.0 2147483647 1907028388 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.186498165130615
+Result: SAT, 0, , 0, 1907028388
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1379588 "" 5.0 2147483647 964239377 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.750039577484131
+Result: SAT, 0, , 0, 964239377
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2052372 "" 5.0 2147483647 66159229 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.0257430076599121
+Result: SAT, 0, , 0, 66159229
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/853913 "" 5.0 2147483647 1281639483 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.739842891693115
+Result: SAT, 0, , 0, 1281639483
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2134634592 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.886940479278564
+Result: SAT, 0, , 0, 2134634592
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2700503 "" 5.0 2147483647 1631367297 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.502333164215088
+Result: SAT, 0, , 0, 1631367297
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/940617 "" 5.0 2147483647 436711423 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.77177906036377
+Result: SAT, 0, , 0, 436711423
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7519922 "" 5.0 2147483647 389079545 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.13441801071167
+Result: SAT, 0, , 0, 389079545
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8600398 "" 5.0 2147483647 1242881897 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.684689998626709
+Result: SAT, 0, , 0, 1242881897
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6523716 "" 5.0 2147483647 387348194 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.927269458770752
+Result: SAT, 0, , 0, 387348194
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1739488 "" 5.0 2147483647 20399485 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.0406441688537598
+Result: SAT, 0, , 0, 20399485
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5289340 "" 5.0 2147483647 1130351333 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.0233192443847656
+Result: SAT, 0, , 0, 1130351333
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5794712 "" 5.0 2147483647 1606102866 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.510244369506836
+Result: SAT, 0, , 0, 1606102866
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4058385 "" 5.0 2147483647 933326369 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.489656925201416
+Result: SAT, 0, , 0, 933326369
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6289394 "" 5.0 2147483647 1233571258 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.932328701019287
+Result: SAT, 0, , 0, 1233571258
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2981971 "" 5.0 2147483647 291303360 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.0110211372375488
+Result: SAT, 0, , 0, 291303360
+
+./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5684099 "" 5.0 2147483647 1520647493 -clonsize 150 -reemplazo 30 -clones 25 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-1422:31:56-0.231616497039795
+Result: SAT, 0, , 0, 1520647493
+

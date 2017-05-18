@@ -31,6 +31,12 @@ Gobierno de~Chile.
 \newblock Portal de datos públicos.
 \newblock http://datos.gob.cl/datasets/ver/1587, Noviembre 2013.
 
+\bibitem{ParamILS-JAIR}
+Frank Hutter, Holger~H. Hoos, Kevin Leyton-Brown, and Thomas Stutzle.
+\newblock Paramils: An automatic algorithm configuration framework.
+\newblock {\em Journal of Artificial Intelligence Research}, 36:267--306,
+  October 2009.
+
 \bibitem{jiang2010improved}
 Hong Jiang, Qingsong Yu, and Yong Huang.
 \newblock An improved ant colony algorithm for urban transit network

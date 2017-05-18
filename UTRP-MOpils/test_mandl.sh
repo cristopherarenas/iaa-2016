@@ -1,0 +1,15 @@
+./utrpmo -i instances/Mandl -s 1 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 2 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 3 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 4 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 5 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 12 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 23 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 34 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 45 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 56 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 123 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 234 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 345 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 456 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101
+./utrpmo -i instances/Mandl -s 567 -r "6:2:8" -p 100 -c 150 -g 1000 -a 25 -b 70 -d 100 -f 101

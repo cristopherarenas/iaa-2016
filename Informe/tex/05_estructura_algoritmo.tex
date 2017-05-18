@@ -9,20 +9,20 @@ En el Algoritmo \ref{alg:aia} se muestran un pseudocódigo del algoritmo impleme
 \begin{algorithmic}[1]
 \REQUIRE  Información del problema, información de instancia
 \ENSURE Un conjunto de memoria $M$
-\STATE Inicializar aleatoriamente población $P$ de tamaño \texttt{POP\_SIZE}
+\STATE Inicializar aleatoriamente población $P$ de tamaño \popsize
 \STATE $g \leftarrow 1$
-\WHILE{$g<=$\texttt{GENERACIONES}}
-	\STATE Eliminar de la población $P$ anticuerpos dominados
+\WHILE{$g<=$\generaciones}
 	\FOR{\textbf{cada} $p$ perteneciente a la población $P$}
 		\STATE Calcular aptitud de $p$
 	\ENDFOR
+	\STATE Eliminar de la población $P$ anticuerpos dominados
 	\STATE Seleccionar $mp$ de los mejores anticuerpos de $P$
-	\STATE Generar un conjunto de clones $C$ de tamaño \texttt{CLON\_SIZE} con anticuerpos $mp$
+	\STATE Generar un conjunto de clones $C$ de tamaño \clonsize con anticuerpos $mp$
 	\FOR{\textbf{cada} clon $c$ perteneciente al conjunto $C$}
 		\STATE $k \leftarrow$ numero de mutaciones a realizar de acuerdo a aptitud de $c$		
 		\STATE Mutar $k$ veces el clon $c$
 	\ENDFOR
-	\STATE Copiar $mp$ clones a la población $P$
+	\STATE Copiar hasta $mp$ clones a la población $P$
 	\STATE Seleccionar $mm$ anticuerpos de $P$
 	\STATE Copiar los anticuerpos $mm$ al conjunto de memoria $M$
 	\STATE Reemplazar $pp$ anticuerpos con anticuerpos generados aleatoriamente

@@ -1,0 +1,209 @@
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/utrpmo-params.txt
+num_params = 5, num_combos=1024
+seed: 1234
+Run 1
+Level 
+========================================================
+Starting ILS for level 1, i.e. a limit of N=1000, and cutoff time=5.0.
+Current CPU time = 0, this run goes until 30.0 
+========================================================
+New Incumbent: 0, 100000000 [0, 0]. With state clones=50, clonsize=150, mejores=100, popsize=100, reemplazo=30
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 30 -clones 50 -mejores 100 -popsize 100 > /tmp/tmp-2017-01-3117:13:00-0.415043592453003
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 30 -clones 50 -mejores 100 -popsize 100 > /tmp/tmp-2017-01-3117:13:00-0.415043592453003
+Result: SAT, 0, -9246.89, 0, 2137449171
+ Same incumbent, new precision:
+New Incumbent: 0.1, -9246.0 [1, 5.0]. With state clones=50, clonsize=150, mejores=100, popsize=100, reemplazo=30
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 10 -clones 100 -mejores 75 -popsize 100 > /tmp/tmp-2017-01-3118:02:31-0.671190738677979
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 10 -clones 100 -mejores 75 -popsize 100 > /tmp/tmp-2017-01-3118:02:31-0.671190738677979
+Result: SAT, 0, -8717.93, 0, 2137449171
+        -> Worse random: clones=100 clonsize=200 mejores=75 popsize=100 reemplazo=10 (-8717.0 [based on 1 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 25 -mejores 50 -popsize 200 > /tmp/tmp-2017-01-3119:59:58-0.660568475723267
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 25 -mejores 50 -popsize 200 > /tmp/tmp-2017-01-3119:59:58-0.660568475723267
+Result: SAT, 0, -9144.24, 0, 2137449171
+        -> Worse random: clones=25 clonsize=50 mejores=50 popsize=200 reemplazo=30 (-9144.0 [based on 1 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 100 -reemplazo 70 -clones 100 -mejores 75 -popsize 150 > /tmp/tmp-2017-01-3120:54:11-0.920940279960632
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 100 -reemplazo 70 -clones 100 -mejores 75 -popsize 150 > /tmp/tmp-2017-01-3120:54:11-0.920940279960632
+Result: SAT, 0, -9199.1, 0, 2137449171
+        -> Worse random: clones=100 clonsize=100 mejores=75 popsize=150 reemplazo=70 (-9199.0 [based on 1 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 50 -clones 75 -mejores 25 -popsize 150 > /tmp/tmp-2017-01-3122:40:52-0.900772094726562
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 50 -clones 75 -mejores 25 -popsize 150 > /tmp/tmp-2017-01-3122:40:52-0.900772094726562
+Result: SAT, 0, -8502.54, 0, 2137449171
+        -> Worse random: clones=75 clonsize=50 mejores=25 popsize=150 reemplazo=50 (-8502.0 [based on 1 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 75 -mejores 25 -popsize 50 > /tmp/tmp-2017-01-3123:46:22-0.668817043304443
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 50 -reemplazo 30 -clones 75 -mejores 25 -popsize 50 > /tmp/tmp-2017-01-3123:46:22-0.668817043304443
+Result: SAT, 0, -8867.52, 0, 2137449171
+        -> Worse random: clones=75 clonsize=50 mejores=25 popsize=50 reemplazo=30 (-8867.0 [based on 1 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 100 -reemplazo 50 -clones 25 -mejores 100 -popsize 150 > /tmp/tmp-2017-02-0100:30:30-0.287642002105713
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 100 -reemplazo 50 -clones 25 -mejores 100 -popsize 150 > /tmp/tmp-2017-02-0100:30:30-0.287642002105713
+Result: SAT, 0, -8317.67, 0, 2137449171
+        -> Worse random: clones=25 clonsize=100 mejores=100 popsize=150 reemplazo=50 (-8317.0 [based on 1 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 10 -clones 100 -mejores 25 -popsize 200 > /tmp/tmp-2017-02-0101:47:58-0.211227893829346
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 10 -clones 100 -mejores 25 -popsize 200 > /tmp/tmp-2017-02-0101:47:58-0.211227893829346
+Result: SAT, 0, -9192.93, 0, 2137449171
+        -> Worse random: clones=100 clonsize=150 mejores=25 popsize=200 reemplazo=10 (-9192.0 [based on 1 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 70 -clones 50 -mejores 75 -popsize 150 > /tmp/tmp-2017-02-0103:21:41-0.565901160240173
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 70 -clones 50 -mejores 75 -popsize 150 > /tmp/tmp-2017-02-0103:21:41-0.565901160240173
+Result: SAT, 0, -9304.57, 0, 2137449171
+New inc: -9304.0
+New Incumbent: 0.9, -9304.0 [1, 5.0]. With state clones=50, clonsize=150, mejores=75, popsize=150, reemplazo=70
+          -> Take improving step to random clones=50 clonsize=150 mejores=75 popsize=150 reemplazo=70 (-9304.0 [based on 1 runs with cutoff 5.0])
+
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0105:17:58-0.908910274505615
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0105:17:58-0.908910274505615
+Result: SAT, 0, -9468.53, 0, 2137449171
+New inc: -9468.0
+New Incumbent: 1.0, -9468.0 [1, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+          -> Take improving step to random clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0])
+
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 10 -clones 25 -mejores 75 -popsize 200 > /tmp/tmp-2017-02-0107:41:39-0.29482364654541
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 10 -clones 25 -mejores 75 -popsize 200 > /tmp/tmp-2017-02-0107:41:39-0.29482364654541
+Result: SAT, 0, -9342.56, 0, 2137449171
+        -> Worse random: clones=25 clonsize=200 mejores=75 popsize=200 reemplazo=10 (-9342.0 [based on 1 runs with cutoff 5.0])
+   BLS in iteration 1, start with clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0])
+    Changing clonsize: 200->100, evaluating ...
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 100 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0109:33:45-0.597577095031738
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 100 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0109:33:45-0.597577095031738
+Result: SAT, 0, -9296.65, 0, 2137449171
+        -> worse: (-9296.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 100->50, evaluating ...
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 50 > /tmp/tmp-2017-02-0111:00:13-0.894725799560547
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 50 > /tmp/tmp-2017-02-0111:00:13-0.894725799560547
+Result: SAT, 0, -7011.67, 0, 2137449171
+        -> worse: (-7011.0 [based on 1 runs with cutoff 5.0])
+    Changing reemplazo: 70->30, evaluating ...
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 30 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0113:25:48-0.49858832359314
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 30 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0113:25:48-0.49858832359314
+Result: SAT, 0, -8442.82, 0, 2137449171
+        -> worse: (-8442.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 100->200, evaluating ...
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 200 > /tmp/tmp-2017-02-0115:20:23-0.678963661193848
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 200 > /tmp/tmp-2017-02-0115:20:23-0.678963661193848
+Result: SAT, 0, -8608.7, 0, 2137449171
+        -> worse: (-8608.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 100->150, evaluating ...
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-0118:17:04-0.837069988250732
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 150 > /tmp/tmp-2017-02-0118:17:04-0.837069988250732
+Result: SAT, 0, -8944.32, 0, 2137449171
+        -> worse: (-8944.0 [based on 1 runs with cutoff 5.0])
+    Changing clonsize: 200->150, evaluating ...
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0121:21:08-0.765543937683105
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 150 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0121:21:08-0.765543937683105
+Result: SAT, 0, -8200.91, 0, 2137449171
+        -> worse: (-8200.0 [based on 1 runs with cutoff 5.0])
+    Changing clones: 100->25, evaluating ...
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0123:25:24-0.860518097877502
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229 "" 5.0 2147483647 2137449171 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0123:25:24-0.860518097877502
+Result: SAT, 0, -9468.53, 0, 2137449171
+          -> Take improving step to neighbour clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0]) with flip 1
+
+          
+============= Performing 7 bonus runs of state: clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0]) ============ 
+
+State wants more detail (1+1) than incumbent (1), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0201:48:59-0.600276947021484
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0201:48:59-0.600276947021484
+Result: SAT, 0, -8072.69, 0, 1365105717
+ Same incumbent, new precision:
+New Incumbent: 1.9, -8770.0 [2, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0204:04:13-0.512067198753357
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6866162 "" 5.0 2147483647 1365105717 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0204:04:13-0.512067198753357
+Result: SAT, 0, -8072.69, 0, 1365105717
+State wants more detail (2+1) than incumbent (2), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8770.0 [based on 2 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8770.0 [based on 2 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8495746 "" 5.0 2147483647 481516916 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0206:19:22-0.278237700462341
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8495746 "" 5.0 2147483647 481516916 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0206:19:22-0.278237700462341
+Result: SAT, 0, -8945.19, 0, 481516916
+ Same incumbent, new precision:
+New Incumbent: 2.1, -8828.33333333333 [3, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8495746 "" 5.0 2147483647 481516916 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0208:52:55-0.574363708496094
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8495746 "" 5.0 2147483647 481516916 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0208:52:55-0.574363708496094
+Result: SAT, 0, -8945.19, 0, 481516916
+State wants more detail (3+1) than incumbent (3), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8828.33333333333 [based on 3 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8828.33333333333 [based on 3 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4080632 "" 5.0 2147483647 1165481977 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0211:26:25-0.681658744812012
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4080632 "" 5.0 2147483647 1165481977 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0211:26:25-0.681658744812012
+Result: SAT, 0, -9180.44, 0, 1165481977
+ Same incumbent, new precision:
+New Incumbent: 2.3, -8916.25 [4, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4080632 "" 5.0 2147483647 1165481977 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0214:31:19-0.0274085998535156
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4080632 "" 5.0 2147483647 1165481977 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0214:31:19-0.0274085998535156
+Result: SAT, 0, -9180.44, 0, 1165481977
+State wants more detail (4+1) than incumbent (4), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8916.25 [based on 4 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8916.25 [based on 4 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3545449 "" 5.0 2147483647 1549064881 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0217:35:18-0.49073600769043
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3545449 "" 5.0 2147483647 1549064881 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0217:35:18-0.49073600769043
+Result: SAT, 0, -9038.23, 0, 1549064881
+ Same incumbent, new precision:
+New Incumbent: 2.5, -8940.6 [5, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3545449 "" 5.0 2147483647 1549064881 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0219:58:18-0.979858994483948
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3545449 "" 5.0 2147483647 1549064881 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0219:58:18-0.979858994483948
+Result: SAT, 0, -9038.23, 0, 1549064881
+State wants more detail (5+1) than incumbent (5), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8940.6 [based on 5 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8940.6 [based on 5 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9704415 "" 5.0 2147483647 646980841 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0222:21:10-0.406193733215332
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9704415 "" 5.0 2147483647 646980841 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0222:21:10-0.406193733215332
+Result: SAT, 0, -9337.86, 0, 646980841
+ Same incumbent, new precision:
+New Incumbent: 2.7, -9006.66666666667 [6, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9704415 "" 5.0 2147483647 646980841 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0300:26:00-0.094369649887085
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9704415 "" 5.0 2147483647 646980841 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0300:26:00-0.094369649887085
+Result: SAT, 0, -9337.86, 0, 646980841
+State wants more detail (6+1) than incumbent (6), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9006.66666666667 [based on 6 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9006.66666666667 [based on 6 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7793621 "" 5.0 2147483647 852631582 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0302:30:35-0.161743402481079
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7793621 "" 5.0 2147483647 852631582 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0302:30:35-0.161743402481079
+Result: SAT, 0, -9144.53, 0, 852631582
+ Same incumbent, new precision:
+New Incumbent: 2.9, -9026.28571428571 [7, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7793621 "" 5.0 2147483647 852631582 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0305:27:19-0.828658819198608
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7793621 "" 5.0 2147483647 852631582 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0305:27:19-0.828658819198608
+Result: SAT, 0, -9144.53, 0, 852631582
+State wants more detail (7+1) than incumbent (7), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9026.28571428571 [based on 7 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9026.28571428571 [based on 7 runs with cutoff 5.0])
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9740134 "" 5.0 2147483647 1353614494 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0308:24:03-0.544230461120605
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9740134 "" 5.0 2147483647 1353614494 -clonsize 200 -reemplazo 70 -clones 100 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0308:24:03-0.544230461120605
+Result: SAT, 0, -8577.75, 0, 1353614494
+ Same incumbent, new precision:
+New Incumbent: 3.1, -8970.125 [8, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+getAlgoResultsForInstsAndParams.
+  Trial 1 for calling: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9740134 "" 5.0 2147483647 1353614494 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0311:14:52-0.318662643432617
+Executing cmd: ./utfsm_movParamILS.sh /home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9740134 "" 5.0 2147483647 1353614494 -clonsize 200 -reemplazo 70 -clones 25 -mejores 25 -popsize 100 > /tmp/tmp-2017-02-0311:14:52-0.318662643432617

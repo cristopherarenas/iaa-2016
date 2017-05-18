@@ -1,0 +1,377 @@
+Call: /usr/bin/ruby ../scripts/param_ils_2_3_run.rb "-numRun" "0" "-maxEvals" "100" "-maxIts" "3" "-approach" "focused" "-N" "1000" "-userunlog" "1" "-validN" "50" "-pruning" "0" "-scenariofile" "scenario-utrpmo.txt"
+
+
+seed: 1234
+algo: ./utfsm_movParamILS.sh
+tunerTimeout: 30.0
+maxEvals: 100
+run_obj: runlength
+overall_obj: mean
+instance_file: ./seeds.txt
+test_instance_file: ./seeds.txt
+N: 1000
+cutoff_time: 5.0
+cutoff_length: 2147483647
+R: 10
+pertubation_strength_basic: 
+pertubation_strength_scaling: false
+p_restart: 0.01
+Run 1
+Level 
+========================================================
+Starting ILS for level 1, i.e. a limit of N=1000, and cutoff time=5.0.
+Current CPU time = 0, this run goes until 30.0 
+========================================================
+New Incumbent: 0, 100000000 [0, 0]. With state clones=50, clonsize=150, mejores=100, popsize=100, reemplazo=30
+ Same incumbent, new precision:
+New Incumbent: 0.1, -9246.0 [1, 5.0]. With state clones=50, clonsize=150, mejores=100, popsize=100, reemplazo=30
+        -> Worse random: clones=100 clonsize=200 mejores=75 popsize=100 reemplazo=10 (-8717.0 [based on 1 runs with cutoff 5.0])
+        -> Worse random: clones=25 clonsize=50 mejores=50 popsize=200 reemplazo=30 (-9144.0 [based on 1 runs with cutoff 5.0])
+        -> Worse random: clones=100 clonsize=100 mejores=75 popsize=150 reemplazo=70 (-9199.0 [based on 1 runs with cutoff 5.0])
+        -> Worse random: clones=75 clonsize=50 mejores=25 popsize=150 reemplazo=50 (-8502.0 [based on 1 runs with cutoff 5.0])
+        -> Worse random: clones=75 clonsize=50 mejores=25 popsize=50 reemplazo=30 (-8867.0 [based on 1 runs with cutoff 5.0])
+        -> Worse random: clones=25 clonsize=100 mejores=100 popsize=150 reemplazo=50 (-8317.0 [based on 1 runs with cutoff 5.0])
+        -> Worse random: clones=100 clonsize=150 mejores=25 popsize=200 reemplazo=10 (-9192.0 [based on 1 runs with cutoff 5.0])
+New inc: -9304.0
+New Incumbent: 0.9, -9304.0 [1, 5.0]. With state clones=50, clonsize=150, mejores=75, popsize=150, reemplazo=70
+          -> Take improving step to random clones=50 clonsize=150 mejores=75 popsize=150 reemplazo=70 (-9304.0 [based on 1 runs with cutoff 5.0])
+
+New inc: -9468.0
+New Incumbent: 1.0, -9468.0 [1, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+          -> Take improving step to random clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0])
+
+        -> Worse random: clones=25 clonsize=200 mejores=75 popsize=200 reemplazo=10 (-9342.0 [based on 1 runs with cutoff 5.0])
+   BLS in iteration 1, start with clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0])
+    Changing clonsize: 200->100, evaluating ...
+        -> worse: (-9296.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 100->50, evaluating ...
+        -> worse: (-7011.0 [based on 1 runs with cutoff 5.0])
+    Changing reemplazo: 70->30, evaluating ...
+        -> worse: (-8442.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 100->200, evaluating ...
+        -> worse: (-8608.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 100->150, evaluating ...
+        -> worse: (-8944.0 [based on 1 runs with cutoff 5.0])
+    Changing clonsize: 200->150, evaluating ...
+        -> worse: (-8200.0 [based on 1 runs with cutoff 5.0])
+    Changing clones: 100->25, evaluating ...
+          -> Take improving step to neighbour clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0]) with flip 1
+
+          
+============= Performing 7 bonus runs of state: clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0]) ============ 
+
+State wants more detail (1+1) than incumbent (1), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9468.0 [based on 1 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 1.9, -8770.0 [2, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (2+1) than incumbent (2), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8770.0 [based on 2 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8770.0 [based on 2 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 2.1, -8828.33333333333 [3, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (3+1) than incumbent (3), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8828.33333333333 [based on 3 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8828.33333333333 [based on 3 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 2.3, -8916.25 [4, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (4+1) than incumbent (4), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8916.25 [based on 4 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8916.25 [based on 4 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 2.5, -8940.6 [5, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (5+1) than incumbent (5), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8940.6 [based on 5 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8940.6 [based on 5 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 2.7, -9006.66666666667 [6, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (6+1) than incumbent (6), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9006.66666666667 [based on 6 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9006.66666666667 [based on 6 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 2.9, -9026.28571428571 [7, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (7+1) than incumbent (7), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9026.28571428571 [based on 7 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-9026.28571428571 [based on 7 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 3.1, -8970.125 [8, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+          -> After 7 bonus runs: clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8970.125 [based on 8 runs with cutoff 5.0])
+
+    Changing clones: 25->75, evaluating ...
+        -> worse: (-9468.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 100->150, evaluating ...
+        -> worse: (-8944.0 [based on 1 runs with cutoff 5.0])
+    Changing mejores: 25->100, evaluating ...
+        -> worse: (-9281.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 100->200, evaluating ...
+        -> worse: (-8608.0 [based on 1 runs with cutoff 5.0])
+    Changing clonsize: 200->100, evaluating ...
+        -> worse: (-9296.0 [based on 1 runs with cutoff 5.0])
+    Changing mejores: 25->50, evaluating ...
+        -> worse: (-9065.0 [based on 1 runs with cutoff 5.0])
+    Changing reemplazo: 70->50, evaluating ...
+        -> worse: (-8239.0 [based on 1 runs with cutoff 5.0])
+    Changing clonsize: 200->50, evaluating ...
+        -> worse: (-8908.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 100->50, evaluating ...
+        -> worse: (-7011.0 [based on 1 runs with cutoff 5.0])
+    Changing reemplazo: 70->10, evaluating ...
+        -> worse: (-8712.0 [based on 1 runs with cutoff 5.0])
+    Changing mejores: 25->75, evaluating ...
+        -> worse: (-9141.0 [based on 1 runs with cutoff 5.0])
+    Changing reemplazo: 70->30, evaluating ...
+        -> worse: (-8442.0 [based on 1 runs with cutoff 5.0])
+    Changing clones: 25->50, evaluating ...
+        -> worse: (-9468.0 [based on 1 runs with cutoff 5.0])
+    Changing clonsize: 200->150, evaluating ...
+        -> worse: (-8200.0 [based on 1 runs with cutoff 5.0])
+          
+============= Performing 14 bonus runs of state: clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8970.125 [based on 8 runs with cutoff 5.0]) ============ 
+
+State wants more detail (8+1) than incumbent (8), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8970.125 [based on 8 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8970.125 [based on 8 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 4.7, -8940.0 [9, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (9+1) than incumbent (9), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8940.0 [based on 9 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8940.0 [based on 9 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 4.9, -8948.6 [10, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (10+1) than incumbent (10), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8948.6 [based on 10 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8948.6 [based on 10 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 5.1, -8974.81818181818 [11, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (11+1) than incumbent (11), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8974.81818181818 [based on 11 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8974.81818181818 [based on 11 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 5.3, -8901.08333333333 [12, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (12+1) than incumbent (12), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8901.08333333333 [based on 12 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8901.08333333333 [based on 12 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 5.5, -8883.46153846154 [13, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (13+1) than incumbent (13), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8883.46153846154 [based on 13 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8883.46153846154 [based on 13 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 5.7, -8865.5 [14, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (14+1) than incumbent (14), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8865.5 [based on 14 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8865.5 [based on 14 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 5.9, -8903.2 [15, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (15+1) than incumbent (15), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8903.2 [based on 15 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8903.2 [based on 15 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 6.09999999999999, -8825.5625 [16, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (16+1) than incumbent (16), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8825.5625 [based on 16 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8825.5625 [based on 16 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 6.29999999999999, -8834.70588235294 [17, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (17+1) than incumbent (17), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8834.70588235294 [based on 17 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8834.70588235294 [based on 17 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 6.49999999999999, -8843.16666666667 [18, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (18+1) than incumbent (18), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8843.16666666667 [based on 18 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8843.16666666667 [based on 18 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 6.69999999999999, -8857.26315789474 [19, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (19+1) than incumbent (19), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8857.26315789474 [based on 19 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8857.26315789474 [based on 19 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 6.89999999999999, -8878.7 [20, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (20+1) than incumbent (20), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8878.7 [based on 20 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8878.7 [based on 20 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 7.09999999999999, -8866.85714285714 [21, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+State wants more detail (21+1) than incumbent (21), doing incumbent first:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8866.85714285714 [based on 21 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8866.85714285714 [based on 21 runs with cutoff 5.0])
+ Same incumbent, new precision:
+New Incumbent: 7.29999999999999, -8864.09090909091 [22, 5.0]. With state clones=100, clonsize=200, mejores=25, popsize=100, reemplazo=70
+          -> After 14 bonus runs for LM: clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8864.09090909091 [based on 22 runs with cutoff 5.0])
+
+   LM for iteration 1: clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8864.09090909091 [based on 22 runs with cutoff 5.0])
+
+========== DETAILED RESULTS (iteration 1): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 1): clonsize=200, reemplazo=70, clones=100, mejores=25, popsize=100
+==================================================================
+Training quality of this incumbent parameter configuration: -8864.09090909091, based on 22 runs with cutoff 5.0
+==================================================================
+
+Comparing LM against incumbent:
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8864.09090909091 [based on 22 runs with cutoff 5.0])
+clones=100 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8864.09090909091 [based on 22 runs with cutoff 5.0])
+LM better, change incumbent
+New Incumbent: 7.39999999999999, -8864.09090909091 [22, 5.0]. With state clones=25, clonsize=200, mejores=25, popsize=100, reemplazo=70
+74/100, 7.39999999999999/30.0
+iteration 2, flip 3, evaluation count 74
+    perturb to ---> clones=25 clonsize=200 mejores=50 popsize=100 reemplazo=70 (-9065.0 [based on 1 runs with cutoff 5.0])
+    perturb to ---> clones=25 clonsize=200 mejores=50 popsize=50 reemplazo=70 (100000000 [based on 0 runs with cutoff 0])
+    perturb to ---> clones=25 clonsize=200 mejores=25 popsize=50 reemplazo=70 (-7011.0 [based on 1 runs with cutoff 5.0])
+   BLS in iteration 2, start with clones=25 clonsize=200 mejores=25 popsize=50 reemplazo=70 (-7216.0 [based on 2 runs with cutoff 5.0])
+    Changing reemplazo: 70->30, evaluating ...
+          -> Take improving step to neighbour clones=25 clonsize=200 mejores=25 popsize=50 reemplazo=30 (-7235.5 [based on 2 runs with cutoff 5.0]) with flip 3
+
+          
+============= Performing 1 bonus runs of state: clones=25 clonsize=200 mejores=25 popsize=50 reemplazo=30 (-7235.5 [based on 2 runs with cutoff 5.0]) ============ 
+
+          -> After 1 bonus runs: clones=25 clonsize=200 mejores=25 popsize=50 reemplazo=30 (-7776.0 [based on 3 runs with cutoff 5.0])
+
+    Changing popsize: 50->150, evaluating ...
+          -> Take improving step to neighbour clones=25 clonsize=200 mejores=25 popsize=150 reemplazo=30 (-9071.0 [based on 3 runs with cutoff 5.0]) with flip 4
+
+          
+============= Performing 1 bonus runs of state: clones=25 clonsize=200 mejores=25 popsize=150 reemplazo=30 (-9071.0 [based on 3 runs with cutoff 5.0]) ============ 
+
+          -> After 1 bonus runs: clones=25 clonsize=200 mejores=25 popsize=150 reemplazo=30 (-9049.75 [based on 4 runs with cutoff 5.0])
+
+    Changing clonsize: 200->50, evaluating ...
+          -> Take improving step to neighbour clones=25 clonsize=50 mejores=25 popsize=150 reemplazo=30 (-9168.25 [based on 4 runs with cutoff 5.0]) with flip 5
+
+          
+============= Performing 1 bonus runs of state: clones=25 clonsize=50 mejores=25 popsize=150 reemplazo=30 (-9168.25 [based on 4 runs with cutoff 5.0]) ============ 
+
+          -> After 1 bonus runs: clones=25 clonsize=50 mejores=25 popsize=150 reemplazo=30 (-9142.8 [based on 5 runs with cutoff 5.0])
+
+    Changing mejores: 25->50, evaluating ...
+        -> worse: (-8263.0 [based on 1 runs with cutoff 5.0])
+    Changing clones: 25->100, evaluating ...
+        -> worse: (-9320.0 [based on 1 runs with cutoff 5.0])
+    Changing mejores: 25->75, evaluating ...
+        -> worse: (-7755.0 [based on 1 runs with cutoff 5.0])
+    Changing clones: 25->50, evaluating ...
+        -> worse: (-9320.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 150->50, evaluating ...
+        -> worse: (-8867.0 [based on 1 runs with cutoff 5.0])
+    Changing clones: 25->75, evaluating ...
+        -> worse: (-9320.0 [based on 1 runs with cutoff 5.0])
+    Changing reemplazo: 30->10, evaluating ...
+        -> worse: (-8958.0 [based on 1 runs with cutoff 5.0])
+    Changing popsize: 150->200, evaluating ...
+        -> worse: (-8801.0 [based on 1 runs with cutoff 5.0])
+    Changing clonsize: 50->150, evaluating ...
+          -> Take improving step to neighbour clones=25 clonsize=150 mejores=25 popsize=150 reemplazo=30 (-9231.0 [based on 5 runs with cutoff 5.0]) with flip 6
+
+          
+============= Performing 9 bonus runs of state: clones=25 clonsize=150 mejores=25 popsize=150 reemplazo=30 (-9231.0 [based on 5 runs with cutoff 5.0]) ============ 
+
+          -> After 9 bonus runs: clones=25 clonsize=150 mejores=25 popsize=150 reemplazo=30 (-9231.0 [based on 5 runs with cutoff 5.0])
+
+          
+============= Performing 0 bonus runs of state: clones=25 clonsize=150 mejores=25 popsize=150 reemplazo=30 (-9231.0 [based on 5 runs with cutoff 5.0]) ============ 
+
+          -> After 0 bonus runs for LM: clones=25 clonsize=150 mejores=25 popsize=150 reemplazo=30 (-9231.0 [based on 5 runs with cutoff 5.0])
+
+   LM for iteration 2: clones=25 clonsize=150 mejores=25 popsize=150 reemplazo=30 (-9231.0 [based on 5 runs with cutoff 5.0])
+
+========== DETAILED RESULTS (iteration 2): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 2): clonsize=200, reemplazo=70, clones=25, mejores=25, popsize=100
+==================================================================
+Training quality of this incumbent parameter configuration: -8864.09090909091, based on 22 runs with cutoff 5.0
+==================================================================
+
+Comparing LM against incumbent:
+clones=25 clonsize=150 mejores=25 popsize=150 reemplazo=30 (-9231.0 [based on 5 runs with cutoff 5.0])
+clones=25 clonsize=200 mejores=25 popsize=100 reemplazo=70 (-8864.09090909091 [based on 22 runs with cutoff 5.0])
+101/100, 10.1/30.0
+New inc: -8999.45454545455
+New Incumbent: 11.7, -8999.45454545455 [22, 5.0]. With state clones=25, clonsize=150, mejores=25, popsize=150, reemplazo=30
+LM better, change incumbent
+New Incumbent: 11.7, -8999.45454545455 [22, 5.0]. With state clones=25, clonsize=150, mejores=25, popsize=150, reemplazo=30
+   Accepting new better local optimum: clones=25 clonsize=150 mejores=25 popsize=150 reemplazo=30 (-8999.45454545455 [based on 22 runs with cutoff 5.0])
+Final solution for depth 1 with limit N=1000, and cutoff time=5.0.
+New Incumbent: 11.7, -8999.45454545455 [22, 5.0]. With state clones=25, clonsize=150, mejores=25, popsize=150, reemplazo=30
+
+==================================================================
+ParamILS is finished.
+==================================================================
+
+Final best parameter configuration found: clones=25, clonsize=150, mejores=25, popsize=150, reemplazo=30
+==================================================================
+Active parameters: clones=25, clonsize=150, mejores=25, popsize=150, reemplazo=30
+
+==================================================================
+Training quality of this final best found parameter configuration: -8999.45454545455, based on 22 runs with cutoff 5.0
+==================================================================
+
+
+==================================================================
+Computing validation result on independent data -- 50 runs with cutoff time 5.0...
+==================================================================
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8393322: -9007
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9916752: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/9513130: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7635240: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7519922: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2068572: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5684099: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5403259: -8918
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/315646: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2981971: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/940617: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1254454: -8715
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2743934: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2700503: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6828229: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8847750: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2824114: -8835
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6289394: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4928911: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6352407: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5639232: -8475
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7417393: -9446
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5139547: -8673
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6363900: -8523
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4417358: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4058385: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5794712: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5263734: -8981
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7436887: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3873012: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/87917: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4960164: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8925704: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6144531: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/5289340: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6629409: -9275
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1739488: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/853913: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6894917: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2052372: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1741997: -8821
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/7919939: -8877
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8065669: -8936
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/1379588: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6523716: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/4671691: -8777
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/6337585: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/8600398: 0
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/3942459: -9150
+/home/cristopher/USM/2016-2/INF474/IAA-2016/Sintoniza/2414007: -8578
+Combined result: -2839.74
+
+================================================================
+Final best parameter configuration: clones=25, clonsize=150, mejores=25, popsize=150, reemplazo=30
+==================================================================
+Active parameters: clones=25, clonsize=150, mejores=25, popsize=150, reemplazo=30
+
+================================================================
+Training quality of this final best found parameter configuration: -8999.45454545455, based on 22 runs with cutoff 5.0
+Test quality of this final best found parameter configuration: -2839.74, based on 50 independent runs with cutoff 5.0
+==================================================================

@@ -1,0 +1,6 @@
+Final best parameter configuration: clones=25, clonsize=150, mejores=25, popsize=150, reemplazo=30
+==================================================================
+Active parameters: clones=25, clonsize=150, mejores=25, popsize=150, reemplazo=30
+==================================================================
+Training quality of this final best found parameter configuration: -8999.45454545455, based on 22 runs with cutoff 5.0
+Test quality of this final best found parameter configuration: -2839.74, based on 50 independent runs with cutoff 5.0

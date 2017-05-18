@@ -1,1 +1,69 @@
 \section{Experimentos}
+
+\subsection{Datasets}
+
+Los datasets considerados para la experimentación corresponden a dos de los datasets los mostrados en la literatura \cite{NewHaEOps}. El primero de ellos, Mandl, corresponde a una red conexa de 15 nodos y 20 arcos. El segundo, Mumford0, es una red de 30 nodos y 90 arcos.  Dos instancias de los datasets se consideraron para la ejecución del algoritmo. En el caso de Mandl, se consideró una instancia con 6 rutas de entre 2 y 8 nodos por ruta. Para el caso de Mumford0, la instancia utilizada fue una de 12 rutas con 2 a 15 paraderos cada una. La Tabla \ref{tab:instancias} resume información de las instancias. 
+%El mismo trabajo \cite{NewHaEOps} considera una cota inferior de tiempo para pasajeros $LB_{pass}$ y otra cota inferior de tiempo para operarios $LB_{op}$, las cuales se muestran con la información de las instancias utilizadas.
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Instancia & Nodos & Arcos & Cant. Rutas & Paraderos/Ruta \\
+\hline
+\hline
+Mandl & 15 & 20 & 6 & 2-8 \\
+Mumford0 & 30 & 90 & 12 & 2-15\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Instancias a utilizar en la experimentación}
+\label{tab:instancias}
+\end{table}
+
+Para normalizar la aptitud de las soluciones se utilizarán las cotas inferiores dadas en \cite{NewHaEOps}, las cuales se muestran en la Tabla \ref{tab:norm}.
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Instancia & $LB_{FO_1} [s]$ & $LB_{FO_2} [s]$\\
+\hline
+\hline
+Mandl & 63 & 10.0058\\
+Mumford0 & 94 & 13.0121\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Cotas inferiores utilizados para normalizar la calidad de las soluciones.}
+\label{tab:norm}
+\end{table}
+
+\subsection{Sintonización de Parámetros}
+
+Para encontrar los parámetros que obtienen mejores resultados se utilizará el sintonizador ParamILS \cite{ParamILS-JAIR}, el cual determina la combinación de parámetros que minimizan un objetivo entregado por la instancia. El objetivo a minimizar por ParamILS será el hipervolumen. Sin embargo, ParamILS encontrará la combinación de parámetros para el menor hipervolumen negativo (el valor obtenido en una ejecución del algoritmo, multiplicado por menos uno) que es equivalente a maximizar el hipervolumen positivo del frente de pareto. Se sintonizarán 5 parámetros que tienen incidencia en la cantidad de soluciones seleccionadas en distintas etapas del algoritmo y en los tamaños de poblaciones de soluciones. Se fijará el parámetro \generaciones{} en 250 para cada ejecución realizada por el sintonizador y se cambiarán los valores de los parámetros \alp{} y \bet{} cada 50 iteraciones de manera aleatoria. En la Tabla \ref{tab:sintonizacion1} se muestran los parámetros a sintonizar, donde en cada caso, un valor por defecto será utilizado inicialmente y otros 3 valores adicionales serán entregados a ParamILS. 
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{|l|l|p{0.75cm}p{0.75cm}p{0.75cm}p{0.75cm}|}
+\hline
+Parámetro & Defecto & \multicolumn{4}{|l|}{Valores a utilizar}\\
+\hline
+\hline
+\pmejores & 1.00 & 0.25 & 0.50 & 0.75 & 1.00\\
+\pclones & 0.50 & 0.25 & 0.50 & 0.75 & 1.00\\
+\preemplazo & 0.30 & 0.10 & 0.30 & 0.50 & 0.70\\
+\popsize & 100 & 50 & 100 & 150 & 200\\
+\clonsize & 150 & 50 & 100 & 150 & 200\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Valores a utilizar para la sintonización de parámetros.}
+\label{tab:sintonizacion1}
+\end{table}
+
+\subsection{Búsqueda de mejores soluciones}
+
+Una vez determinados los mejores parámetros por cada instancia, se realizarán 10 pruebas adicionales con estos parámetros usando distintas semillas. Se fijará el parámetro \generaciones{} en 1000 para cada ejecución del algoritmo y se cambiarán los valores de los parámetros \alp{} y \bet{} cada 50 iteraciones de manera aleatoria.  
+
+

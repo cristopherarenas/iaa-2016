@@ -2,12 +2,27 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{tikz}
-
+%\usepackage[spanish,mexico]{babel}
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{amsmath}
 \usepackage{diagbox}
+\usepackage{multirow}
 \input{spanishAlgorithmic}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\generaciones}{\texttt{generaciones}}
+\newcommand{\alp}{\texttt{alpha}}
+\newcommand{\bet}{\texttt{beta}}
+\newcommand{\popsize}{\texttt{tam\_pob}}
+\newcommand{\clonsize}{\texttt{tam\_clon}}
+\newcommand{\pmejores}{\texttt{porc\_mejores}}
+\newcommand{\pclones}{\texttt{porc\_clones}}
+\newcommand{\preemplazo}{\texttt{porc\_reemplazo}}
+
 
 \pagestyle{plain}
 
@@ -28,11 +43,10 @@
 \input{tex/05_estructura_algoritmo}
 \input{tex/06_parametros_algoritmo}
 \input{tex/07_inicializacion}
-\input{tex/08_proceso_transformacion}
+\input{tex/08_proceso_iterativo}
 \input{tex/09_experimentos}
 \input{tex/10_resultados}
 %\input{tex/temp}
-
 
 \section{Bibliograf\'ia}
 \bibliographystyle{plain}

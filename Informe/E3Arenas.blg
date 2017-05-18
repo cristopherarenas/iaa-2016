@@ -5,45 +5,45 @@ The style file: plain.bst
 Database file #1: utrp.bib
 Warning--empty journal in cortes2009
 Warning--empty booktitle in sia
-You've used 15 entries,
+You've used 16 entries,
             2118 wiz_defined-function locations,
-            585 strings with 6499 characters,
-and the built_in function-call counts, 5263 in all, are:
-= -- 546
-> -- 159
+            592 strings with 6707 characters,
+and the built_in function-call counts, 5655 in all, are:
+= -- 585
+> -- 182
 < -- 8
-+ -- 75
-- -- 50
-* -- 296
-:= -- 805
-add.period$ -- 48
-call.type$ -- 15
-change.case$ -- 68
++ -- 84
+- -- 58
+* -- 330
+:= -- 872
+add.period$ -- 51
+call.type$ -- 16
+change.case$ -- 75
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 243
-empty$ -- 459
-format.name$ -- 50
-if$ -- 1165
+cite$ -- 18
+duplicate$ -- 254
+empty$ -- 485
+format.name$ -- 58
+if$ -- 1242
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 14
-newline$ -- 78
-num.names$ -- 30
-pop$ -- 90
+int.to.str$ -- 16
+missing$ -- 15
+newline$ -- 83
+num.names$ -- 32
+pop$ -- 95
 preamble$ -- 1
-purify$ -- 55
+purify$ -- 61
 quote$ -- 0
-skip$ -- 193
+skip$ -- 200
 stack$ -- 0
-substring$ -- 392
-swap$ -- 85
+substring$ -- 422
+swap$ -- 86
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
+type$ -- 62
 warning$ -- 2
-while$ -- 54
-width$ -- 17
-write$ -- 167
+while$ -- 58
+width$ -- 18
+write$ -- 178
 (There were 2 warnings)

@@ -4,9 +4,9 @@ import sys
 import numpy as np
 
 
-print "This is the name of the script: ", sys.argv[0]
-print "Number of arguments: ", len(sys.argv)
-print "The arguments are: " , str(sys.argv)
+#print("This is the name of the script: ", sys.argv[0])
+#print("Number of arguments: ", len(sys.argv))
+#print("The arguments are: " , str(sys.argv))
 
 datos = {}
 archivo = open(sys.argv[1])
@@ -20,7 +20,7 @@ for linea in archivo:
 archivo.close()
 
 semillas = datos.keys()
-semillas.sort()
+#semillas.sort()
 #generar grafico
 
 colores = np.linspace(0.3,0.6,len(semillas))
@@ -38,4 +38,4 @@ plt.xlabel("Generaciones")
 plt.ylabel("Hipervolumen")
 plt.legend(loc='center left', bbox_to_anchor=(1.02, 0.5))
 plt.subplots_adjust(bottom=0.12,right=0.88,left=0.07,top=0.93)
-plt.savefig("test.pdf",format="pdf")
+plt.savefig("hyp_"+str(sys.argv[2])+".pdf",format="pdf")

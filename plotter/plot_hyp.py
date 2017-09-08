@@ -16,7 +16,7 @@ for linea in archivo:
 	if data[0] != "instancia":
 		if int(data[1]) not in datos:
 			datos[int(data[1])]=list()
-		datos[int(data[1])].append(float(data[10]))
+		datos[int(data[1])].append(float(data[10].replace('"','')))
 archivo.close()
 
 semillas = datos.keys()

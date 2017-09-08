@@ -19,19 +19,80 @@ Mumford0 & 0.25 & 0.25 & 0.30 & 150 & 150 \\
 
 \begin{table}[!htb]
 \begin{center}
-\begin{tabular}{|p{0.14\textwidth}|p{0.18\textwidth}|p{0.25\textwidth}|p{0.18\textwidth}|p{0.25\textwidth}|}
+\begin{tabular}{|p{0.14\textwidth}|p{0.36\textwidth}|p{0.50\textwidth}|}
 \hline
-\multirow{2}{*}{Instancia} & \multicolumn{2}{|c|}{Mejor solución para pasajeros} & \multicolumn{2}{|c|}{Mejor solución para operadores}\\
-\cline{2-5}
- & Costos & Rutas & Costos & Rutas \\
+\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para pasajeros} \\
+\cline{2-3}
+ & Costos & Rutas\\
 \hline
 \hline
-Mandl & $C_p = 10.4778$\newline $C_o = 158$ \newline (semilla=4) & 9-15-6-3-2-1 \newline 3-2-5-4-6-8-10 \newline 4-2-3-6-15-7 \newline 11-10-8-6-3-2-1 \newline 9-15-7-10-11-12-4-2 \newline 11-13-14-10-7 & $C_p = 13.0501$\newline $C_o = 63$ \newline (semilla=567)  & 11-13-14 \newline 9-15-7 \newline 15-8-6-3-2-4-5 \newline 2-1 \newline 7-10 \newline 12-11-10 \\
+Mandl & $C_p = 10.4778$\newline $C_o = 158$ \newline (semilla=4) & 9-15-6-3-2-1 \newline 3-2-5-4-6-8-10 \newline 4-2-3-6-15-7 \newline 11-10-8-6-3-2-1 \newline 9-15-7-10-11-12-4-2 \newline 11-13-14-10-7 \\
 \hline
-Mumford0 & $C_p = $\newline $C_o = $ \newline  &  & $C_p = $\newline $C_o = $ \newline  &  \\
+Mumford0 & $C_p = 17.0681$ \newline $C_o = 616$ \newline (semilla=45) & 8-29-17-3-16-22-7-14-1-13-9-20-18-12 \newline 24-15-2-5-4-10 \newline 27-1-26-12-15-8-3-7-6-16-11 \newline 2-5-25-8-3-30-28-16-22-11-7-6 \newline 18-1-14-7-6-22-3-16-30-28-8-5-2 \newline 27-9-13-20-23-18-1-19-14-7-3-28-17-8 \newline 7-3-11-17-16-28-8-21-15-10 \newline 7-14-19-1-26-23-18-12-4-2-5 \newline 21-8-26-1-13-9 \newline 4-2-5-8-3-7-14-19-13-23-1-20-18-12-15 \newline 30-3-22-6-16-7-14-1-20-18-29-17-28-11-8 \newline 28-11-22-6-7-17-16-3-8-25-2-4-5-15\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Mejores soluciones para pasajeros y operadores por instancia.}
-\label{tab:mejoresfos}
+\caption{Mejores soluciones para pasajeros por instancia.}
+\label{tab:mejoresfo1}
 \end{table}
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{|p{0.14\textwidth}|p{0.36\textwidth}|p{0.50\textwidth}|}
+\hline
+\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para operadores}\\
+\cline{2-3}
+ & Costos & Rutas \\
+\hline
+\hline
+Mandl & $C_p = 13.0501$\newline $C_o = 63$ \newline (semilla=567)  & 11-13-14 \newline 9-15-7 \newline 15-8-6-3-2-4-5 \newline 2-1 \newline 7-10 \newline 12-11-10 \\
+\hline
+Mumford0 & $C_p = 22.3516$ \newline $C_o = 112$ \newline (semilla=34) & 15-21 \newline 5-25-15 \newline 3-30-11-7 \newline 22-11 \newline 28-17-7-6 \newline 29-26-12 \newline 19-1 \newline 16-7-14 \newline 2-4-10-24 \newline 2-5-8-29-18-19-13-20-9-27 \newline 1-23 \newline 14-1 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Mejores soluciones para operadores por instancia.}
+\label{tab:mejoresfo2}
+\end{table}
+
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{|p{0.14\textwidth}|p{0.36\textwidth}|p{0.50\textwidth}|}
+\hline
+\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para pasajeros} \\
+\cline{2-3}
+ & Costos & Rutas\\
+\hline
+\hline
+Mandl & $C_p = 10.5164$\newline $C_o = 149$ \newline (semilla=3) &  5-4-6-8-10-7-15-9 \newline  7-15-6-3-2-1 \newline  1-2 \newline  12-11-10-8-6-3-2-1 \newline  14-13-11-10-7 \newline  11-12-4-2-1\\
+\hline
+Mumford0 & $C_p = 17.3447$ \newline $C_o = 439$ \newline (semilla=2) &  28-30-11-17-29-8-26-12-15-25 \newline  4-2-25-5-8-11-22 \newline  19-18-1-29-8-17-7-11 \newline  8-25-4-12-18-19-14-7-6-16-3 \newline  5-25-2-10-15-24-21-8-3-7 \newline  13-23-19-18-20-9-27-1-26-8-5 \newline  8-21-24-25-5-4-15-2 \newline  26-23-20-1-14-19-18-13-9 \newline  24-21-5 \newline  11-7-14-1-13-9-20-18-12-4-2 \newline  3-22-7-16-11-8-28-17-29-1-13-9 \newline  3-17-29-1-13-9
+\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Mejores soluciones para pasajeros por instancia.}
+\label{tab:mejoresfo1comp}
+\end{table}
+
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{|p{0.14\textwidth}|p{0.36\textwidth}|p{0.50\textwidth}|}
+\hline
+\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para operadores} \\
+\cline{2-3}
+ & Costos & Rutas\\
+\hline
+\hline
+Mandl & $C_p = 12.973$\newline $C_o = 63$ \newline (semilla=5678) & 6-3-2-1 \newline  2-4-5 \newline  12-11-10 \newline  11-13-14 \newline  9-15-7-10 \newline  15-8-6 \\
+\hline
+Mumford0 & $C_p = 21.4104$ \newline $C_o = 116$ \newline (semilla=1234) & 21-15 \newline  14-7-6 \newline  20-13-18-23-1-29 \newline  30-28-17 \newline  5-2-4-10 \newline  19-1 \newline  10-24-15-25 \newline  30-11-7 \newline  21-8-3 \newline  30-3 \newline  15-12-26-23-18-1-27-9 \newline  16-11-22 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Mejores soluciones para operadores por instancia.}
+\label{tab:mejoresfo2comp}
+\end{table}
+

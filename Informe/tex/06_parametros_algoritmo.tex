@@ -3,11 +3,11 @@
 El algoritmo considera los siguientes parámetros:
 
 \begin{itemize}
-\item \generaciones: criterio de término para el algoritmo inmune. Es la cantidad de iteraciones que deben ocurrir para que finalice el algoritmo. Posee valores de 0 a infinito.
-\item \alp{ } y \bet: representan variables de peso para ponderar las dos funciones objetivo y determinar una aptitud para una solución candidata. Posee valores entre cero y uno. La suma de ambas debe ser uno.
-\item \popsize: representa el tamaño de la población $P$ en cada generación. Una generación está compuesta por un conjunto de soluciones candidatas factibles. Posee valores de 1 a infinito.
-\item \clonsize: es el tamaño de la población de clones $C$ que se generarán en cada generación a partir de las mejores soluciones candidatas. Posee valores de 1 a infinito.
-\item \pmejores: Porcentaje de mejores soluciones de la población que serán seleccionadas para mutarse en cada generación. Posee valores entre 0 y 1.
-\item \pclones: porcentaje de mejores clones mutados que serán almacenados en el conjunto de memoria $M$. Posee valores entre 0 y 1.
-\item \preemplazo: porcentaje de peores soluciones de la población que serán reemplazadas por soluciones aleatorias. Posee valores entre 0 y 1.
+\item \generaciones: criterio de término para el algoritmo inmune. Es la cantidad de iteraciones que deben ocurrir para que finalice el algoritmo. El rango de valores permitidos para este parámetro va de 0 a infinito.
+\item \alp{ } y \bet: representan variables de peso para ponderar las dos funciones objetivo y determinar una aptitud para una solución candidata. El rango de valores permitidos va de cero a uno. Además, la suma de ambas debe ser uno.
+\item \popsize: representa el tamaño de la población $P$ en cada generación. Una generación está compuesta por un conjunto de soluciones candidatas factibles. El rango de valores permitidos va de 1 a infinito.
+\item \clonsize: es el tamaño de la población de clones $C$ que se generarán en cada generación a partir de las mejores soluciones candidatas. El rango de valores permitidos va de 1 a infinito.
+\item \pmejores: Porcentaje de mejores soluciones de la población que serán seleccionadas para mutarse en cada generación. El rango de valores permitidos va de 0 a 1.
+\item \pclones: porcentaje de mejores clones mutados que serán almacenados en el conjunto de memoria $M$. El rango de valores permitidos va de 0 a 1.
+\item \preemplazo: porcentaje de peores soluciones de la población que serán reemplazadas por soluciones aleatorias. El rango de valores permitidos va de 0 a 1.
 \end{itemize}

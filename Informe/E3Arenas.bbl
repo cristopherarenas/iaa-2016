@@ -44,6 +44,13 @@ Hong Jiang, Qingsong Yu, and Yong Huang.
 \newblock In {\em Natural Computation (ICNC), 2010 Sixth International
   Conference on}, volume~5, pages 2739--2743. IEEE, 2010.
 
+\bibitem{john2014improved}
+Matthew~P John, Christine~L Mumford, and Rhyd Lewis.
+\newblock An improved multi-objective algorithm for the urban transit routing
+  problem.
+\newblock In {\em European Conference on Evolutionary Computation in
+  Combinatorial Optimization}, pages 49--60. Springer, 2014.
+
 \bibitem{vrprb}
 Talbi Josefowiez, Semet.
 \newblock An evolutionary algorithm for the vehicle routing problem with route

@@ -2,7 +2,7 @@
 
 Dentro del contexto del UTRP, se pretende determinar un conjunto de rutas a partir de distintos paraderos de buses preestablecidos, los cuales deben presentar un beneficio para los pasajeros y para el operador del bus.\\
 
-Para las paradas se utiliza un grafo no dirigido, cuyos vértices corresponden a las paradas y los arcos a un camino entre las paradas. Un ejemplo de esta representación es la red de Mandl, la cual puede apreciarse en la Figura \ref{fig:mandl}.
+Para las paradas se utiliza un grafo no dirigido, cuyos vértices corresponden a las paradas y los arcos a un camino entre las paradas. Un ejemplo de esta representación es la red de Mandl, que puede apreciarse en la Figura \ref{fig:mandl}.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -50,12 +50,28 @@ Para las paradas se utiliza un grafo no dirigido, cuyos vértices corresponden a
 \end{center}
 \end{figure}
 
-La representación escogida para manejar el UTRP es mediante un arreglo bi-dimensional que representa un conjunto de rutas. Cada fila será una ruta, la cual contiene un identificador asociado al número de ruta y posteriormente identificadores para los paraderos de buses. Estos paraderos se encuentran representados por una matriz de demandas, una matriz de tiempos de viaje y por un sistema de coordenadas (este último para modelar la posición de cada paradero).
-
-En la Figura \ref{fig:repr1} se muestra un ejemplo de una representación de rutas el cual se pudo obtener a partir de la literatura existente sobre el UTRP \cite{metaheuristic2010}.
+La representación utilizada en \cite{metaheuristic2010} para manejar el conjunto de rutas consiste en un arreglo bi-dimensional de $r$ filas y $m+1$ columnas, con $r$ la cantidad de rutas de la solución y $m$ la máxima cantidad de paraderos permitida. Cada fila distinta será una ruta, donde la primera columna almacena el número de la ruta. Para las otras columnas de la fila se utlizan identificadores para los paraderos de buses que componen la ruta. Por otra parte, los paraderos se encuentran representados por una matriz de demandas, una matriz de tiempos de viaje y por un sistema de coordenadas (este último para modelar la posición de cada paradero).
 
 \begin{figure}[!htb]
-\begin{center}
+\begin{subfigure}[b]{0.6\textwidth}
+\begin{tikzpicture}
+\node[draw,circle] (0) at (0,0) {$0$};
+\node[draw,circle] (1) at (2,2) {$1$};
+\node[draw,circle] (2) at (2,0) {$2$};
+\node[draw,circle] (3) at (2,-2) {$3$};
+\node[draw,circle] (4) at (4,2) {$4$};
+\node[draw,circle] (5) at (4,0) {$5$};
+\node[draw,circle] (6) at (4,-2) {$6$};
+\node[draw,circle] (7) at (6,0) {$7$};
+
+\draw[dotted, line width=1pt] (0) -- (1) -- (4) -- (7);
+\draw[dash dot, line width=1pt] (1) -- (2) -- (5);
+\draw[-, line width=1pt] (0) -- (3) -- (6);
+\end{tikzpicture}
+\caption{Grafo con tres rutas.}
+\label{fig:grafo}
+\end{subfigure}
+\begin{subfigure}[b]{0.4\textwidth}
 \begin{tabular}{|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|}
 \hline
 R1 & 0 & 1 & 4 & 7\\
@@ -65,11 +81,13 @@ R2 & 0 & 3 & 6 & $*$\\
 R3 & 1 & 2 & 5 & $*$\\
 \hline
 \end{tabular}
-\caption{Representación para las rutas.}
+\caption{Arreglo bi-dimensional con tres rutas.}
+\label{fig:tabla}
+\end{subfigure}
+\caption{Representación para el conjunto de rutas.}
 \label{fig:repr1}
-\end{center}
 \end{figure}
 
-Las matrices de tiempos de viaje y de demandas se representan mediante arreglos bidimensionales, donde la fila $i$ y columna $j$ aporta información entre el paradero $i$ y el paradero $j$.\\
+Las matrices de tiempos de viaje y de demandas se representan mediante arreglos bidimensionales, donde la fila $i$ y columna $j$ aporta información entre el paradero $i$ y el paradero $j$.
 
-Las soluciones para el algoritmo inmune artificial propuesto están dadas por un conjunto de rutas que siguen la estructura de la Figura \ref{fig:repr1}.
+Un ejemplo representación, considerando un grafo de 7 paraderos y 3 rutas distintas, están dadas la estructura de la Figura \ref{fig:repr1}. Se puede observar que la cantidad máxima de paraderos es 4, entonces la representación consiste de un arreglo de 3 filas y 5 columnas. El caracter asterisco al final de las rutas 2 y 3 denota que no hay un identificador de paradero, y por ende, la ruta tiene menos de cuatro paraderos.

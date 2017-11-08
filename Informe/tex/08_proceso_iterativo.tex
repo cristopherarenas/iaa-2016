@@ -11,7 +11,7 @@ Cada elemento $p$ de la población $P$ es evaluado mediante una función de apti
 f_{apt}(p) = \alp \cdot \tilde{FO}_1(p) + \bet \cdot \tilde{FO}_2(p)
 \end{equation}
 
-Para determinar la aptitud de un elemento $p$, ésta se deberá evaluar en las funciones objetivo $FO_1$ y $FO_2$ dadas por las ecuaciones \eqref{eq:fo1} y \eqref{eq:fo2}, respectivamente. Luego, cada valor será normalizado por una cota inferior y así se determinarán las magnitudes $\tilde{FO}_1$ y $\tilde{FO}_2$, según lo mostrado en las Ecuaciones \eqref{eq:lb1} y \eqref{eq:lb2}.
+Para determinar la aptitud de un elemento $p$, ésta se deberá evaluar en las funciones objetivo $FO_1$ y $FO_2$ dadas por las ecuaciones \eqref{eq:fo1} y \eqref{eq:fo2}, respectivamente. Dado que el orden de magnitud de las funciones objetivo es distinto, cada valor será normalizado por una cota inferior conocida para cada instancia. Así, se determinarán las magnitudes $\tilde{FO}_1$ y $\tilde{FO}_2$, según lo mostrado en las Ecuaciones \eqref{eq:lb1} y \eqref{eq:lb2}.
 
 \begin{equation}
 \label{eq:lb1}
@@ -24,8 +24,6 @@ Para determinar la aptitud de un elemento $p$, ésta se deberá evaluar en las f
 \end{equation}
 
 Finalmente, la aptitud de $p$ está dada por una poderación de $\tilde{FO}_1$ y $\tilde{FO}_2$, utilizando los parámetros \alp{} y \bet. La función de aptitud entregará valores entre 0 y 1, siendo el valor 1 la mejor aptitud posible.
-
-%Donde $\tilde{FO}_1$ y $\tilde{FO}_2$ corresponden a las funciones objetivo dadas por las ecuaciones \eqref{eq:fo1} y \eqref{eq:fo2}, respectivamente. $\alpha$ y $\beta$ son parámetros del algoritmo y ponderan la importancia que se le da a ambos objetivos. Se considera como restricción de estos parámetros que $\alpha+\beta=1$.
 
 \subsection{Eliminación de soluciones dominadas}
 
@@ -44,10 +42,10 @@ La cantidad $mp$ se detemina multiplicando la cardinalidad del conjunto $P$ por 
 
 \subsection{Operadores de transformación}
 
-Los operadores de tranformación utilizados en este algoritmo son tres operadores de mutación, diseñados para generar cambios distintos en las solciones. Los operadores trabajan generando un movimiento sobre una ruta de una solución. Estos operadores consisten en agregar un paradero a una ruta, eliminar un paradero de una ruta y reordenar una ruta mediante un punto de corte.
+Los operadores de transformación utilizados en este algoritmo consisten en tres operadores de mutación, diseñados para generar cambios distintos en las soluciones con la esperanza de mejorar la función de aptitud de los anticuerpos. Los operadores trabajan generando un movimiento sobre una ruta de una solución. Estos operadores son agregar un paradero a una ruta, eliminar un paradero de una ruta y reordenar una ruta mediante un punto de corte.
 
 \begin{enumerate}
-\item \textbf{Agregar una ruta}: Considerando una ruta $r$ con $n$ paraderos ordenados: $bs_1, bs_2, \ldots, bs_n$. Este operador busca un vecino del paradero $bs_n$ y le agrega un nuevo paradero $bs_{n+1}$ al final de la ruta, dejando la ruta con $n+1$ paraderos ordenados. La Figura \ref{fig:mut1} muestra un ejemplo con $n=6$.
+\item \textbf{Agregar una ruta}: Considerando una ruta $r$ con $n$ paraderos ordenados: $bs_1, bs_2, \ldots, bs_n$. Este operador busca un vecino del paradero $bs_n$ y le agrega un nuevo paradero $bs_{n+1}$ al final de la ruta, dejando la ruta con $n+1$ paraderos ordenados. Este operador es factible de realizar en gran parte de los casos, exceptuando las rutas que tienen el máximo de paraderos permitidos. La Figura \ref{fig:mut1} muestra un ejemplo con $n=6$.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -79,7 +77,7 @@ Los operadores de tranformación utilizados en este algoritmo son tres operadore
 \label{fig:mut1}
 \end{figure}
 
-\item \textbf{Eliminar una ruta}: Considerando una ruta $r$ con $n$ paraderos ordenados: $bs_1, bs_2, \ldots, bs_n$. Este operador elimina el último paradero $bs_n$, dejando la ruta con $n-1$ paraderos ordenados. La Figura \ref{fig:mut2} muestra un ejemplo con $n=6$.
+\item \textbf{Eliminar una ruta}: Considerando una ruta $r$ con $n$ paraderos ordenados: $bs_1, bs_2, \ldots, bs_n$. Este operador elimina el último paradero $bs_n$, dejando la ruta con $n-1$ paraderos ordenados. Este operador es factible de realizar en gran parte de los casos, exceptuando las rutas que tienen el mínimo de paraderos permitidos. La Figura \ref{fig:mut2} muestra un ejemplo con $n=6$.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -109,7 +107,7 @@ Los operadores de tranformación utilizados en este algoritmo son tres operadore
 \label{fig:mut2}
 \end{figure}
 
-\item \textbf{Reordenar una ruta mediante un punto de corte}: Considerando una ruta $r$ con $n$ paraderos ordenados: $bs_1, bs_2, \ldots, bs_n$. Si los paraderos $bs_1$ y $bs_n$ tienen conexión directa, entonces se genera un reordenamiento del orden de la ruta uniendo $bs_1$ y $bs_n$ y seleccionando aleatoriamente un punto de corte en la conexión entre otras dos paradas. La ruta mantiene el número de paraderos. La Figura \ref{fig:mut3} muestra un ejemplo con $n=6$ y seleccionando como punto de corte la conexión entre el cuarto y quinto paradero.
+\item \textbf{Reordenar una ruta mediante un punto de corte}: Considerando una ruta $r$ con $n$ paraderos ordenados: $bs_1, bs_2, \ldots, bs_n$. Si los paraderos $bs_1$ y $bs_n$ tienen conexión directa, entonces se genera un reordenamiento del orden de la ruta uniendo $bs_1$ y $bs_n$ y seleccionando aleatoriamente un punto de corte en la conexión entre otras dos paradas. La ruta mantiene el número de paraderos. Este operador tiene una factibilidad menor a la de los otros operadores, ya que depende fuertemente de las conexiones entre paraderos. Se ha establecido que se realizarán 20 intentos para intentar cambiar una solución mediante este operador. Menos intentos podrían descartar buenas opciones para la solución y más intentos impactarían en más tiempo de cómputo. En caso de fracaso, el operador entrega la misma solución que recibió inicialmente. La Figura \ref{fig:mut3} muestra un ejemplo con $n=6$ y seleccionando como punto de corte la conexión entre el cuarto y quinto paradero.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -148,7 +146,7 @@ La cantidad de veces que un clon debe ser mutado está determinado por su aptitu
 k = \ceil*{K(x)} = \ceil*{ 1 + \frac{n_{rutas} - 1}{apt_{menor} - apt_{mayor}} (x- apt_{menor})}
 \end{equation}
 
-Dado que $x$ puede tener valores entre la aptitud menor y la aptitud mayor, $apt_{menor} \leq x \leq apt_{mayor}$. Evaluando la función $K(x)$, se tiene que $K(apt_{menor})=1$ y $k(apt_{mayor})=n_{rutas}$, por lo tanto $1 \leq K(x) \leq n_{rutas}$. En la Figura \ref{fig:k(x)} se muestra la función $K(x)$ de manera gráfica. Esta función corresponde a una recta con pendiente positiva igual a $(n_{rutas}-1)/(apt_{mayor}-apt_{menor})$. De esta forma, el clon dentro del conjunto de clones con mejor aptitud será mutada 1 vez, mientras que el con con peor aptitud se mutará tantas veces como rutas tenga. Clones que están en puntos intermedios se mutarán más a medida que tengan mayor aptitud. La cantidad $k$ que determina la cantidad de veces que un clon se mutará utilizará esta función aproximada al entero inmediatamente superior. Con esta función se asegura la generación de diversidad de soluciones, donde todos los clones serán mutados al menos 1 vez y se mutarán más a medida que su aptitud sea mayor. Una consideración importante a destacar, para mantenerse en el terreno de las soluciones factibles, es que el operador de mutación 1 (agregar un paradero) está prohibido para rutas con el máximo de paraderos y el operador de mutación 2 (eliminar un paradero) está prohibido para rutas con el mínimo de paraderos.
+Dado que $x$ puede tener valores entre la aptitud menor y la aptitud mayor, $apt_{menor} \leq x \leq apt_{mayor}$. Evaluando la función $K(x)$, se tiene que $K(apt_{menor})=1$ y $k(apt_{mayor})=n_{rutas}$, por lo tanto $1 \leq K(x) \leq n_{rutas}$. En la Figura \ref{fig:k(x)} se muestra la función $K(x)$ de manera gráfica. Esta función corresponde a una recta con pendiente positiva igual a $(n_{rutas}-1)/(apt_{mayor}-apt_{menor})$. De esta forma, el clon dentro del conjunto de clones con mejor aptitud será mutado 1 vez, mientras que el clon con peor aptitud se mutará tantas veces como rutas tenga. Clones que están en puntos intermedios se mutarán más a medida que tengan mayor aptitud. La cantidad $k$ que determina la cantidad de veces que un clon se mutará utilizará esta función aproximada al entero inmediatamente superior. Con esta función se asegura la generación de diversidad de soluciones, donde todos los clones serán mutados al menos 1 vez y se mutarán más a medida que su aptitud sea mayor. Una consideración importante a destacar, para mantenerse en el terreno de las soluciones factibles, es que el operador de mutación 1 (agregar un paradero) está prohibido para rutas con el máximo de paraderos y el operador de mutación 2 (eliminar un paradero) está prohibido para rutas con el mínimo de paraderos.
 
 
 \begin{figure}[!htb]
@@ -184,7 +182,7 @@ Luego de la mutación de clones, se copian hasta $mp$ de los clones a la poblaci
 rank(x_i,t) = 1+p_i^{(t)}
 \end{equation}
 
-El ranking para una solución $x_i$ con respecto a un conjunto $t$ es 1 + $p_i^{(t)}$, donde $p_i^{(t)}$ es la cantidad de soluciones que dominan a $x_{i}$ en el conjunto $t$. Los clones seleccionados para pasar al conjunto $P$ son escogidos por el valor que tengan ranking con respecto al conjunto de clones. Los primeros clones en copiarse a la población $P$ serán aquellos con menor valor de ranking, luego se seleccionarán clones en orden ascendente hasta completar la población \popsize{} o hasta que se hayan copiado todos los clones en la población.
+El ranking para una solución $x_i$ con respecto a un conjunto $t$ es 1 + $p_i^{(t)}$, donde $p_i^{(t)}$ es la cantidad de soluciones que dominan a $x_{i}$ en el conjunto $t$. Los clones seleccionados para pasar al conjunto $P$ son escogidos por el valor de ranking que tengan con respecto al conjunto de clones. Los primeros clones en copiarse a la población $P$ serán aquellos con menor valor de ranking, luego se seleccionarán clones en orden ascendente hasta completar la población \popsize{} o hasta que se hayan copiado todos los clones en la población.
 
 Los anticuerpos de la población $P$ son ordenados de acuerdo a su aptitud, luego los primeros $mm$ anticuerpos son copiados al conjunto de memoria $M$. Para determinar la cantidad $mm$ se considera la cardinalidad de la población $P$ y el parámetro \pclones{}, según la Ecuación \eqref{eq:mm}. $mm$ es aproximado al entero inmediatamente superior.
 

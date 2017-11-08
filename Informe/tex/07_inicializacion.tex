@@ -1,10 +1,10 @@
 \section{Inicialización}
 
-El conjunto de soluciones iniciales es generado aleatoriamente. Una solución está compuesta por $r$ rutas, donde cada está acotada por un mínimo y máximo de paraderos. El algoritmo \ref{alg:inicializacion} muestra los pasos de la generación de la población inicial.
+El conjunto de soluciones iniciales es generado aleatoriamente. Una solución está compuesta por $r$ rutas, donde cada una está acotada por un mínimo y máximo de paraderos. El algoritmo \ref{alg:inicializacion} muestra los pasos de la generación de la población inicial.
 
 Como fue mencionado en la representación del problema, una solución se compone por un conjunto de rutas. A su vez cada ruta se compone de un conjunto de paraderos. Para la generación de soluciones se debe iniciar con la asignación de paraderos, los cuales al agruparse constituyen una ruta. Finalmente, un conjunto de rutas genera una solución. 
 
-Una ruta es generada escogiendo aleatoriamente la cantidad $q$ de paraderos que tendrá (acotada por el mínimo y máximo de paraderos). Después se selecciona aleatoriamente un paradero. Luego, se buscan los vecinos del paradero y se escoge aleatoriamente uno de ellos. Este proceso se repite hasta completar la cantidad $q$. Progresivamente, nuevas rutas son generadas de la misma forma, hasta completar $r$ rutas. Un conjunto de soluciones se generará repitiendo los pasos anteriores de rutas y paraderos hasta llenar la población $P$ con \popsize individuos.
+Una ruta es generada escogiendo aleatoriamente la cantidad $q$ de paraderos que tendrá (acotada por el mínimo y máximo de paraderos). Después se selecciona aleatoriamente un paradero. Luego, se busca una conexión directa desde este paradero a otros y se escoge aleatoriamente uno de ellos para formar parte de la ruta. Este proceso se repite hasta completar la cantidad $q$. Progresivamente, nuevas rutas son generadas de la misma forma, hasta completar $r$ rutas. Un conjunto de soluciones se generará repitiendo los pasos anteriores de rutas y paraderos hasta llenar la población $P$ con \popsize{} individuos.
 
 Las soluciones que se generan en este algoritmo siempre son factibles, ya que satisfacen las cuatro restricciones del problema:
 \begin{itemize}
@@ -18,7 +18,7 @@ Las soluciones que se generan en este algoritmo siempre son factibles, ya que sa
 \caption{Inicialización de soluciones factibles para el UTRP}
 \label{alg:inicializacion}
 \begin{algorithmic}[1]
-\REQUIRE tamaño de población \popsize, cantidad $r$ de rutas por solución, mímimo $min$ de parederos para una ruta, máximo $max$ de paraderos para una ruta
+\REQUIRE tamaño de población \popsize, cantidad $r$ de rutas por solución, mínimo $min$ de parederos para una ruta, máximo $max$ de paraderos para una ruta
 \ENSURE Conjunto $P$ con población de soluciones factibles
 \STATE $P \leftarrow$ conjunto vacío
 \STATE $soluciones \leftarrow 0$ 
@@ -28,7 +28,7 @@ Las soluciones que se generan en este algoritmo siempre son factibles, ya que sa
 	\WHILE{$rutas < r$}
 		\STATE $nr \leftarrow$ nueva ruta
 		\STATE $q \leftarrow$ número aleatorio entre $min$ y $max$
-		\STATE $i \leftarrow$ paradero seleccioado aleatoriamente
+		\STATE $i \leftarrow$ paradero seleccionado aleatoriamente
 		\STATE agregar paradero $i$ a ruta $nr$
 		\STATE $paraderos \leftarrow 1$
 		\WHILE{$paraderos < q$}

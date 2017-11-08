@@ -17,12 +17,12 @@ En el Algoritmo \ref{alg:aia} se muestran un pseudocódigo del algoritmo impleme
 	\ENDFOR
 	\STATE Eliminar de la población $P$ anticuerpos dominados
 	\STATE Seleccionar $mp$ de los mejores anticuerpos de $P$
-	\STATE Generar un conjunto de clones $C$ de tamaño \clonsize con anticuerpos $mp$
+	\STATE Generar un conjunto de clones $C$ de tamaño \clonsize{} con anticuerpos $mp$
 	\FOR{\textbf{cada} clon $c$ perteneciente al conjunto $C$}
 		\STATE $k \leftarrow$ numero de mutaciones a realizar de acuerdo a aptitud de $c$		
 		\STATE Mutar $k$ veces el clon $c$
 	\ENDFOR
-	\STATE Copiar hasta $mp$ clones a la población $P$
+	\STATE Copiar hasta $mp$ clones a la población $P$, basándose en ranking de pareto
 	\STATE Seleccionar $mm$ anticuerpos de $P$
 	\STATE Copiar los anticuerpos $mm$ al conjunto de memoria $M$
 	\STATE Reemplazar $pp$ anticuerpos con anticuerpos generados aleatoriamente

@@ -16,7 +16,7 @@ for linea in archivo:
 		if data[1] == sys.argv[4]:
 			if int(data[2]) not in datos:
 				datos[int(data[2])]=list()
-			datos[int(data[2])].append(map(float,[data[10].replace('"',''),data[11].replace('"','')]))
+			datos[int(data[2])].append(tuple(map(float,[data[10],data[11]])))
 archivo.close()
 
 hyper = {}
@@ -26,11 +26,15 @@ arch3 = open(sys.argv[2])
 for li in arch3:
 	li = li.strip()
 	data2 = li.split(",")
+	#print data2
 	if data2[0] != "instancia":
-		hyper[int(data2[2])] = float(data2[10].replace('"',''))
-		time[int(data2[2])] = float(data2[11].replace('"',''))
+		if data2[1] == sys.argv[4]:
+			hyper[int(data2[2])] = float(data2[10])
+			time[int(data2[2])] = float(data2[11])
 arch3.close()
 
+#print "hyper",hyper
+#print "time",time
 
 generacion = [1,50,100,1000]
 plt.figure(figsize=(6,6), dpi=50)
@@ -42,12 +46,12 @@ l = "{0} & {1} & {2} & {3} & {4} \\\\ \n"
 
 col = ["b","r","g","c"]
 mar = ["d","s","o","p"]
-sizes = [10,14,12,10]
+sizes = [15,14,12,10]
 
 i=0
 for g in generacion:
 	if g in datos:
-		arch2.write(l.format(str(sys.argv[4]),str(g),str(len(datos[g])),str(hyper[g]),str(time[g])))
+		arch2.write(l.format(str(sys.argv[4]),str(g),str(len(set(datos[g])))+" ("+str(len(datos[g]))+")",str(hyper[g]),str(time[g])))
 		X = []
 		Y = []
 		for x,y in datos[g]:

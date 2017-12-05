@@ -1,5 +1,7 @@
 \section{Resultados}
 
+El sintonizador de parámetros obtuvo los mejores parámetros para las dos instancias analizadas, los cuales se muestran en la Tabla \ref{tab:mejoresparam}.
+
 \begin{table}[!htb]
 \begin{center}
 \begin{tabular}{|l|r|r|r|r|r|}
@@ -17,11 +19,108 @@ Mumford0 & 0.25 & 0.25 & 0.30 & 150 & 150 \\
 \label{tab:mejoresparam}
 \end{table}
 
+De acuerdo a estos resultados, se puede apreciar que el parámetro \pmejores{} se mantuvo en el valor por defecto para Mandl, pero disminuyó al mínimo posible en Mumford0. Probablemente, esto se debe a que la red de Mumford0 es más grande y se tiene mejor esperanza de mejorar las soluciones si se toma una fracción de las mejores soluciones para pasar al proceso de mutación.
+
+El mejor valor para el parámetro \pclones{} fue asignado al mínimo posible en ambas instancias, lo que indica que se toma una fracción pequeña de valores para almacenar en el conjunto de memoria, lo que tiene una ventaja computacional al evitar almacenar soluciones que podrían ser eliminadas posteriormente. 
+
+El parámetro \preemplazo{} se mantuvo en el valor por defecto sugerido en ambas instancias y probablemente es el mejor valor para un \textit{trade-off} entre exploración y explotación en una vecindad de soluciones candidatas.
+
+Los tamaños de población, reflejados en los parámetros \popsize{} y \clonsize{} aumentaron con respecto a los valores por defecto. Al comparar las cantidades de ambas poblaciones, se cumple que el tamaño de la población de clones siempre es mayor o igual al tamaño de la población de cada generación.
+
+
+Al realizar experimentos para la instancia de Mandl con los mejores valores de los parámetros con 15 semillas distintas, se pueden apreciar los frentes de Pareto resultantes de 4 de ellas en las Figuras \ref{fig:paretoMandl1} y \ref{fig:paretoMandl2}. Además, información adicional de apoyo referente a estos frentes se encuentra en la Tabla \ref{tab:dataFrenteMandl}. En general, en todos los casos se puede ver visualmente que los frentes de pareto se acercan a los mínimos de ambas funciones. Además, aparecen nuevas soluciones que son mínimos para una u otra función objetivo. La cantidad de soluciones de los frentes aumenta a medida que transcurren generaciones en el algoritmo inmune. Luego, se puede afirmar que el alogoritmo inmune es capaz de explorar lugares distintos en búsqueda de soluciones distintas a las que se generan inicialmente y además, se logran mejorar las soluciones existentes. Más específicamente, por medio de la información de la Tabla \ref{tab:paretoMandl} se destaca para este algoritmo en específico la aparición de muchas soluciones idénticas en los frentes de pareto. En la columna de cantidad de soluciones
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|r|r|r|r|r|}
+\hline
+Semilla & Generación & Sol. Únicas(Sol. Totales) & Hipervolumen & Tiempo [s]\\ 
+\hline \hline
+4 & 1 & \textbf{15} (\textbf{15}) & 702.207 & 26 \\ \hline
+45 & 1 & 14 (14) & 692.819 & 25 \\ \hline
+12 & 1 & 12 (12) & \textbf{714.867} & \textbf{22} \\ \hline
+34 & 1 & 13 (13) & 704.389 & \textbf{22} \\ \hline \hline
+4 & 50 & 34 (34) & 833.746 & 334 \\ \hline
+45 & 50 & \textbf{36} (\textbf{36}) & 809.110 & 344 \\ \hline
+12 & 50 & 27 (27) & 821.737 & 347 \\ \hline
+34 & 50 & 19 (19) & \textbf{836.426} & \textbf{325} \\ \hline\hline
+4 & 100 & 35 (65) & 834.683 & 645 \\ \hline
+45 & 100 & \textbf{36} (\textbf{70}) & 809.110 & 663 \\ \hline
+12 & 100 & 27 (27) & 821.737 & 683 \\ \hline
+34 & 100 & 20 (37) & \textbf{836.769} & \textbf{634} \\ \hline \hline
+4 & 1000 & \textbf{37} (\textbf{335}) & 847.025 & 6770 \\ \hline
+45 & 1000 & 25 (83) & 833.812 & 6533 \\ \hline
+12 & 1000 & 26 (153) & 830.848 & 6675 \\ \hline
+34 & 1000 & 19 (180) & \textbf{837.087} & \textbf{6357} \\ \hline
+\end{tabular}
+\caption{Cantidad de soluciones únicas/totales, hipervolumen y tiempo de cómputo en el frente de Pareto para 4 semillas de la instancia Mandl.}
+\label{tab:dataFrenteMandl}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|r|r|r|r|r|}
+\hline
+Semilla & Generación & Cant.Soluciones & Hipervolumen & Tiempo [s]\\ 
+\hline \hline
+4 & 1 & \textbf{15} (\textbf{15}) & 7118.92 & \textbf{46} \\ \hline
+45 & 1 & 12 (12) & 7054.21 & 52 \\ \hline
+12 & 1 & 9 (9) & 7125.38 & 55 \\ \hline
+34 & 1 & 12 (12) & \textbf{7392.27} & 49 \\ \hline\hline
+4 & 50 & 23 (23) & 8650.36 & \textbf{1219} \\ \hline
+45 & 50 & 20 (20) & 7502.79 & 1742 \\ \hline
+12 & 50 & \textbf{30} (\textbf{30}) & \textbf{9185.21} & 1349 \\ \hline
+34 & 50 & 22 (22) & 8874.78 & 1276 \\ \hline\hline
+4 & 100 & 26 (33) & 8740.11 & \textbf{2280} \\ \hline
+45 & 100 & 38 (38) & \textbf{9506.56} & 3062 \\ \hline
+12 & 100 & 27 (30) & 9204.48 & 2622 \\ \hline
+34 & 100 & \textbf{42} (\textbf{42}) & 9285.58 & 3158 \\ \hline\hline
+4 & 1000 & 42 (\textbf{103}) & 9064.71 & \textbf{24308} \\ \hline
+45 & 1000 & 38 (38) & 9566.61 & 31216 \\ \hline
+12 & 1000 & 64 (85) & \textbf{9792.15} & 27600 \\ \hline
+34 & 1000 & \textbf{65} (83) & 9691.16 & 27324 \\ \hline\hline
+\end{tabular}
+\caption{Cantidad de soluciones únicas/totales, hipervolumen y tiempo de cómputo en el frente de Pareto para 4 semillas de la instancia Mumford0.}
+\label{tab:dataFrenteMumford0}
+\end{table}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.79\textwidth]{img/frente_Mandl_s4}
+\includegraphics[width=0.79\textwidth]{img/frente_Mandl_s12}
+\caption{Frente de Pareto para Mandl con semillas 4 y 12.}
+\label{fig:paretoMandl1}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.79\textwidth]{img/frente_Mandl_s34}
+\includegraphics[width=0.79\textwidth]{img/frente_Mandl_s45}
+\caption{Frente de Pareto para Mandl con semillas 34 y 45.}
+\label{fig:paretoMandl2}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s4}
+\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s12}
+\caption{Frente de Pareto para Mumford0 con semillas 4 y 12.}
+\label{fig:paretoMumford1}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s34}
+\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s45}
+\caption{Frente de Pareto para Mumford0 con semillas 34 y 45.}
+\label{fig:paretoMumford2}
+\end{figure}
+
 \begin{table}[!htb]
 \begin{center}
 \begin{tabular}{|p{0.14\textwidth}|p{0.36\textwidth}|p{0.50\textwidth}|}
 \hline
-\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para pasajeros} \\
+\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para pasajeros (sintonización)} \\
 \cline{2-3}
  & Costos & Rutas\\
 \hline
@@ -40,7 +139,7 @@ Mumford0 & $C_p = 17.0681$ \newline $C_o = 616$ \newline (semilla=45) & 8-29-17-
 \begin{center}
 \begin{tabular}{|p{0.14\textwidth}|p{0.36\textwidth}|p{0.50\textwidth}|}
 \hline
-\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para operadores}\\
+\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para operadores (sintonización)}\\
 \cline{2-3}
  & Costos & Rutas \\
 \hline
@@ -60,7 +159,7 @@ Mumford0 & $C_p = 22.3516$ \newline $C_o = 112$ \newline (semilla=34) & 15-21 \n
 \begin{center}
 \begin{tabular}{|p{0.14\textwidth}|p{0.36\textwidth}|p{0.50\textwidth}|}
 \hline
-\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para pasajeros} \\
+\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para pasajeros (comparación)} \\
 \cline{2-3}
  & Costos & Rutas\\
 \hline
@@ -81,7 +180,7 @@ Mumford0 & $C_p = 17.3447$ \newline $C_o = 439$ \newline (semilla=2) &  28-30-11
 \begin{center}
 \begin{tabular}{|p{0.14\textwidth}|p{0.36\textwidth}|p{0.50\textwidth}|}
 \hline
-\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para operadores} \\
+\multirow{2}{*}{Instancia} & \multicolumn{2}{c|}{Mejor solución para operadores (comparación)} \\
 \cline{2-3}
  & Costos & Rutas\\
 \hline

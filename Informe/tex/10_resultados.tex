@@ -28,61 +28,7 @@ El parámetro \preemplazo{} se mantuvo en el valor por defecto sugerido en ambas
 Los tamaños de población, reflejados en los parámetros \popsize{} y \clonsize{} aumentaron con respecto a los valores por defecto. Al comparar las cantidades de ambas poblaciones, se cumple que el tamaño de la población de clones siempre es mayor o igual al tamaño de la población de cada generación.
 
 
-Al realizar experimentos para la instancia de Mandl con los mejores valores de los parámetros con 15 semillas distintas, se pueden apreciar los frentes de Pareto resultantes de 4 de ellas en las Figuras \ref{fig:paretoMandl1} y \ref{fig:paretoMandl2}. Además, información adicional de apoyo referente a estos frentes se encuentra en la Tabla \ref{tab:dataFrenteMandl}. En general, en todos los casos se puede ver visualmente que los frentes de pareto se acercan a los mínimos de ambas funciones. Además, aparecen nuevas soluciones que son mínimos para una u otra función objetivo. La cantidad de soluciones de los frentes aumenta a medida que transcurren generaciones en el algoritmo inmune. Luego, se puede afirmar que el alogoritmo inmune es capaz de explorar lugares distintos en búsqueda de soluciones distintas a las que se generan inicialmente y además, se logran mejorar las soluciones existentes. Más específicamente, por medio de la información de la Tabla \ref{tab:paretoMandl} se destaca para este algoritmo en específico la aparición de muchas soluciones idénticas en los frentes de pareto. En la columna de cantidad de soluciones
-
-\begin{table}[!htb]
-\centering
-\begin{tabular}{|r|r|r|r|r|}
-\hline
-Semilla & Generación & Sol. Únicas(Sol. Totales) & Hipervolumen & Tiempo [s]\\ 
-\hline \hline
-4 & 1 & \textbf{15} (\textbf{15}) & 702.207 & 26 \\ \hline
-45 & 1 & 14 (14) & 692.819 & 25 \\ \hline
-12 & 1 & 12 (12) & \textbf{714.867} & \textbf{22} \\ \hline
-34 & 1 & 13 (13) & 704.389 & \textbf{22} \\ \hline \hline
-4 & 50 & 34 (34) & 833.746 & 334 \\ \hline
-45 & 50 & \textbf{36} (\textbf{36}) & 809.110 & 344 \\ \hline
-12 & 50 & 27 (27) & 821.737 & 347 \\ \hline
-34 & 50 & 19 (19) & \textbf{836.426} & \textbf{325} \\ \hline\hline
-4 & 100 & 35 (65) & 834.683 & 645 \\ \hline
-45 & 100 & \textbf{36} (\textbf{70}) & 809.110 & 663 \\ \hline
-12 & 100 & 27 (27) & 821.737 & 683 \\ \hline
-34 & 100 & 20 (37) & \textbf{836.769} & \textbf{634} \\ \hline \hline
-4 & 1000 & \textbf{37} (\textbf{335}) & 847.025 & 6770 \\ \hline
-45 & 1000 & 25 (83) & 833.812 & 6533 \\ \hline
-12 & 1000 & 26 (153) & 830.848 & 6675 \\ \hline
-34 & 1000 & 19 (180) & \textbf{837.087} & \textbf{6357} \\ \hline
-\end{tabular}
-\caption{Cantidad de soluciones únicas/totales, hipervolumen y tiempo de cómputo en el frente de Pareto para 4 semillas de la instancia Mandl.}
-\label{tab:dataFrenteMandl}
-\end{table}
-
-\begin{table}[!htb]
-\centering
-\begin{tabular}{|r|r|r|r|r|}
-\hline
-Semilla & Generación & Cant.Soluciones & Hipervolumen & Tiempo [s]\\ 
-\hline \hline
-4 & 1 & \textbf{15} (\textbf{15}) & 7118.92 & \textbf{46} \\ \hline
-45 & 1 & 12 (12) & 7054.21 & 52 \\ \hline
-12 & 1 & 9 (9) & 7125.38 & 55 \\ \hline
-34 & 1 & 12 (12) & \textbf{7392.27} & 49 \\ \hline\hline
-4 & 50 & 23 (23) & 8650.36 & \textbf{1219} \\ \hline
-45 & 50 & 20 (20) & 7502.79 & 1742 \\ \hline
-12 & 50 & \textbf{30} (\textbf{30}) & \textbf{9185.21} & 1349 \\ \hline
-34 & 50 & 22 (22) & 8874.78 & 1276 \\ \hline\hline
-4 & 100 & 26 (33) & 8740.11 & \textbf{2280} \\ \hline
-45 & 100 & 38 (38) & \textbf{9506.56} & 3062 \\ \hline
-12 & 100 & 27 (30) & 9204.48 & 2622 \\ \hline
-34 & 100 & \textbf{42} (\textbf{42}) & 9285.58 & 3158 \\ \hline\hline
-4 & 1000 & 42 (\textbf{103}) & 9064.71 & \textbf{24308} \\ \hline
-45 & 1000 & 38 (38) & 9566.61 & 31216 \\ \hline
-12 & 1000 & 64 (85) & \textbf{9792.15} & 27600 \\ \hline
-34 & 1000 & \textbf{65} (83) & 9691.16 & 27324 \\ \hline\hline
-\end{tabular}
-\caption{Cantidad de soluciones únicas/totales, hipervolumen y tiempo de cómputo en el frente de Pareto para 4 semillas de la instancia Mumford0.}
-\label{tab:dataFrenteMumford0}
-\end{table}
+Al realizar experimentos para la instancia de Mandl con los mejores valores de los parámetros con 15 semillas distintas, se pueden apreciar los frentes de Pareto resultantes de 4 de ellas en las Figuras \ref{fig:paretoMandl1} y \ref{fig:paretoMandl2}. Además, información adicional de apoyo referente a estos frentes se encuentra en la Tabla \ref{tab:dataFrenteMandl}. 
 
 \begin{figure}[p]
 \centering
@@ -100,6 +46,68 @@ Semilla & Generación & Cant.Soluciones & Hipervolumen & Tiempo [s]\\
 \label{fig:paretoMandl2}
 \end{figure}
 
+En general, en todos los casos se puede ver visualmente que los frentes de Pareto se acercan a los mínimos de ambas funciones. El cambio en los frentes de Pareto, se ve reflejado en un aumento en el hipervolumen a medida que avanzan las generaciones. Además, aparecen nuevas soluciones que son mínimos para una u otra función objetivo. La cantidad de soluciones de los frentes aumenta a medida que transcurren generaciones en el algoritmo inmune. Luego, se puede afirmar que el alogoritmo inmune es capaz de explorar lugares distintos en búsqueda de soluciones distintas a las que se generan inicialmente y además, se logran mejorar las soluciones existentes. Más específicamente, por medio de la información de la Tabla \ref{tab:dataFrenteMandl} se destaca para este algoritmo en específico la aparición de muchas soluciones idénticas en los frentes de pareto. 
+
+Se puede observar, a modo general que desde la generación 50 y la generación 100 la soluciones totales son el doble de las soluciones únicas. En la generación 1000, las soluciones únicas representa entre un 10\% y un 30\% de las soluciones totales. En esta instancia se mantiene la tendencia de que la semilla que genera más soluciones únicas es la que tiene más soluciones totales. No existe una correlación entre un mayor hipervolumen con más soluciones únicas/totales en el frente. 
+
+Finalmente, el tiempo para una instancia fue medido desde el inicio del algoritmo hasta la finalización de una generación. Tiempos menores en etapas prematuras del algoritmo suelen derivar en un tiempo total de cómputo menor para el algoritmo completo. Notar que al término de la generación 1 han transcurrido cerca de 20 segundos desde el inicio del algoritmo, donde este tiempo está destinado a la generación del conjunto inicial de soluciones factibles para iniciar el algoritmo.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|r|r|r|r|r|r|}
+\hline
+Semilla & Generación & Sol. Únicas & Sol. Totales & Hipervolumen & Tiempo [s]\\ 
+\hline \hline
+4 & 1 & \textbf{15} & \textbf{15} & 702.207 & 26 \\ \hline
+45 & 1 & 14 & 14 & 692.819 & 25 \\ \hline
+12 & 1 & 12 & 12 & \textbf{714.867} & \textbf{22} \\ \hline
+34 & 1 & 13 & 13 & 704.389 & \textbf{22} \\ \hline \hline
+4 & 50 & 34 & 34 & 833.746 & 334 \\ \hline
+45 & 50 & \textbf{36} & \textbf{36} & 809.110 & 344 \\ \hline
+12 & 50 & 27 & 27 & 821.737 & 347 \\ \hline
+34 & 50 & 19 & 19 & \textbf{836.426} & \textbf{325} \\ \hline\hline
+4 & 100 & 35 & 65 & 834.683 & 645 \\ \hline
+45 & 100 & \textbf{36} & \textbf{70} & 809.110 & 663 \\ \hline
+12 & 100 & 27 & 27 & 821.737 & 683 \\ \hline
+34 & 100 & 20 & 37 & \textbf{836.769} & \textbf{634} \\ \hline \hline
+4 & 1000 & \textbf{37} & \textbf{335} & 847.025 & 6770 \\ \hline
+45 & 1000 & 25 & 83 & 833.812 & 6533 \\ \hline
+12 & 1000 & 26 & 153 & 830.848 & 6675 \\ \hline
+34 & 1000 & 19 & 180 & \textbf{837.087} & \textbf{6357} \\ \hline
+\end{tabular}
+\caption{Cantidad de soluciones únicas/totales, hipervolumen y tiempo de cómputo en el frente de Pareto para 4 semillas de la instancia Mandl.}
+\label{tab:dataFrenteMandl}
+\end{table}
+
+En el caso de la instancia Mumford0, se realizó el mismo procedimiento, utilizando 15 semillas distintas con 1000 generaciones y los mejores valores  para los parámetros. Las Figuras \ref{fig:paretoMumford1} y \ref{fig:paretoMumford2} muestra la evolución del frente de Pareto en 4 semillas distintas y la Tabla \ref{tab:dataFrenteMumford0} muestra información adicional respecto a estos frentes.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|r|r|r|r|r|r|}
+\hline
+Semilla & Generación & Sol. Únicas & Sol. Totales & Hipervolumen & Tiempo [s]\\  
+\hline \hline
+4 & 1 & \textbf{15} & \textbf{15} & 7118.92 & \textbf{46} \\ \hline
+45 & 1 & 12 & 12 & 7054.21 & 52 \\ \hline
+12 & 1 & 9 & 9 & 7125.38 & 55 \\ \hline
+34 & 1 & 12 & 12 & \textbf{7392.27} & 49 \\ \hline\hline
+4 & 50 & 23 & 23 & 8650.36 & \textbf{1219} \\ \hline
+45 & 50 & 20 & 20 & 7502.79 & 1742 \\ \hline
+12 & 50 & \textbf{30} & \textbf{30} & \textbf{9185.21} & 1349 \\ \hline
+34 & 50 & 22 & 22 & 8874.78 & 1276 \\ \hline\hline
+4 & 100 & 26 & 33 & 8740.11 & \textbf{2280} \\ \hline
+45 & 100 & 38 & 38 & \textbf{9506.56} & 3062 \\ \hline
+12 & 100 & 27 & 30 & 9204.48 & 2622 \\ \hline
+34 & 100 & \textbf{42} & \textbf{42} & 9285.58 & 3158 \\ \hline\hline
+4 & 1000 & 42 & \textbf{103} & 9064.71 & \textbf{24308} \\ \hline
+45 & 1000 & 38 & 38 & 9566.61 & 31216 \\ \hline
+12 & 1000 & 64 & 85 & \textbf{9792.15} & 27600 \\ \hline
+34 & 1000 & \textbf{65} & 83 & 9691.16 & 27324 \\ \hline\hline
+\end{tabular}
+\caption{Cantidad de soluciones únicas/totales, hipervolumen y tiempo de cómputo en el frente de Pareto para 4 semillas de la instancia Mumford0.}
+\label{tab:dataFrenteMumford0}
+\end{table}
+
 \begin{figure}[p]
 \centering
 \includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s4}
@@ -115,6 +123,10 @@ Semilla & Generación & Cant.Soluciones & Hipervolumen & Tiempo [s]\\
 \caption{Frente de Pareto para Mumford0 con semillas 34 y 45.}
 \label{fig:paretoMumford2}
 \end{figure}
+
+Se puede apreciar que la evolución de los frentes en las 4 semillas mostradas presenta un comportamiento favorable, ya que se acerca a la región de mínimos en ambas funciones objetivo. Un caso notable a mencionar ocurre con la semilla 4, donde se observa un gran avance a partir del frente inicial en la primera generación hasta el frente obtenido en la generación 50.
+
+
 
 \begin{table}[!htb]
 \begin{center}

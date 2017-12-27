@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.8)  27 DEC 2017 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.8)  27 DEC 2017 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -989,11 +989,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen264
 \l_MT_below_shortintertext_sep=\dimen265
 )
-(./E3Arenas.aux
-
-LaTeX Warning: Label `fig:hyp_mandl' multiply defined.
-
-)
+(./E3Arenas.aux)
 \openout1 = `E3Arenas.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
@@ -1168,135 +1164,127 @@ File: img/hyp_Mandl.pdf Graphic file (type pdf)
 Package pdftex.def Info: img/hyp_Mandl.pdf used on input line 32.
 (pdftex.def)             Requested size: 347.12354pt x 260.34602pt.
 
-<img/hyp_Mumford0.pdf, id=70, 867.24pt x 650.43pt>
-File: img/hyp_Mumford0.pdf Graphic file (type pdf)
- <use img/hyp_Mumford0.pdf>
-Package pdftex.def Info: img/hyp_Mumford0.pdf used on input line 39.
-(pdftex.def)             Requested size: 347.12354pt x 260.34602pt.
-
-
-LaTeX Warning: Reference `fig:hyp_Mandl' on page 15 undefined on input line 45.
-
-
-<img/frente_Mandl_s4.pdf, id=71, 433.62pt x 433.62pt>
+<img/frente_Mandl_s4.pdf, id=70, 433.62pt x 433.62pt>
 File: img/frente_Mandl_s4.pdf Graphic file (type pdf)
 
 <use img/frente_Mandl_s4.pdf>
-Package pdftex.def Info: img/frente_Mandl_s4.pdf used on input line 49.
+Package pdftex.def Info: img/frente_Mandl_s4.pdf used on input line 41.
 (pdftex.def)             Requested size: 274.22525pt x 274.24068pt.
 
-<img/frente_Mandl_s12.pdf, id=72, 433.62pt x 433.62pt>
+<img/frente_Mandl_s12.pdf, id=71, 433.62pt x 433.62pt>
 File: img/frente_Mandl_s12.pdf Graphic file (type pdf)
 
 <use img/frente_Mandl_s12.pdf>
-Package pdftex.def Info: img/frente_Mandl_s12.pdf used on input line 50.
+Package pdftex.def Info: img/frente_Mandl_s12.pdf used on input line 42.
+(pdftex.def)             Requested size: 274.22525pt x 274.24068pt.
+
+
+LaTeX Warning: Float too large for page by 22.34308pt on input line 45.
+
+<img/frente_Mandl_s34.pdf, id=72, 433.62pt x 433.62pt>
+File: img/frente_Mandl_s34.pdf Graphic file (type pdf)
+
+<use img/frente_Mandl_s34.pdf>
+Package pdftex.def Info: img/frente_Mandl_s34.pdf used on input line 49.
+(pdftex.def)             Requested size: 274.22525pt x 274.24068pt.
+
+<img/frente_Mandl_s45.pdf, id=73, 433.62pt x 433.62pt>
+File: img/frente_Mandl_s45.pdf Graphic file (type pdf)
+
+<use img/frente_Mandl_s45.pdf>
+Package pdftex.def Info: img/frente_Mandl_s45.pdf used on input line 50.
 (pdftex.def)             Requested size: 274.22525pt x 274.24068pt.
 
 
 LaTeX Warning: Float too large for page by 22.34308pt on input line 53.
 
-<img/frente_Mandl_s34.pdf, id=73, 433.62pt x 433.62pt>
-File: img/frente_Mandl_s34.pdf Graphic file (type pdf)
+[15] [16 <./img/hyp_Mandl.pdf>] [17 <./img/frente_Mandl_s4.pdf> <./img/frente_M
+andl_s12.pdf
 
-<use img/frente_Mandl_s34.pdf>
-Package pdftex.def Info: img/frente_Mandl_s34.pdf used on input line 57.
-(pdftex.def)             Requested size: 274.22525pt x 274.24068pt.
+pdfTeX warning: pdflatex (file ./img/frente_Mandl_s12.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>] [18 <./img/frente_Mandl_s34.pdf> <./img/frente_Mandl_s45.pdf
 
-<img/frente_Mandl_s45.pdf, id=74, 433.62pt x 433.62pt>
-File: img/frente_Mandl_s45.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex (file ./img/frente_Mandl_s45.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>] <img/hyp_Mumford0.pdf, id=348, 867.24pt x 650.43pt>
+File: img/hyp_Mumford0.pdf Graphic file (type pdf)
 
-<use img/frente_Mandl_s45.pdf>
-Package pdftex.def Info: img/frente_Mandl_s45.pdf used on input line 58.
-(pdftex.def)             Requested size: 274.22525pt x 274.24068pt.
+<use img/hyp_Mumford0.pdf>
+Package pdftex.def Info: img/hyp_Mumford0.pdf used on input line 94.
+(pdftex.def)             Requested size: 347.12354pt x 260.34602pt.
 
-
-LaTeX Warning: Float too large for page by 22.34308pt on input line 61.
-
-[15] <img/frente_Mumford0_s4.pdf, id=78, 433.62pt x 433.62pt>
+<img/frente_Mumford0_s4.pdf, id=349, 433.62pt x 433.62pt>
 File: img/frente_Mumford0_s4.pdf Graphic file (type pdf)
 
 <use img/frente_Mumford0_s4.pdf>
-Package pdftex.def Info: img/frente_Mumford0_s4.pdf used on input line 127.
+Package pdftex.def Info: img/frente_Mumford0_s4.pdf used on input line 128.
 (pdftex.def)             Requested size: 274.22525pt x 274.24068pt.
 
-<img/frente_Mumford0_s12.pdf, id=79, 433.62pt x 433.62pt>
+<img/frente_Mumford0_s12.pdf, id=350, 433.62pt x 433.62pt>
 File: img/frente_Mumford0_s12.pdf Graphic file (type pdf)
 
 <use img/frente_Mumford0_s12.pdf>
-Package pdftex.def Info: img/frente_Mumford0_s12.pdf used on input line 128.
+Package pdftex.def Info: img/frente_Mumford0_s12.pdf used on input line 129.
 (pdftex.def)             Requested size: 274.22525pt x 274.24068pt.
 
 
-LaTeX Warning: Float too large for page by 22.34308pt on input line 131.
+LaTeX Warning: Float too large for page by 22.34308pt on input line 132.
 
-<img/frente_Mumford0_s34.pdf, id=80, 433.62pt x 433.62pt>
+<img/frente_Mumford0_s34.pdf, id=351, 433.62pt x 433.62pt>
 File: img/frente_Mumford0_s34.pdf Graphic file (type pdf)
 
 <use img/frente_Mumford0_s34.pdf>
-Package pdftex.def Info: img/frente_Mumford0_s34.pdf used on input line 135.
+Package pdftex.def Info: img/frente_Mumford0_s34.pdf used on input line 136.
 (pdftex.def)             Requested size: 274.22525pt x 274.24068pt.
 
-<img/frente_Mumford0_s45.pdf, id=81, 433.62pt x 433.62pt>
+<img/frente_Mumford0_s45.pdf, id=352, 433.62pt x 433.62pt>
 File: img/frente_Mumford0_s45.pdf Graphic file (type pdf)
 
 <use img/frente_Mumford0_s45.pdf>
-Package pdftex.def Info: img/frente_Mumford0_s45.pdf used on input line 136.
+Package pdftex.def Info: img/frente_Mumford0_s45.pdf used on input line 137.
 (pdftex.def)             Requested size: 274.22525pt x 274.24068pt.
 
 
-LaTeX Warning: Float too large for page by 22.34308pt on input line 139.
+LaTeX Warning: Float too large for page by 22.34308pt on input line 140.
 
-[16 <./img/hyp_Mandl.pdf>]
-Overfull \hbox (9.99992pt too wide) in paragraph at lines 151--163
+[19]
+Overfull \hbox (9.99992pt too wide) in paragraph at lines 152--164
  [] 
  []
 
 
-Overfull \hbox (9.99992pt too wide) in paragraph at lines 170--182
+Overfull \hbox (9.99992pt too wide) in paragraph at lines 171--183
  [] 
  []
 
 
-Overfull \hbox (9.99992pt too wide) in paragraph at lines 190--203
+Overfull \hbox (9.99992pt too wide) in paragraph at lines 191--204
  [] 
  []
 
 
-Overfull \hbox (9.99992pt too wide) in paragraph at lines 211--223
+Overfull \hbox (9.99992pt too wide) in paragraph at lines 212--224
  [] 
  []
 
 ) (./E3Arenas.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
+[]\OT1/cmr/m/n/9 Gobierno de Chile.  Por-tal de datos p^^Sublicos.
+ []
 
- [17 <./img/hyp_Mumford0.pdf>] [18 <./img/frente_Mandl_s4.pdf> <./img/frente_Ma
-ndl_s12.pdf
-
-pdfTeX warning: pdflatex (file ./img/frente_Mandl_s12.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
->] [19 <./img/frente_Mandl_s34.pdf> <./img/frente_Mandl_s45.pdf
-
-pdfTeX warning: pdflatex (file ./img/frente_Mandl_s45.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
->] [20 <./img/frente_Mumford0_s4.pdf> <./img/frente_Mumford0_s12.pdf
+[20 <./img/hyp_Mumford0.pdf>] [21 <./img/frente_Mumford0_s4.pdf> <./img/frente_
+Mumford0_s12.pdf
 
 pdfTeX warning: pdflatex (file ./img/frente_Mumford0_s12.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
->] [21 <./img/frente_Mumford0_s34.pdf> <./img/frente_Mumford0_s45.pdf
+>] [22 <./img/frente_Mumford0_s34.pdf> <./img/frente_Mumford0_s45.pdf
 
 pdfTeX warning: pdflatex (file ./img/frente_Mumford0_s45.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >]
-Overfull \vbox (20.2737pt too high) has occurred while \output is active []
-
-
-[22]
 
 LaTeX Warning: Text page 23 contains only floats.
-
-
-Overfull \vbox (3.62386pt too high) has occurred while \output is active []
-
 
 [23]
 
@@ -1306,50 +1294,38 @@ LaTeX Warning: Text page 24 contains only floats.
 Overfull \vbox (3.62386pt too high) has occurred while \output is active []
 
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 30--33
-[]\OT1/cmr/m/n/9 Gobierno de Chile.  Por-tal de datos p^^Sublicos.
- []
-
-) [25] (./E3Arenas.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[24] [25]) [26] (./E3Arenas.aux) ) 
 Here is how much of TeX's memory you used:
  15860 strings out of 493029
- 295648 string characters out of 6136235
- 383854 words of memory out of 5000000
+ 295647 string characters out of 6136235
+ 377824 words of memory out of 5000000
  19014 multiletter control sequences out of 15000+600000
  9557 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,13n,54p,1406b,789s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmtt9.pfb>
-Output written on E3Arenas.pdf (25 pages, 470760 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on E3Arenas.pdf (26 pages, 472265 bytes).
 PDF statistics:
- 715 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
+ 718 PDF objects out of 1000 (max. 8388607)
+ 242 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

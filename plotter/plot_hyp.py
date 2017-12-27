@@ -1,7 +1,13 @@
 import matplotlib.pyplot as plt
-import matplotlib
+import matplotlib as mpl
 import sys
 import numpy as np
+
+mpl.rcParams['font.size'] = 20
+mpl.rcParams['axes.labelsize'] = 20
+mpl.rcParams['xtick.labelsize'] = 20
+mpl.rcParams['ytick.labelsize'] = 20
+
 
 #print("This is the name of the script: ", sys.argv[0])
 #print("Number of arguments: ", len(sys.argv))
@@ -19,22 +25,23 @@ for linea in archivo:
 archivo.close()
 
 semillas = datos.keys()
-#semillas.sort()
+semillas.sort()
 #generar grafico
 
 colores = np.linspace(0.3,0.6,len(semillas))
 colores = map(str,colores)
 lineas = ["-.","--","-"]
 
-plt.figure(figsize=(12,5), dpi=50)
+plt.figure(figsize=(12,9), dpi=50)
 i = len(semillas)-1
+
 for semilla in semillas:
-	plt.plot(datos[semilla], label=semilla, linestyle = lineas[i%3])
+	plt.plot(datos[semilla], label=semilla, linestyle = lineas[i%3],lw=2.0)
 	i-=1
 
 plt.grid(True)
 plt.xlabel("Generaciones")
 plt.ylabel("Hipervolumen")
 plt.legend(loc='center left', bbox_to_anchor=(1.02, 0.5))
-plt.subplots_adjust(bottom=0.12,right=0.88,left=0.07,top=0.93)
+plt.subplots_adjust(bottom=0.12,right=0.80,left=0.10,top=0.93)
 plt.savefig("hyp_"+str(sys.argv[2])+".pdf",format="pdf")

@@ -27,8 +27,22 @@ El parámetro \preemplazo{} se mantuvo en el valor por defecto sugerido en ambas
 
 Los tamaños de población, reflejados en los parámetros \popsize{} y \clonsize{} aumentaron con respecto a los valores por defecto. Al comparar las cantidades de ambas poblaciones, se cumple que el tamaño de la población de clones siempre es mayor o igual al tamaño de la población de cada generación.
 
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{img/hyp_Mandl}
+\caption{Hipervolumen obtenido en 15 semillas distintas con la instancia Mandl para los mejores parámetros obtenidos en la sintonización.}
+\label{fig:hyp_mandl}
+\end{figure}
 
-Al realizar experimentos para la instancia de Mandl con los mejores valores de los parámetros con 15 semillas distintas, se pueden apreciar los frentes de Pareto resultantes de 4 de ellas en las Figuras \ref{fig:paretoMandl1} y \ref{fig:paretoMandl2}. Además, información adicional de apoyo referente a estos frentes se encuentra en la Tabla \ref{tab:dataFrenteMandl}. 
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{img/hyp_Mumford0}
+\caption{Hipervolumen obtenido en 15 semillas distintas con la instancia Mumford0 para los mejores parámetros obtenidos en la sintonización.}
+\label{fig:hyp_mandl}
+\end{figure}
+
+
+Al realizar experimentos para la instancia de Mandl con los mejores valores de los parámetros con 15 semillas distintas, se puede observar la variación de hipervolumen para todas ellas en la Figura \ref{fig:hyp_Mandl}. Además, los frentes de Pareto resultantes de 4 semillas se pueden apreciar en las Figuras \ref{fig:paretoMandl1} y \ref{fig:paretoMandl2}. Además, información adicional de apoyo referente a estos frentes se encuentra en la Tabla \ref{tab:dataFrenteMandl}. 
 
 \begin{figure}[p]
 \centering
@@ -46,7 +60,7 @@ Al realizar experimentos para la instancia de Mandl con los mejores valores de l
 \label{fig:paretoMandl2}
 \end{figure}
 
-En general, en todos los casos se puede ver visualmente que los frentes de Pareto se acercan a los mínimos de ambas funciones. El cambio en los frentes de Pareto, se ve reflejado en un aumento en el hipervolumen a medida que avanzan las generaciones. Además, aparecen nuevas soluciones que son mínimos para una u otra función objetivo. La cantidad de soluciones de los frentes aumenta a medida que transcurren generaciones en el algoritmo inmune. Luego, se puede afirmar que el alogoritmo inmune es capaz de explorar lugares distintos en búsqueda de soluciones distintas a las que se generan inicialmente y además, se logran mejorar las soluciones existentes. Más específicamente, por medio de la información de la Tabla \ref{tab:dataFrenteMandl} se destaca para este algoritmo en específico la aparición de muchas soluciones idénticas en los frentes de pareto. 
+En general, en todos los casos se puede ver visualmente que los frentes de Pareto se acercan a los mínimos de ambas funciones. El cambio en los frentes de Pareto, se ve reflejado en un aumento en el hipervolumen a medida que avanzan las generaciones. Además, aparecen nuevas soluciones que son mínimos para una u otra función objetivo. La cantidad de soluciones de los frentes aumenta a medida que transcurren generaciones en el algoritmo inmune. Luego, se puede afirmar que el alogoritmo inmune es capaz de explorar lugares distintos en búsqueda de soluciones distintas a las que se generan inicialmente y además, se logran mejorar las soluciones existentes. Más específicamente, por medio de la información de la Tabla \ref{tab:dataFrenteMandl} se destaca para este algoritmo en específico la aparición de muchas soluciones idénticas en los frentes de Pareto. 
 
 Se puede observar, a modo general que desde la generación 50 y la generación 100 la soluciones totales son el doble de las soluciones únicas. En la generación 1000, las soluciones únicas representa entre un 10\% y un 30\% de las soluciones totales. En esta instancia se mantiene la tendencia de que la semilla que genera más soluciones únicas es la que tiene más soluciones totales. No existe una correlación entre un mayor hipervolumen con más soluciones únicas/totales en el frente. 
 
@@ -125,6 +139,10 @@ Semilla & Generación & Sol. Únicas & Sol. Totales & Hipervolumen & Tiempo [s]\
 \end{figure}
 
 Se puede apreciar que la evolución de los frentes en las 4 semillas mostradas presenta un comportamiento favorable, ya que se acerca a la región de mínimos en ambas funciones objetivo. Un caso notable a mencionar ocurre con la semilla 4, donde se observa un gran avance a partir del frente inicial en la primera generación hasta el frente obtenido en la generación 50.
+
+Al analizar los resultados de la Tabla \ref{tab:dataFrenteMandl} se puede observar que, en general, existe una repetición de soluciones candidatas que aumenta a medida que transcurren las generaciones. En esta instancia la cantidad de soluciones únicas representan una mayor parte de las soluciones totales que en la instancia Mandl. En las cuatro semillas mostradas, las soluciones representan más de un 40 \% de las soluciones totales.
+
+Al relacionar el hipervolumen de los frentes con la cantidad de soluciones obtenidas, se puede observar que las mayores variaciones en hipervolumen conlleva una variación en la cantidad de soluciones en el frente. Se puede notar que la semlilla 45 no varía la cantidad de soluciones únicas ni totales entre la generación 100 y 1000, y su hipervolumen varía levemente entre ambas generaciones, por lo que el mejorarmiento en este caso particular fue menor.
 
 
 

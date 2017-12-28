@@ -1,5 +1,7 @@
 echo "Generar grafico Hipervolumen"
 python plot_hyp.py ./results/resultados_Mandl_hyp.csv Mandl
+echo "Generar grafico Hipervolumen Box Plot"
+python plot_hyp_bp.py ./results/resultados_Mandl_hyp.csv Mandl
 echo "Generar frentes de pareto"
 echo "semilla 4"
 python plot_frente.py ./results/resultados_Mandl.csv ./results/resultados_Mandl_hyp.csv Mandl 4

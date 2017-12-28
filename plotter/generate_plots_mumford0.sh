@@ -1,5 +1,7 @@
 echo "Generar grafico Hipervolumen"
 python plot_hyp.py ./results/resultados_Mumford0_hyp.csv Mumford0
+echo "Generar grafico Hipervolumen Box Plot"
+python plot_hyp_bp.py ./results/resultados_Mumford0_hyp.csv Mumford0
 echo "Generar frentes de pareto"
 echo "semilla 4"
 python plot_frente.py ./results/resultados_Mumford0.csv ./results/resultados_Mumford0_hyp.csv Mumford0 4

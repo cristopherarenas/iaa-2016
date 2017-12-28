@@ -30,11 +30,22 @@ Los tamaños de población, reflejados en los parámetros \popsize{} y \clonsize
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{img/hyp_Mandl}
-\caption{Hipervolumen obtenido en 15 semillas distintas con la instancia Mandl para los mejores parámetros obtenidos en la sintonización.}
+\caption{Hipervolumen obtenido en 15 semillas distintas con la instancia Mandl con sintonización de parámetros.}
 \label{fig:hyp_mandl}
 \end{figure}
 
-Al realizar experimentos para la instancia de Mandl con los mejores valores de los parámetros con 15 semillas distintas, se puede observar la variación de hipervolumen para todas ellas en la Figura \ref{fig:hyp_mandl}. Además, los frentes de Pareto resultantes de 4 semillas se pueden apreciar en las Figuras \ref{fig:paretoMandl1} y \ref{fig:paretoMandl2}. Además, información adicional de apoyo referente a estos frentes se encuentra en la Tabla \ref{tab:dataFrenteMandl}. 
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{img/hyp_Mandl_bp}
+\caption{Box plot del hipervolumen obtenido en distintas generaciones del algoritmo inmune para la instancia Mandl con sintonización de parámetros.}
+\label{fig:hyp_mandl_bp}
+\end{figure}
+
+Al realizar experimentos para la instancia de Mandl con los mejores valores de los parámetros con 15 semillas distintas, se puede observar la variación de hipervolumen para todas ellas en la Figura \ref{fig:hyp_mandl}. Se observa que el comportamiento de la gráfica es el esperado para un algoritmo que va mejorando sus soluciones en cada generación. Se observa que en todos los casos hay periodos de estancamiento en las soluciones obtenidas, pero en ocasiones se produce una mejora súbita para pasar nuevamente a otro periodo de estancamiento. En general, a partir de la generación 200 no se observa una gran mejora en las soluciones obtenidas, ya que el hipervolumen se mantiene en niveles estables para cada caso. La Figura \ref{fig:hyp_mandl_bp} muestra la distibución de los valores del hipervolumen obtenidos con las 15 semillas en las generaciones 1, 50, 100 y 1000 del algoritmo para la instancia Mandl, utilizando los mejores valores de los parámetros para esta instancia. Se observa que a medida que aumentan las generaciones del algoritmo la mayoría de los valores se acerca a un valor de hipervolumen comprendido entre 800 y 850. Se puede decir entonces, que el algoritmo inmune propuesto no es afectado en gran medida por la aleatoridad introducida al utilizar distintas semillas en esta instancia.
+
+A continuación, los frentes de Pareto resultantes de 4 semillas se pueden apreciar en las Figuras \ref{fig:paretoMandl1} y \ref{fig:paretoMandl2}. Además, información adicional de apoyo referente a estos frentes se encuentra en la Tabla \ref{tab:dataFrenteMandl}. En los casos mostrados, se observa que los frentes de Pareto se acercan a los mínimos de ambas funciones a medida que aumenta el número de generaciones. Adicionalmente, se puede ver la aparición de nuevas soluciones que no estaban definidas con anterioridad. El algoritmo propuesto es capaz de encontrar nuevas soluciones dentro de un vecindario de soluciones similares, producto de los operadores de mutación aplicados, los cual queda en evidencia con el aumento de soluciones del frente al aumentar el número de generaciones. Por otra parte, se obtienen mejoras en las soluciones ya encontradas, al visualizar el avance del frente de Pareto hacia el sector inferior izquierdo que tiene los mínimos de las dos funciones objetivo. Otro aspecto a notar en estas gráficas es la forma en que los frentes se van acercando al sector inferior izquierdo. Se observa claramente que el algoritmo propuesto obtiene muchas soluciones que son buenas para los pasajeros y pocas soluciones que son buenas para los operadores. 
+
+\newpage
 
 \begin{figure}[p]
 \centering
@@ -51,14 +62,6 @@ Al realizar experimentos para la instancia de Mandl con los mejores valores de l
 \caption{Frente de Pareto para Mandl con semillas 34 y 45.}
 \label{fig:paretoMandl2}
 \end{figure}
-
-Al analizar todos los valores de hipervolumen, se observan que el comportamiento de la gráfica es el esperado para un algoritmo que va mejorando sus soluciones en cada generación. Se observa que en todos los casos hay periodos de estancamiento en las soluciones obtenidas, pero en ocasiones se produce una mejora súbita para pasar nuevamente a otro periodo de estancamiento. En general, a partir de la generación 200 no se observa una gran mejora en las soluciones obtenidas, ya que el hipervolumen se mantiene en niveles estables para cada caso.
-
-Al revisar las gráficas de 4 de las 15 semillas, se observa que los frentes de Pareto se acercan a los mínimos de ambas funciones a medida que aumenta el número de generaciones. Además, se observa la aparición de nuevas soluciones que no estaban definidas anteriormente. El algoritmo propuesto es capaz de encontrar nuevas soluciones dentro de un vecindario de soluciones similares, producto de los operadores de mutación aplicados, los cual queda en evidencia con el aumento de soluciones del frente al aumentar el número de generaciones. Además, se obtienen mejoras en las soluciones ya encontradas, lo cual queda en evidencia al ver el avance del frente de Pareto hacia mínimo simultáneo de ambas funciones objetivo.
-
-Por medio de la información de la Tabla \ref{tab:dataFrenteMandl} se destaca para este algoritmo en específico la aparición de muchas soluciones idénticas en los frentes de Pareto. Se puede observar, a modo general que desde la generación 50 y la generación 100 la soluciones totales son el doble de las soluciones únicas. En la generación 1000, las soluciones únicas representa entre un 10\% y un 30\% de las soluciones totales. En esta instancia se mantiene la tendencia de que la semilla que genera más soluciones únicas es la que tiene más soluciones totales. No existe una correlación entre un mayor hipervolumen con más soluciones únicas/totales en el frente. 
-
-Finalmente, el tiempo para una instancia fue medido desde el inicio del algoritmo hasta la finalización de una generación. Tiempos menores en etapas prematuras del algoritmo suelen derivar en un tiempo total de cómputo menor para el algoritmo completo. Notar que al término de la generación 1 han transcurrido cerca de 20 segundos desde el inicio del algoritmo, donde este tiempo está destinado a la generación del conjunto inicial de soluciones factibles para iniciar el algoritmo.
 
 \begin{table}[!htb]
 \centering
@@ -87,13 +90,38 @@ Semilla & Generación & Sol. Únicas & Sol. Totales & Hipervolumen & Tiempo [s]\
 \label{tab:dataFrenteMandl}
 \end{table}
 
-En el caso de la instancia Mumford0, se realizó el mismo procedimiento, utilizando 15 semillas distintas con 1000 generaciones y los mejores valores  para los parámetros. Las Figuras \ref{fig:paretoMumford1} y \ref{fig:paretoMumford2} muestra la evolución del frente de Pareto en 4 semillas distintas y la Tabla \ref{tab:dataFrenteMumford0} muestra información adicional respecto a estos frentes.
+Por medio de la información de la Tabla \ref{tab:dataFrenteMandl} se destaca para este algoritmo en específico la aparición de muchas soluciones idénticas en los frentes de Pareto. Se puede observar, a modo general que desde la generación 50 y la generación 100 la soluciones totales son el doble de las soluciones únicas. En la generación 1000, las soluciones únicas representa entre un 10\% y un 30\% de las soluciones totales. En esta instancia se mantiene la tendencia de que la semilla que genera más soluciones únicas es la que tiene más soluciones totales. No existe una correlación entre un mayor hipervolumen con más soluciones únicas/totales en el frente. Finalmente, el tiempo para una instancia fue medido desde el inicio del algoritmo hasta la finalización de una generación. Tiempos menores en etapas prematuras del algoritmo suelen derivar en un tiempo total de cómputo menor para el algoritmo completo. Notar que al término de la generación 1 han transcurrido cerca de 20 segundos desde el inicio del algoritmo, donde este tiempo está destinado a la generación del conjunto inicial de soluciones factibles para iniciar el algoritmo.
+
+En el caso de la instancia Mumford0, se realizó el mismo procedimiento, utilizando 15 semillas distintas con 1000 generaciones y los mejores valores  para los parámetros. La Figura \ref{fig:hyp_mumford0} muestra la evolución del hipervolumen para todas las semillas utilizadas y la Figura \ref{fig:hyp_mumford0_bp} muestra la distribución de los valores de hipervolumen para las semillas en las generaciones 1, 50, 100 y 1000 del algoritmo. En la Figura \ref{fig:hyp_mumford0} se observa que el hipervolumen aumenta su valor en todas las semillas utilizadas, notando estancamientos prolongados en este valor desde las 200 generaciones aproximadamente. En el \textit{box plot} de la Figura \ref{fig:hyp_mumford0_bp} se puede notar la aparición de \textit{outliers}. Sin embargo, para todas las semillas se observa el mismo comportamiento creciente, visto anteriormente. A modo general, el algoritmo no se ve afectado por la aleatoridad de una semilla determinada y tiende a obtener un valor de hipervolumen acotado.
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{img/hyp_Mumford0}
-\caption{Hipervolumen obtenido en 15 semillas distintas con la instancia Mumford0 para los mejores parámetros obtenidos en la sintonización.}
-\label{fig:mumford0}
+\caption{Hipervolumen obtenido en 15 semillas distintas con la instancia Mumford0 con sintonización de parámetros.}
+\label{fig:hyp_mumford0}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{img/hyp_Mumford0_bp}
+\caption{Box plot del hipervolumen obtenido en distintas generaciones del algoritmo inmune para la instancia Mumford0 con sintonización de parámetros.}
+\label{fig:hyp_mumford0_bp}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s4}
+\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s12}
+\caption{Frente de Pareto para Mumford0 con semillas 4 y 12.}
+\label{fig:paretoMumford1}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s34}
+\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s45}
+\caption{Frente de Pareto para Mumford0 con semillas 34 y 45.}
+\label{fig:paretoMumford2}
 \end{figure}
 
 \begin{table}[!htb]
@@ -123,28 +151,11 @@ Semilla & Generación & Sol. Únicas & Sol. Totales & Hipervolumen & Tiempo [s]\
 \label{tab:dataFrenteMumford0}
 \end{table}
 
-\begin{figure}[p]
-\centering
-\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s4}
-\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s12}
-\caption{Frente de Pareto para Mumford0 con semillas 4 y 12.}
-\label{fig:paretoMumford1}
-\end{figure}
+Las Figuras \ref{fig:paretoMumford1} y \ref{fig:paretoMumford2} muestran la evolución del frente de Pareto en 4 semillas distintas y la Tabla \ref{tab:dataFrenteMumford0} muestra información adicional respecto a estos frentes. Se puede apreciar que la evolución del frente para semillas presenta un comportamiento favorable, ya que se acerca a la región de mínimos en ambas funciones objetivo. Un caso notable a mencionar ocurre con la semilla 4, donde se observa un gran avance a partir del frente inicial en la primera generación hasta el frente obtenido en la generación 50. A diferencia de la instancia Mandl, en estos casos se obtiene una buena cantidad de soluciones que son mejores para operadores y para pasajeros y el algoritmo tiene ciertas dificultades para acercarse a soluciones ubicadas en la zona inferior izquierda donde está el mínimo para operadores y pasajeros simultáneamente.
 
-\begin{figure}[p]
-\centering
-\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s34}
-\includegraphics[width=0.79\textwidth]{img/frente_Mumford0_s45}
-\caption{Frente de Pareto para Mumford0 con semillas 34 y 45.}
-\label{fig:paretoMumford2}
-\end{figure}
+Al analizar los resultados de la Tabla \ref{tab:dataFrenteMandl} se puede observar que, en general, existe una repetición de soluciones candidatas que aumenta a medida que transcurren las generaciones. En esta instancia la cantidad de soluciones únicas representan una mayor parte de las soluciones totales que en la instancia Mandl. En las cuatro semillas mostradas, las soluciones únicas representan más del 40 \% de las soluciones totales en la milésima generación. En la semilla 45 en específico, la cantidad de soluciones únicas es igual a la cantidad de soluciones totales. Nuevamente, no es posible relacionar la cantidad de soluciones con el hipervolumen obtenido para una misma semilla en una generación determinada. Además, tampoco es posible afirmar que una semilla que inicia con un buen valor de hipervolumen, seguirá siendo la mejor semilla en la generación 1000. Los tiempos registrados al finalizar una generación dan cuenta de la misma relación que en Mandl, donde semillas que tardan menos tiempo en llegar a una generación tempranamente mantendrán la tendencia y demorarán menos tiempo en terminar con las 1000 generaciones. 
 
-Se puede apreciar que la evolución de los frentes en las 4 semillas mostradas presenta un comportamiento favorable, ya que se acerca a la región de mínimos en ambas funciones objetivo. Un caso notable a mencionar ocurre con la semilla 4, donde se observa un gran avance a partir del frente inicial en la primera generación hasta el frente obtenido en la generación 50.
-
-Al analizar los resultados de la Tabla \ref{tab:dataFrenteMandl} se puede observar que, en general, existe una repetición de soluciones candidatas que aumenta a medida que transcurren las generaciones. En esta instancia la cantidad de soluciones únicas representan una mayor parte de las soluciones totales que en la instancia Mandl. En las cuatro semillas mostradas, las soluciones representan más de un 40 \% de las soluciones totales.
-
-Al relacionar el hipervolumen de los frentes con la cantidad de soluciones obtenidas, se puede observar que las mayores variaciones en hipervolumen conlleva una variación en la cantidad de soluciones en el frente. Se puede notar que la semlilla 45 no varía la cantidad de soluciones únicas ni totales entre la generación 100 y 1000, y su hipervolumen varía levemente entre ambas generaciones, por lo que el mejorarmiento en este caso particular fue menor.
-
+Las Tablas \ref{tab:mejoresfo1} y \ref{tab:mejoresfo2} muestran las mejores soluciones que se obtuvieron para las instancias Mandl y Mumford0, respectivamente. Es importante recordar que una solución corresponde a un conjunto de rutas acotado entre un mínimo y un máximo de paraderos, el cual debe satisfacer una serie de restriccciones. Los conjuntos de rutas que son mejores para 
 
 
 \begin{table}[!htb]

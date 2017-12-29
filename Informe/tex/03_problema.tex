@@ -14,18 +14,18 @@ Con esto se asume que se sabe la cantidad de rutas tendrá el conjunto de rutas 
 
 El UTRP consiste en satisfacer tanto a operadores de buses, como a los pasajeros que los utilizan. Es por esto que se tienen las siguientes funciones objetivo, dadas por las Ecuaciones \eqref{eq:fo1} y \eqref{eq:fo2} \cite{NewHaEOps}.
 
-La Ecuación \eqref{eq:fo1} considera una minimización de los costos para el operador de buses. $d_{ij}$ representa la demanda  entre las paradas $i$ y $j$ y $\alpha_{ij}$ corresponde al camino más corto entre las dos paradas.
+La Ecuación \eqref{eq:fo1} considera una minimización de los costos para los pasajeros. $d_{ij}$ representa la demanda  entre las paradas $i$ y $j$ y $\alpha_{ij}(R)$ corresponde al camino más corto entre las paradas $i$ y $j$ usando el conjunto de rutas $R$. Es asi, como esta ecuación puede verse como una minimización del tiempo de viaje promedio de todos los pasajeros, considerando las demandas en las paradas.
 
 \begin{equation}
 \label{eq:fo1}
 min\mbox{ }\frac{\sum^n_{i,j=1}d_{ij}\alpha_{ij}(R)}{\sum_{i,j=1}^{n}d_{ij}}
 \end{equation} 
 
-Por otra parte, en la Ecuación \eqref{eq:fo2} se considera una minimización de los costos para los pasajeros. $t_{ij}$ corresponde al tiempo de viaje entre las paradas $i$ y $j$. 
+Por otra parte, en la Ecuación \eqref{eq:fo2} se considera una minimización de los costos para los operadores de buses. $t_{ij}$ corresponde al tiempo de viaje entre las paradas $i$ y $j$. Entonces, esta ecuación corresponde simplemente a la minimización del tiempo de viaje considerando todas las rutas. En \cite{NewHaEOps} se le llama longitud total de la ruta.
 
 \begin{equation}
 \label{eq:fo2}
 min\mbox{ }\sum^r_{a=1}\sum_{(i,j) \in r} t_{i,j} (a)
 \end{equation} 
 
-Al considerar el UTRP como problema multiobjetivo, se plantea una minimización de costos tanto para operadores de buses, con la demanda de pasajeros; como para pasajeros al considerar los tiempos de viaje.
+Al considerar el UTRP como problema multiobjetivo, se plantea una minimización de costos tanto para pasajeros como para operadores de buses.

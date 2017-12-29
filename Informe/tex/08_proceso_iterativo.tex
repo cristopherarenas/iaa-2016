@@ -4,14 +4,15 @@ El algoritmo propuesto posee un proceso iterativo que se repite hasta satisfacer
 
 \subsection{Cálculo de aptitud}
 
-Cada elemento $p$ de la población $P$ es evaluado mediante una función de aptitud para determinar si es mejor o peor que otras soluciones. Esta función $f_{apt}$ está dada por la ecuación \eqref{eq:fitness}.
+Cada elemento $p$ de la población $P$ es evaluado mediante una función de aptitud para determinar si es mejor o peor que otras soluciones. La aptitud de un elemento $p$ está dada por su conjunto de rutas, por lo tanto se deberá evaluar en dos funciones objetivo $FO_1$ y $FO_2$, dadas por las ecuaciones \eqref{eq:costp} y \eqref{eq:costo}, que provienen de la minimización de costos para pasajeros y operadores, según se explicó en la definición del problema.
 
-\begin{equation}
-\label{eq:fitness}
-f_{apt}(p) = \alp \cdot \tilde{FO}_1(p) + \bet \cdot \tilde{FO}_2(p)
-\end{equation}
-
-Para determinar la aptitud de un elemento $p$, ésta se deberá evaluar en las funciones objetivo $FO_1$ y $FO_2$ dadas por las ecuaciones \eqref{eq:fo1} y \eqref{eq:fo2}, respectivamente. Dado que el orden de magnitud de las funciones objetivo es distinto, cada valor será normalizado por una cota inferior conocida para cada instancia. Así, se determinarán las magnitudes $\tilde{FO}_1$ y $\tilde{FO}_2$, según lo mostrado en las Ecuaciones \eqref{eq:lb1} y \eqref{eq:lb2}.
+\begin{align}
+\label{eq:costp}
+FO_1(p) &= \frac{\sum^n_{i,j=1}d_{ij}\alpha_{ij}(R)}{\sum_{i,j=1}^{n}d_{ij}}\\
+\label{eq:costo}
+FO_2(p) &= \sum^r_{a=1}\sum_{(i,j) \in r} t_{i,j} (a)
+\end{align}
+Dado que el orden de magnitud de las funciones objetivo es distinto, cada valor será normalizado por una cota inferior conocida para cada instancia. Así, se determinarán las magnitudes $\tilde{FO}_1$ y $\tilde{FO}_2$, según lo mostrado en las Ecuaciones \eqref{eq:lb1} y \eqref{eq:lb2}.
 
 \begin{equation}
 \label{eq:lb1}
@@ -23,7 +24,12 @@ Para determinar la aptitud de un elemento $p$, ésta se deberá evaluar en las f
 \tilde{FO}_2(p) = \frac{FO_2(p)}{LB_{FO_2}}
 \end{equation}
 
-Finalmente, la aptitud de $p$ está dada por una poderación de $\tilde{FO}_1$ y $\tilde{FO}_2$, utilizando los parámetros \alp{} y \bet. La función de aptitud entregará valores entre 0 y 1, siendo el valor 1 la mejor aptitud posible.
+Finalmente, la aptitud de $p$ está dada por una poderación de $\tilde{FO}_1$ y $\tilde{FO}_2$, utilizando los parámetros \alp{} y \bet. La función de aptitud entregará valores mayores o iguales a 1, siendo el valor 1 la mejor aptitud posible en el problema de minimización. La función de aptitud de un elemento $p$ de la población se denotará por $f_{apt}$ y se calculará mediante la ecuación \eqref{eq:fitness}.
+
+\begin{equation}
+\label{eq:fitness}
+f_{apt}(p) = \alp \cdot \tilde{FO}_1(p) + \bet \cdot \tilde{FO}_2(p)
+\end{equation}
 
 \subsection{Eliminación de soluciones dominadas}
 
